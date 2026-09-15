@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-09-15 23:19:14 +0800",
+  "device": "cuda",
+  "train_size": 2000,
+  "test_size": 200,
+  "model": {
+    "layers": 2,
+    "hidden": 64,
+    "kernel": 5,
+    "input_frames": 4
+  },
+  "double_ball": {
+    "balls": 2,
+    "train_test_overlap": 0
+  },
+  "boundary_noise": {
+    "type": "binary false echoes on observed border pixels only",
+    "probability": 0.08,
+    "border_width": 3,
+    "targets_clean": true,
+    "mse_improvement_percent_with_augmentation": 52.73536292275411
+  },
+  "sample_metrics": {
+    "multiball_sample_mse": 0.007725217379629612,
+    "noise_clean_train_sample_mse": 0.003797071985900402,
+    "noise_augmented_train_sample_mse": 0.0019278043182566762
+  }
+}

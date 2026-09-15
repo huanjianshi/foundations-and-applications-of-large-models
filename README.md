@@ -7,5 +7,6 @@ Coursework repository for the course **Foundations and Applications of Large Mod
 | Assignment | Topic | Materials |
 | --- | --- | --- |
 | [Assignment 01](assignment-01-neural-network/) | Designing a Better Neural Network with PyTorch | Source code, reproducibility notes, experiment results, and figures |
+| [Assignment 02](assignment-02-convlstm/) | ConvLSTM for Bouncing-Ball Prediction | Source code, controlled experiments, innovation extensions, reproducibility data, and figures |
 
 Additional assignments will be added in separate `assignment-XX-*` directories.

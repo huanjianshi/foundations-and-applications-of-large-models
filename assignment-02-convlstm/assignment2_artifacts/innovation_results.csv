@@ -1,0 +1,4 @@
+﻿group,experiment,seed,model_type,layers,hidden,kernel,input_frames,loss,epochs,batch_size,learning_rate,parameters,test_mse,test_mae,elapsed_seconds,device,training_condition,test_condition
+I1,创新1：双球预测,42,convlstm,2,64,5,4,mse,5,64,0.001,1236289,0.00580526240170002,0.018662839084863662,26.57733829999779,cuda,双球训练,双球测试
+I2a,创新2a：无增强训练,42,convlstm,2,64,5,4,mse,5,64,0.001,1236289,0.005905210599303245,0.03414354115724563,26.60116619999826,cuda,干净单球训练,边界噪声单球测试
+I2b,创新2b：噪声增强训练,42,convlstm,2,64,5,4,mse,5,64,0.001,1236289,0.0027910763584077358,0.011202229671180248,26.23519810000289,cuda,边界噪声增强训练,边界噪声单球测试
