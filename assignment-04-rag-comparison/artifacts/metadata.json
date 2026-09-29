@@ -1,0 +1,22 @@
+{
+  "model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "os": "Windows-11-10.0.26200-SP0",
+  "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "sentence_transformers": "6.1.0",
+  "torch": "2.14.0+cpu",
+  "networkx": "3.6.1",
+  "numpy": "2.5.3",
+  "documents": 15,
+  "questions_builtin": 15,
+  "questions_added": 5,
+  "triples": 40,
+  "graph_nodes": 45,
+  "detected_communities": 10,
+  "preset_summaries": 3,
+  "preset_entries": 9,
+  "chunk_size": 120,
+  "chunk_overlap": 20,
+  "rrf_c": 60,
+  "runtime_seconds": 33.01
+}

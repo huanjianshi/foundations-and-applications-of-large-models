@@ -9,5 +9,6 @@ Coursework repository for the course **Foundations and Applications of Large Mod
 | [Assignment 01](assignment-01-neural-network/) | Designing a Better Neural Network with PyTorch | Source code, reproducibility notes, experiment results, and figures |
 | [Assignment 02](assignment-02-convlstm/) | ConvLSTM for Bouncing-Ball Prediction | Source code, controlled experiments, innovation extensions, reproducibility data, and figures |
 | [Assignment 03](assignment-03-minimal-llm/) | Minimal Decoder-Only LLM Trained on CPU | Source code, controlled experiments, sampling extension, reproducibility data, and loss curves |
+| [Assignment 04](assignment-04-rag-comparison/) | Vector RAG, GraphRAG, WikiRAG, and Hybrid Retrieval | Source code, retrieval benchmarks, evidence-level results, and figures |
 
 Additional assignments will be added in separate `assignment-XX-*` directories.

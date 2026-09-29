@@ -1,0 +1,76 @@
+﻿system,scope,question_set,k,type,n,recall,mrr,complete
+GraphRAG,global,all20,5,fact,7,0.571429,0.47619,4
+GraphRAG,global,all20,5,global,6,0.75,0.505556,4
+GraphRAG,global,all20,5,multi,7,0.785714,0.642857,3
+GraphRAG,global,builtin15,1,fact,5,0.4,0.4,2
+GraphRAG,global,builtin15,1,global,5,0.266667,0.4,1
+GraphRAG,global,builtin15,1,multi,5,0.166667,0.4,0
+GraphRAG,global,builtin15,2,fact,5,0.4,0.4,2
+GraphRAG,global,builtin15,2,global,5,0.533333,0.5,2
+GraphRAG,global,builtin15,2,multi,5,0.5,0.7,0
+GraphRAG,global,builtin15,3,fact,5,0.6,0.466667,3
+GraphRAG,global,builtin15,3,global,5,0.7,0.566667,3
+GraphRAG,global,builtin15,3,multi,5,0.733333,0.7,2
+GraphRAG,global,builtin15,5,fact,5,0.6,0.466667,3
+GraphRAG,global,builtin15,5,global,5,0.9,0.606667,4
+GraphRAG,global,builtin15,5,multi,5,0.833333,0.7,3
+GraphRAG,local,all20,5,fact,7,0.857143,0.857143,6
+GraphRAG,local,all20,5,global,6,0.583333,0.311111,3
+GraphRAG,local,all20,5,multi,7,1.0,0.928571,7
+GraphRAG,local,builtin15,1,fact,5,1.0,1.0,5
+GraphRAG,local,builtin15,1,global,5,0.2,0.2,1
+GraphRAG,local,builtin15,1,multi,5,0.333333,0.8,0
+GraphRAG,local,builtin15,2,fact,5,1.0,1.0,5
+GraphRAG,local,builtin15,2,global,5,0.2,0.2,1
+GraphRAG,local,builtin15,2,multi,5,0.6,0.9,1
+GraphRAG,local,builtin15,3,fact,5,1.0,1.0,5
+GraphRAG,local,builtin15,3,global,5,0.5,0.333333,2
+GraphRAG,local,builtin15,3,multi,5,0.866667,0.9,3
+GraphRAG,local,builtin15,5,fact,5,1.0,1.0,5
+GraphRAG,local,builtin15,5,global,5,0.7,0.373333,3
+GraphRAG,local,builtin15,5,multi,5,1.0,0.9,5
+Hybrid RAG,na,all20,5,fact,7,1.0,1.0,7
+Hybrid RAG,na,all20,5,global,6,0.944444,0.916667,5
+Hybrid RAG,na,all20,5,multi,7,0.952381,0.928571,6
+Hybrid RAG,na,builtin15,1,fact,5,1.0,1.0,5
+Hybrid RAG,na,builtin15,1,global,5,0.566667,0.8,2
+Hybrid RAG,na,builtin15,1,multi,5,0.366667,0.8,0
+Hybrid RAG,na,builtin15,2,fact,5,1.0,1.0,5
+Hybrid RAG,na,builtin15,2,global,5,0.766667,0.9,3
+Hybrid RAG,na,builtin15,2,multi,5,0.8,0.9,3
+Hybrid RAG,na,builtin15,3,fact,5,1.0,1.0,5
+Hybrid RAG,na,builtin15,3,global,5,0.766667,0.9,3
+Hybrid RAG,na,builtin15,3,multi,5,0.866667,0.9,3
+Hybrid RAG,na,builtin15,5,fact,5,1.0,1.0,5
+Hybrid RAG,na,builtin15,5,global,5,0.933333,0.9,4
+Hybrid RAG,na,builtin15,5,multi,5,0.933333,0.9,4
+Vector RAG,na,all20,5,fact,7,1.0,1.0,7
+Vector RAG,na,all20,5,global,6,0.944444,0.916667,5
+Vector RAG,na,all20,5,multi,7,0.952381,0.928571,6
+Vector RAG,na,builtin15,1,fact,5,1.0,1.0,5
+Vector RAG,na,builtin15,1,global,5,0.566667,0.8,2
+Vector RAG,na,builtin15,1,multi,5,0.366667,0.8,0
+Vector RAG,na,builtin15,2,fact,5,1.0,1.0,5
+Vector RAG,na,builtin15,2,global,5,0.766667,0.9,3
+Vector RAG,na,builtin15,2,multi,5,0.8,0.9,3
+Vector RAG,na,builtin15,3,fact,5,1.0,1.0,5
+Vector RAG,na,builtin15,3,global,5,0.766667,0.9,3
+Vector RAG,na,builtin15,3,multi,5,0.866667,0.9,3
+Vector RAG,na,builtin15,5,fact,5,1.0,1.0,5
+Vector RAG,na,builtin15,5,global,5,0.933333,0.9,4
+Vector RAG,na,builtin15,5,multi,5,0.933333,0.9,4
+WikiRAG,na,all20,5,fact,7,1.0,0.719048,7
+WikiRAG,na,all20,5,global,6,0.722222,0.588889,4
+WikiRAG,na,all20,5,multi,7,1.0,0.904762,7
+WikiRAG,na,builtin15,1,fact,5,0.6,0.6,3
+WikiRAG,na,builtin15,1,global,5,0.5,0.6,2
+WikiRAG,na,builtin15,1,multi,5,0.366667,0.8,0
+WikiRAG,na,builtin15,2,fact,5,0.8,0.7,4
+WikiRAG,na,builtin15,2,global,5,0.5,0.6,2
+WikiRAG,na,builtin15,2,multi,5,0.566667,0.8,2
+WikiRAG,na,builtin15,3,fact,5,1.0,0.766667,5
+WikiRAG,na,builtin15,3,global,5,0.6,0.6,3
+WikiRAG,na,builtin15,3,multi,5,0.8,0.866667,3
+WikiRAG,na,builtin15,5,fact,5,1.0,0.766667,5
+WikiRAG,na,builtin15,5,global,5,0.666667,0.64,3
+WikiRAG,na,builtin15,5,multi,5,1.0,0.866667,5

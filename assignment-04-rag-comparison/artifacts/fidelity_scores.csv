@@ -1,0 +1,10 @@
+﻿system,id,answer,retrieved,human_score
+Vector RAG,Q01,检索资料显示，《大模型通识课》的授课教师是李文瀚，李文瀚任职于人工智能学院。现有检索资料未给出该学院的行政负责人，无法确定其姓名。（doc06、doc04）,doc04;doc06;doc05;doc11;doc07,5
+Vector RAG,Q06,云山大学的校训是“格物致知”。（doc01）,doc01;doc15;doc06;doc07;doc04,5
+Vector RAG,Q11,资料列出认知计算全国重点实验室，依托人工智能学院建设；岭南超算中心由云山大学与省科技厅共建，计算机学院参与运行管理。（doc10）,doc10;doc05;doc15;doc01;doc03,5
+GraphRAG,Q01,《大模型通识课》由李文瀚授课，他任职于人工智能学院；该学院的现任院长是王启明教授。（doc06、doc04、doc02）,doc06;doc11;doc02;doc04;doc10,5
+GraphRAG,Q06,云山大学的校训是“格物致知”。（doc01）,doc01,5
+GraphRAG,Q11,本次检索只找到学校概况，未找到科研平台及其依托单位的信息，因此无法依据所给资料回答。（doc01）,doc01,5
+WikiRAG,Q01,《大模型通识课》由李文瀚授课，他任职于人工智能学院；该学院的现任院长是王启明教授。（doc06、doc04、doc02）,doc04;doc11;doc06;doc02;doc10,5
+WikiRAG,Q06,云山大学的校训是“格物致知”。（doc01）,doc01;doc12;doc14;doc03;doc10,5
+WikiRAG,Q11,这次检索没有找到科研平台的介绍，无法列出平台及其依托单位。（检索到的 doc03 仅介绍计算机学院概况）,doc05;doc01;doc12;doc14;doc03,5
