@@ -1,0 +1,25 @@
+﻿stage,label,type,n,guide_correct,rule_correct,fact_correct
+baseline,基线,count,5,0,2,2
+baseline,基线,attr,5,0,3,3
+baseline,基线,exist,5,0,2,2
+baseline,基线,total,15,0,7,7
+sft,SFT,count,5,1,1,1
+sft,SFT,attr,5,0,0,0
+sft,SFT,exist,5,2,2,2
+sft,SFT,total,15,3,3,3
+dpo_original_b01,DPO原12组,count,5,2,2,2
+dpo_original_b01,DPO原12组,attr,5,0,0,0
+dpo_original_b01,DPO原12组,exist,5,2,2,2
+dpo_original_b01,DPO原12组,total,15,4,4,4
+dpo_expanded_b01,DPO扩展17组 β=0.1,count,5,3,3,3
+dpo_expanded_b01,DPO扩展17组 β=0.1,attr,5,0,1,1
+dpo_expanded_b01,DPO扩展17组 β=0.1,exist,5,2,2,2
+dpo_expanded_b01,DPO扩展17组 β=0.1,total,15,5,6,6
+dpo_expanded_b005,DPO扩展17组 β=0.05,count,5,2,2,2
+dpo_expanded_b005,DPO扩展17组 β=0.05,attr,5,0,1,1
+dpo_expanded_b005,DPO扩展17组 β=0.05,exist,5,2,2,2
+dpo_expanded_b005,DPO扩展17组 β=0.05,total,15,4,5,5
+dpo_expanded_b05,DPO扩展17组 β=0.5,count,5,1,1,1
+dpo_expanded_b05,DPO扩展17组 β=0.5,attr,5,1,1,1
+dpo_expanded_b05,DPO扩展17组 β=0.5,exist,5,2,2,2
+dpo_expanded_b05,DPO扩展17组 β=0.5,total,15,4,4,4

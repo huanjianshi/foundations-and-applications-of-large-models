@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+models/
+.download_cache/
+.qa/
+results/
+hw5_imgs/
+reproduced/
+*.docx
+*.pdf

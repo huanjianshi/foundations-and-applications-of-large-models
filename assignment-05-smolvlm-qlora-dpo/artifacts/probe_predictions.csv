@@ -1,0 +1,21 @@
+﻿stage,id,type,img,q,gold,prediction,guide_correct,audited_correct
+baseline,N01,count,img04,图中有几个红色方形？,3,The image contains a square-shaped object with a red color. The object is rectangular in shape and has a smooth surface,0,0
+baseline,N02,attr,img05,图中绿色的图形是什么形状？,方形,"The image represents a simple, yet effective, graphic design for a logo or a brand identity. The design uses a combination",0,0
+baseline,N03,exist,img11,图里有没有蓝色圆形？,没有,"Yes, there is a yellow square in the image.",0,0
+baseline,N04,exist,img12,图里有没有蓝色方形？,有,"Yes, there are no blue squares in the image.",0,0
+baseline,N05,count,img15,图中有几个黄色圆形？,2,"Yes, the image contains a yellow circle.",0,0
+sft,N01,count,img04,图中有几个红色方形？,3,1个。,0,0
+sft,N02,attr,img05,图中绿色的图形是什么形状？,方形,图形是绿色。,0,0
+sft,N03,exist,img11,图里有没有蓝色圆形？,没有,有。,0,0
+sft,N04,exist,img12,图里有没有蓝色方形？,有,有。,1,1
+sft,N05,count,img15,图中有几个黄色圆形？,2,1个。,0,0
+dpo_original_b01,N01,count,img04,图中有几个红色方形？,3,1,0,0
+dpo_original_b01,N02,attr,img05,图中绿色的图形是什么形状？,方形,Squares.,0,1
+dpo_original_b01,N03,exist,img11,图里有没有蓝色圆形？,没有,有。,0,0
+dpo_original_b01,N04,exist,img12,图里有没有蓝色方形？,有,一。,0,0
+dpo_original_b01,N05,count,img15,图中有几个黄色圆形？,2,0个。,0,0
+dpo_expanded_b01,N01,count,img04,图中有几个红色方形？,3,3,1,1
+dpo_expanded_b01,N02,attr,img05,图中绿色的图形是什么形状？,方形,Square。,0,1
+dpo_expanded_b01,N03,exist,img11,图里有没有蓝色圆形？,没有,有。,0,0
+dpo_expanded_b01,N04,exist,img12,图里有没有蓝色方形？,有,一。,0,0
+dpo_expanded_b01,N05,count,img15,图中有几个黄色圆形？,2,0个。,0,0

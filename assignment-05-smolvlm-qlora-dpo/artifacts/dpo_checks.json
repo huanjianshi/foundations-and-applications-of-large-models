@@ -1,0 +1,44 @@
+{
+  "cases": [
+    {
+      "pol_w": 1.2,
+      "ref_w": 0.8,
+      "pol_l": 0.9,
+      "ref_l": 0.6,
+      "beta": 0.1,
+      "margin": 0.009999999999999988,
+      "loss": 0.6881596805078624
+    },
+    {
+      "pol_w": -1.0,
+      "ref_w": -1.0,
+      "pol_l": -2.0,
+      "ref_l": -2.0,
+      "beta": 0.1,
+      "margin": 0.0,
+      "loss": 0.6931471805599453
+    },
+    {
+      "pol_w": -2.0,
+      "ref_w": -1.0,
+      "pol_l": -1.0,
+      "ref_l": -1.0,
+      "beta": 0.1,
+      "margin": -0.1,
+      "loss": 0.7443966600735709
+    },
+    {
+      "pol_w": 1.5,
+      "ref_w": 1.0,
+      "pol_l": 0.2,
+      "ref_l": 0.6,
+      "beta": 0.1,
+      "margin": 0.09,
+      "loss": 0.6491593390256101
+    }
+  ],
+  "chosen_gradient": -0.05000000074505806,
+  "rejected_gradient": 0.05000000074505806,
+  "gradient_direction_correct": true,
+  "guide_exist_false_positive_reproduced": true
+}

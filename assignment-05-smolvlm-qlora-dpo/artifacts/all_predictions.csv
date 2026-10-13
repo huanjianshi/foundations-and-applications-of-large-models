@@ -1,0 +1,93 @@
+﻿stage,id,type,img,q,gold,prediction,guide_correct,historical_rule_correct,rule_correct,fact_correct,review_note
+baseline,P01,count,img01,图中有几个红色圆形？,2,"Yes, there are three colors in the image.",0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+baseline,P02,count,img02,图中有几个绿色圆形？,3,"The image contains a table with two columns and three rows. The first column is labeled ""0"" and the second column",0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+baseline,P03,count,img03,图中有几个黄色方形？,2,"Yes, there are two squares in the image.",0,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+baseline,P04,count,img06,图中有几个黄色圆形？,4,"Yes, the image contains a yellow circle.",0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+baseline,P05,count,img10,图中有几个蓝色圆形？,3,"Yes, there are three circles in the image.",0,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+baseline,P06,attr,img01,图中蓝色的图形是什么形状？,方形,"The image is a square with a blue square in the top left corner. The square is a solid blue color, and",0,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+baseline,P07,attr,img05,图中红色的图形是什么形状？,圆形,"The image represents a simple, yet effective, design layout for a website. The layout is divided into three main sections:",0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+baseline,P08,attr,img09,图中绿色的图形是什么形状？,方形,The green color of the image is a graphic element used to represent a specific concept or theme. It is often used in,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+baseline,P09,attr,img13,图中黄色的图形是什么形状？,圆形,The image contains a circular shape with a yellow center. The circle is a solid shape with no additional details or colors.,0,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+baseline,P10,attr,img14,图中蓝色的图形是什么形状？,方形,"The image is a square-shaped grid with four squares in the center. The squares are arranged in a grid pattern,",0,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+baseline,P11,exist,img11,图里有没有黄色方形？,有,"Yes, there is a yellow square in the image.",0,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+baseline,P12,exist,img12,图里有没有红色圆形？,没有,No.,0,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+baseline,P13,exist,img07,图里有没有绿色圆形？,有,No.,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+baseline,P14,exist,img08,图里有没有绿色方形？,没有,"Yes, there is a green color.",0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+baseline,P15,exist,img15,图里有没有蓝色图形？,没有,"Yes, there are no images with a green color in the image.",0,1,0,0,回答否认绿色而非蓝色，且开头为Yes；不能按出现no就计对。
+sft,P01,count,img01,图中有几个红色圆形？,2,1个。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+sft,P02,count,img02,图中有几个绿色圆形？,3,1个。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+sft,P03,count,img03,图中有几个黄色方形？,2,1个。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+sft,P04,count,img06,图中有几个黄色圆形？,4,"有几个黄色圆形？
+
+黄色",0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+sft,P05,count,img10,图中有几个蓝色圆形？,3,3个。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+sft,P06,attr,img01,图中蓝色的图形是什么形状？,方形,图形是灰色。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+sft,P07,attr,img05,图中红色的图形是什么形状？,圆形,图形是白色。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+sft,P08,attr,img09,图中绿色的图形是什么形状？,方形,绿色的图形是圆形。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+sft,P09,attr,img13,图中黄色的图形是什么形状？,圆形,图形是黄色。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+sft,P10,attr,img14,图中蓝色的图形是什么形状？,方形,图形是圆形。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+sft,P11,exist,img11,图里有没有黄色方形？,有,有。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+sft,P12,exist,img12,图里有没有红色圆形？,没有,有。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+sft,P13,exist,img07,图里有没有绿色圆形？,有,有。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+sft,P14,exist,img08,图里有没有绿色方形？,没有,有。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+sft,P15,exist,img15,图里有没有蓝色图形？,没有,有。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_original_b01,P01,count,img01,图中有几个红色圆形？,2,0。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_original_b01,P02,count,img02,图中有几个绿色圆形？,3,0。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_original_b01,P03,count,img03,图中有几个黄色方形？,2,2。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_original_b01,P04,count,img06,图中有几个黄色圆形？,4,0个。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_original_b01,P05,count,img10,图中有几个蓝色圆形？,3,3。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_original_b01,P06,attr,img01,图中蓝色的图形是什么形状？,方形,图形。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_original_b01,P07,attr,img05,图中红色的图形是什么形状？,圆形,2D图。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_original_b01,P08,attr,img09,图中绿色的图形是什么形状？,方形,三角形。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_original_b01,P09,attr,img13,图中黄色的图形是什么形状？,圆形,青色。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_original_b01,P10,attr,img14,图中蓝色的图形是什么形状？,方形,图形。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_original_b01,P11,exist,img11,图里有没有黄色方形？,有,有。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_original_b01,P12,exist,img12,图里有没有红色圆形？,没有,一。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_original_b01,P13,exist,img07,图里有没有绿色圆形？,有,1。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_original_b01,P14,exist,img08,图里有没有绿色方形？,没有,有。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_original_b01,P15,exist,img15,图里有没有蓝色图形？,没有,没有。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b01,P01,count,img01,图中有几个红色圆形？,2,2.,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b01,P02,count,img02,图中有几个绿色圆形？,3,0。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b01,P03,count,img03,图中有几个黄色方形？,2,2。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b01,P04,count,img06,图中有几个黄色圆形？,4,0个。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b01,P05,count,img10,图中有几个蓝色圆形？,3,3。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b01,P06,attr,img01,图中蓝色的图形是什么形状？,方形,图形。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b01,P07,attr,img05,图中红色的图形是什么形状？,圆形,2D图。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b01,P08,attr,img09,图中绿色的图形是什么形状？,方形,三角形。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b01,P09,attr,img13,图中黄色的图形是什么形状？,圆形,Circle。,0,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b01,P10,attr,img14,图中蓝色的图形是什么形状？,方形,2D.,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b01,P11,exist,img11,图里有没有黄色方形？,有,有。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b01,P12,exist,img12,图里有没有红色圆形？,没有,一。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b01,P13,exist,img07,图里有没有绿色圆形？,有,1。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b01,P14,exist,img08,图里有没有绿色方形？,没有,有。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b01,P15,exist,img15,图里有没有蓝色图形？,没有,没有。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b005,P01,count,img01,图中有几个红色圆形？,2,3.,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b005,P02,count,img02,图中有几个绿色圆形？,3,0。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b005,P03,count,img03,图中有几个黄色方形？,2,2.,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b005,P04,count,img06,图中有几个黄色圆形？,4,0个。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b005,P05,count,img10,图中有几个蓝色圆形？,3,3。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b005,P06,attr,img01,图中蓝色的图形是什么形状？,方形,图形。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b005,P07,attr,img05,图中红色的图形是什么形状？,圆形,2D图。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b005,P08,attr,img09,图中绿色的图形是什么形状？,方形,三角形。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b005,P09,attr,img13,图中黄色的图形是什么形状？,圆形,Circle。,0,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b005,P10,attr,img14,图中蓝色的图形是什么形状？,方形,2D.,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b005,P11,exist,img11,图里有没有黄色方形？,有,有。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b005,P12,exist,img12,图里有没有红色圆形？,没有,一。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b005,P13,exist,img07,图里有没有绿色圆形？,有,1。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b005,P14,exist,img08,图里有没有绿色方形？,没有,有。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b005,P15,exist,img15,图里有没有蓝色图形？,没有,没有。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b05,P01,count,img01,图中有几个红色圆形？,2,0。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b05,P02,count,img02,图中有几个绿色圆形？,3,1个。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b05,P03,count,img03,图中有几个黄色方形？,2,0。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b05,P04,count,img06,图中有几个黄色圆形？,4,1个。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b05,P05,count,img10,图中有几个蓝色圆形？,3,3个。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b05,P06,attr,img01,图中蓝色的图形是什么形状？,方形,图形是灰色。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b05,P07,attr,img05,图中红色的图形是什么形状？,圆形,3D图。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b05,P08,attr,img09,图中绿色的图形是什么形状？,方形,方形。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b05,P09,attr,img13,图中黄色的图形是什么形状？,圆形,青色。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b05,P10,attr,img14,图中蓝色的图形是什么形状？,方形,图形。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b05,P11,exist,img11,图里有没有黄色方形？,有,有。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b05,P12,exist,img12,图里有没有红色圆形？,没有,有。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b05,P13,exist,img07,图里有没有绿色圆形？,有,1。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b05,P14,exist,img08,图里有没有绿色方形？,没有,有。,0,0,0,0,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
+dpo_expanded_b05,P15,exist,img15,图里有没有蓝色图形？,没有,没有。,1,1,1,1,CODEX按问题和标准答案核对；任务答案与理由忠实度分开评价。
