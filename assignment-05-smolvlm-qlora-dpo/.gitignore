@@ -6,7 +6,11 @@ models/
 .download_cache/
 .qa/
 results/
+results_corrected/
 hw5_imgs/
+heldout_imgs/
+/heldout_manifest.json
+/summarized/
 reproduced/
 *.docx
 *.pdf

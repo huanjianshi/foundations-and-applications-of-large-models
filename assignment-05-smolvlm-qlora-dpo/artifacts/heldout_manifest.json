@@ -1,0 +1,561 @@
+{
+  "seed": 20261014,
+  "purpose": "final-only, no training or selection",
+  "layout": "nonoverlapping grid with position jitter; different wording from training",
+  "questions": [
+    {
+      "id": "H01",
+      "type": "count",
+      "img": "test_count_01",
+      "q": "请数一数，图片里红色圆形一共有多少个？",
+      "gold": "1"
+    },
+    {
+      "id": "H02",
+      "type": "count",
+      "img": "test_count_02",
+      "q": "请数一数，图片里蓝色方形一共有多少个？",
+      "gold": "2"
+    },
+    {
+      "id": "H03",
+      "type": "count",
+      "img": "test_count_03",
+      "q": "请数一数，图片里绿色圆形一共有多少个？",
+      "gold": "3"
+    },
+    {
+      "id": "H04",
+      "type": "count",
+      "img": "test_count_04",
+      "q": "请数一数，图片里黄色方形一共有多少个？",
+      "gold": "4"
+    },
+    {
+      "id": "H05",
+      "type": "count",
+      "img": "test_count_05",
+      "q": "请数一数，图片里红色圆形一共有多少个？",
+      "gold": "1"
+    },
+    {
+      "id": "H06",
+      "type": "count",
+      "img": "test_count_06",
+      "q": "请数一数，图片里蓝色方形一共有多少个？",
+      "gold": "2"
+    },
+    {
+      "id": "H07",
+      "type": "count",
+      "img": "test_count_07",
+      "q": "请数一数，图片里绿色圆形一共有多少个？",
+      "gold": "3"
+    },
+    {
+      "id": "H08",
+      "type": "count",
+      "img": "test_count_08",
+      "q": "请数一数，图片里黄色方形一共有多少个？",
+      "gold": "4"
+    },
+    {
+      "id": "H09",
+      "type": "count",
+      "img": "test_count_09",
+      "q": "请数一数，图片里红色圆形一共有多少个？",
+      "gold": "1"
+    },
+    {
+      "id": "H10",
+      "type": "count",
+      "img": "test_count_10",
+      "q": "请数一数，图片里蓝色方形一共有多少个？",
+      "gold": "2"
+    },
+    {
+      "id": "H11",
+      "type": "attr",
+      "img": "test_attr_01",
+      "q": "请判断图片中红色图形的形状。",
+      "gold": "圆形"
+    },
+    {
+      "id": "H12",
+      "type": "attr",
+      "img": "test_attr_02",
+      "q": "请判断图片中蓝色图形的形状。",
+      "gold": "方形"
+    },
+    {
+      "id": "H13",
+      "type": "attr",
+      "img": "test_attr_03",
+      "q": "请判断图片中绿色图形的形状。",
+      "gold": "圆形"
+    },
+    {
+      "id": "H14",
+      "type": "attr",
+      "img": "test_attr_04",
+      "q": "请判断图片中黄色图形的形状。",
+      "gold": "方形"
+    },
+    {
+      "id": "H15",
+      "type": "attr",
+      "img": "test_attr_05",
+      "q": "请判断图片中红色图形的形状。",
+      "gold": "圆形"
+    },
+    {
+      "id": "H16",
+      "type": "attr",
+      "img": "test_attr_06",
+      "q": "请判断图片中蓝色图形的形状。",
+      "gold": "方形"
+    },
+    {
+      "id": "H17",
+      "type": "attr",
+      "img": "test_attr_07",
+      "q": "请判断图片中绿色图形的形状。",
+      "gold": "圆形"
+    },
+    {
+      "id": "H18",
+      "type": "attr",
+      "img": "test_attr_08",
+      "q": "请判断图片中黄色图形的形状。",
+      "gold": "方形"
+    },
+    {
+      "id": "H19",
+      "type": "attr",
+      "img": "test_attr_09",
+      "q": "请判断图片中红色图形的形状。",
+      "gold": "圆形"
+    },
+    {
+      "id": "H20",
+      "type": "attr",
+      "img": "test_attr_10",
+      "q": "请判断图片中蓝色图形的形状。",
+      "gold": "方形"
+    },
+    {
+      "id": "H21",
+      "type": "exist",
+      "img": "test_exist_01",
+      "q": "这张图片中存在红色圆形吗？",
+      "gold": "有"
+    },
+    {
+      "id": "H22",
+      "type": "exist",
+      "img": "test_exist_02",
+      "q": "这张图片中存在蓝色方形吗？",
+      "gold": "有"
+    },
+    {
+      "id": "H23",
+      "type": "exist",
+      "img": "test_exist_03",
+      "q": "这张图片中存在绿色圆形吗？",
+      "gold": "有"
+    },
+    {
+      "id": "H24",
+      "type": "exist",
+      "img": "test_exist_04",
+      "q": "这张图片中存在黄色方形吗？",
+      "gold": "有"
+    },
+    {
+      "id": "H25",
+      "type": "exist",
+      "img": "test_exist_05",
+      "q": "这张图片中存在红色圆形吗？",
+      "gold": "有"
+    },
+    {
+      "id": "H26",
+      "type": "exist",
+      "img": "test_exist_06",
+      "q": "这张图片中存在蓝色方形吗？",
+      "gold": "没有"
+    },
+    {
+      "id": "H27",
+      "type": "exist",
+      "img": "test_exist_07",
+      "q": "这张图片中存在绿色圆形吗？",
+      "gold": "没有"
+    },
+    {
+      "id": "H28",
+      "type": "exist",
+      "img": "test_exist_08",
+      "q": "这张图片中存在黄色方形吗？",
+      "gold": "没有"
+    },
+    {
+      "id": "H29",
+      "type": "exist",
+      "img": "test_exist_09",
+      "q": "这张图片中存在红色圆形吗？",
+      "gold": "没有"
+    },
+    {
+      "id": "H30",
+      "type": "exist",
+      "img": "test_exist_10",
+      "q": "这张图片中存在蓝色方形吗？",
+      "gold": "没有"
+    }
+  ],
+  "specifications": {
+    "test_count_01": [
+      [
+        "红",
+        "圆",
+        1
+      ],
+      [
+        "蓝",
+        "方",
+        1
+      ]
+    ],
+    "test_count_02": [
+      [
+        "蓝",
+        "方",
+        2
+      ],
+      [
+        "绿",
+        "圆",
+        1
+      ]
+    ],
+    "test_count_03": [
+      [
+        "绿",
+        "圆",
+        3
+      ],
+      [
+        "黄",
+        "方",
+        1
+      ]
+    ],
+    "test_count_04": [
+      [
+        "黄",
+        "方",
+        4
+      ],
+      [
+        "红",
+        "圆",
+        1
+      ]
+    ],
+    "test_count_05": [
+      [
+        "红",
+        "圆",
+        1
+      ],
+      [
+        "蓝",
+        "方",
+        1
+      ]
+    ],
+    "test_count_06": [
+      [
+        "蓝",
+        "方",
+        2
+      ],
+      [
+        "绿",
+        "圆",
+        1
+      ]
+    ],
+    "test_count_07": [
+      [
+        "绿",
+        "圆",
+        3
+      ],
+      [
+        "黄",
+        "方",
+        1
+      ]
+    ],
+    "test_count_08": [
+      [
+        "黄",
+        "方",
+        4
+      ],
+      [
+        "红",
+        "圆",
+        1
+      ]
+    ],
+    "test_count_09": [
+      [
+        "红",
+        "圆",
+        1
+      ],
+      [
+        "蓝",
+        "方",
+        1
+      ]
+    ],
+    "test_count_10": [
+      [
+        "蓝",
+        "方",
+        2
+      ],
+      [
+        "绿",
+        "圆",
+        1
+      ]
+    ],
+    "test_attr_01": [
+      [
+        "红",
+        "圆",
+        2
+      ],
+      [
+        "蓝",
+        "方",
+        1
+      ]
+    ],
+    "test_attr_02": [
+      [
+        "蓝",
+        "方",
+        2
+      ],
+      [
+        "绿",
+        "圆",
+        1
+      ]
+    ],
+    "test_attr_03": [
+      [
+        "绿",
+        "圆",
+        2
+      ],
+      [
+        "黄",
+        "方",
+        1
+      ]
+    ],
+    "test_attr_04": [
+      [
+        "黄",
+        "方",
+        2
+      ],
+      [
+        "红",
+        "圆",
+        1
+      ]
+    ],
+    "test_attr_05": [
+      [
+        "红",
+        "圆",
+        2
+      ],
+      [
+        "蓝",
+        "方",
+        1
+      ]
+    ],
+    "test_attr_06": [
+      [
+        "蓝",
+        "方",
+        2
+      ],
+      [
+        "绿",
+        "圆",
+        1
+      ]
+    ],
+    "test_attr_07": [
+      [
+        "绿",
+        "圆",
+        2
+      ],
+      [
+        "黄",
+        "方",
+        1
+      ]
+    ],
+    "test_attr_08": [
+      [
+        "黄",
+        "方",
+        2
+      ],
+      [
+        "红",
+        "圆",
+        1
+      ]
+    ],
+    "test_attr_09": [
+      [
+        "红",
+        "圆",
+        2
+      ],
+      [
+        "蓝",
+        "方",
+        1
+      ]
+    ],
+    "test_attr_10": [
+      [
+        "蓝",
+        "方",
+        2
+      ],
+      [
+        "绿",
+        "圆",
+        1
+      ]
+    ],
+    "test_exist_01": [
+      [
+        "红",
+        "圆",
+        1
+      ]
+    ],
+    "test_exist_02": [
+      [
+        "蓝",
+        "方",
+        2
+      ]
+    ],
+    "test_exist_03": [
+      [
+        "绿",
+        "圆",
+        3
+      ]
+    ],
+    "test_exist_04": [
+      [
+        "黄",
+        "方",
+        1
+      ]
+    ],
+    "test_exist_05": [
+      [
+        "红",
+        "圆",
+        2
+      ]
+    ],
+    "test_exist_06": [
+      [
+        "绿",
+        "方",
+        3
+      ]
+    ],
+    "test_exist_07": [
+      [
+        "黄",
+        "圆",
+        1
+      ]
+    ],
+    "test_exist_08": [
+      [
+        "红",
+        "方",
+        2
+      ]
+    ],
+    "test_exist_09": [
+      [
+        "蓝",
+        "圆",
+        3
+      ]
+    ],
+    "test_exist_10": [
+      [
+        "绿",
+        "方",
+        1
+      ]
+    ]
+  },
+  "image_sha256": {
+    "test_attr_01.png": "7726fa9e81ee82a523d317fb951a887393bcfbd35cbeee212bd9ff2976ad299a",
+    "test_attr_02.png": "81158432bc682c2d26725795929c7e9aa68a1cc179a02334c9dd9f6bf15b17cd",
+    "test_attr_03.png": "d22c240d9ac41f09ec77033c04ad41019a7aea569faf9c0e5e048fc8454e8c5f",
+    "test_attr_04.png": "2ec05f184634ca37951252bb251b3fb7d8848f0867b1ad99a798b27478c32d5b",
+    "test_attr_05.png": "f94be04e898f31983dab439eb29d99fa657097b68bd416c8f76cf7d3c4e9dcdd",
+    "test_attr_06.png": "1306cee224ff571fd59fa14d8bc26b2fbe617ebd3b59ca5d2112c5b18e87a2bc",
+    "test_attr_07.png": "1caa2ba6b9360f796af480b3265fe86df9e0a8c07879b1d14dc8d2c284cd3a49",
+    "test_attr_08.png": "3cbe0a5a4289edd9a062cae9b2256e8cb98ce330c9f5592f8fed86955ed4a3b3",
+    "test_attr_09.png": "3b599063c7fc0b5a994cf71b30f456ec28a73a338813191ca0a4d57d59bbbbfe",
+    "test_attr_10.png": "96c54eb530f5e84b0bc98f39cbeaf068c1112e6a51d81fa1b087532e27dc8ebd",
+    "test_count_01.png": "1dc475fde78f932bd00344df9149050522f58a2ea6cfc164c604b16489888397",
+    "test_count_02.png": "76c1f027a73b364f07b1e98f586e9888e2a0b49f5105dbb3506e11c81e789eb3",
+    "test_count_03.png": "804c5c98aecfe0f614a8ca5af432078c7ec97af75960de9fd5b25ec7f078977d",
+    "test_count_04.png": "e01a59dc5fd8bad7cf041ffa73d0972dded6e0dadd0575a585a4e00c99bbc717",
+    "test_count_05.png": "b1146dc89bd5307956c9bdd0febe6f29dee9fca5e388acb3da8f52e2d3570fda",
+    "test_count_06.png": "35754e00a5869b7774e4bca11cfa8136eca70ea15d15bc3d6a24984bca120c8b",
+    "test_count_07.png": "0f57f26ebb2d3604aeffe778e1bfcd742b41cd29824e7ec1c9b09715a235913b",
+    "test_count_08.png": "45f60b01176ec412368aca063c479d90802f8ab3e51d538c5bf6b4e665f48ee3",
+    "test_count_09.png": "d5accd8c50208d032bd068708366b2aa2df06f4e175a5543016d5c2482377049",
+    "test_count_10.png": "74330648f6637cb069922698b3d85ea1264e615410b5677623d0c06b8f4fa80e",
+    "test_exist_01.png": "8d072dc9133ab2e8496bdebe20f2e8e9c575cc1c3d139d1e7aa4665bdefc70c3",
+    "test_exist_02.png": "ae216eb975bd5a1efcb76ac7f5e9746714baec46609f57299bf88881dc085371",
+    "test_exist_03.png": "6a1f4653794926fd19c454a641009fb48f8995c48e32ce9354393ad97cb0828b",
+    "test_exist_04.png": "5fa69db1eaf8728f43a097857df0bb1a8f213f53e0ae474a8668e88de896d594",
+    "test_exist_05.png": "7ab62b8cb772d4233f5890f987ce7d77cf5808a77525f2b52271a57f9349c922",
+    "test_exist_06.png": "79af9cbab8f20a0f7e98124a5574b14ce5f6dccd3d1cc0cfe83b14465384becc",
+    "test_exist_07.png": "28071b6be7c62eb12e571c9bafbc5ba7bc1c05b2272c36d54d7ab6f0fb56b92b",
+    "test_exist_08.png": "a269c3a3d1b0a0512fd733be7dd96adf2bea3fd02b758670ffbc9de4f0087e61",
+    "test_exist_09.png": "747cfd1520d5be60de7ca7bf844098331a8f50622ec5f0ca44e9635fffec15b4",
+    "test_exist_10.png": "3c5d6452236730ac404ce49607130207a71c2cf9690bb2212afc69e9789fa708"
+  }
+}

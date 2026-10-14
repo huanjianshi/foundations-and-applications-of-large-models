@@ -1,6 +1,5 @@
 {
-  "model_id": "HuggingFaceTB/SmolVLM-256M-Instruct",
-  "python": "3.12.14",
+  "revision": "Matched NF4 evaluation and separately labeled EOS/learning-rate extensions",
   "packages": {
     "torch": "2.8.0+cu128",
     "transformers": "4.57.6",
@@ -9,38 +8,108 @@
     "bitsandbytes": "0.48.2",
     "pillow": "12.3.0"
   },
-  "cuda_runtime": "12.8",
+  "cuda": "12.8",
+  "original_questions": 15,
+  "independent_questions": 30,
+  "training_question_overlap": true,
   "image_seed": 42,
-  "training_seed": 42,
-  "source_image_size": [
-    256,
-    256
-  ],
+  "heldout_seed": 20261014,
   "processor_longest_edge": 512,
   "image_splitting": false,
-  "training_precision": "NF4/fp32 compute",
-  "evaluation_precision": "fp32",
-  "lora_rank": 8,
-  "lora_alpha": 16,
-  "sft_lora_dropout": 0.05,
-  "dpo_lora_dropout": 0.0,
-  "sft_steps": 60,
-  "dpo_steps": 40,
-  "sft_learning_rate": 0.0001,
-  "dpo_learning_rate": 5e-05,
-  "optimizer": "AdamW",
-  "batch_size": 1,
-  "beta_scan": [
-    0.05,
-    0.1,
-    0.5
-  ],
-  "preference_counts": [
-    12,
-    17
-  ],
-  "max_new_tokens": 24,
-  "do_sample": false,
-  "dpo_reference": "frozen quantized base, adapter disabled",
-  "evaluation_questions_overlap_training": true
+  "evaluation": "FP32 unadapted baseline; NF4 unadapted baseline and matched NF4 adapter inference",
+  "source_sha256": "1d84b5b621f35bbba667fa7f8c15c4cc9ecec3f8026bebdfa3fb70263e5d6b4b",
+  "scoring": "Guide substring and conservative target-aware semantic check; fidelity separate",
+  "fidelity_confirmed_by_user": true,
+  "training": {
+    "sft": {
+      "steps": 60,
+      "learning_rate": 0.0001,
+      "beta": 0.1,
+      "pairs": 15,
+      "supervise_eos": false,
+      "precision": "NF4/fp32 compute",
+      "source_sha256": "84dcafe77b9e0261e84ba19bb202563cf5b1025beb6036c04f76438a9d2b525e"
+    },
+    "dpo_original_b01": {
+      "steps": 40,
+      "learning_rate": 5e-05,
+      "beta": 0.1,
+      "pairs": 12,
+      "supervise_eos": false,
+      "precision": "NF4/fp32 compute",
+      "source_sha256": "84dcafe77b9e0261e84ba19bb202563cf5b1025beb6036c04f76438a9d2b525e"
+    },
+    "dpo_expanded_b01": {
+      "steps": 40,
+      "learning_rate": 5e-05,
+      "beta": 0.1,
+      "pairs": 17,
+      "supervise_eos": false,
+      "precision": "NF4/fp32 compute",
+      "source_sha256": "84dcafe77b9e0261e84ba19bb202563cf5b1025beb6036c04f76438a9d2b525e"
+    },
+    "dpo_expanded_b005": {
+      "steps": 40,
+      "learning_rate": 5e-05,
+      "beta": 0.05,
+      "pairs": 17,
+      "supervise_eos": false,
+      "precision": "NF4/fp32 compute",
+      "source_sha256": "84dcafe77b9e0261e84ba19bb202563cf5b1025beb6036c04f76438a9d2b525e"
+    },
+    "dpo_expanded_b05": {
+      "steps": 40,
+      "learning_rate": 5e-05,
+      "beta": 0.5,
+      "pairs": 17,
+      "supervise_eos": false,
+      "precision": "NF4/fp32 compute",
+      "source_sha256": "84dcafe77b9e0261e84ba19bb202563cf5b1025beb6036c04f76438a9d2b525e"
+    },
+    "dpo60_lr1e5": {
+      "steps": 40,
+      "learning_rate": 1e-05,
+      "beta": 0.1,
+      "pairs": 17,
+      "supervise_eos": false,
+      "precision": "NF4/fp32 compute",
+      "source_sha256": "ced6ac03d5749ae9dc6e5b67221c844e84379189732de312b30299dcf5fc274c"
+    },
+    "sft120": {
+      "steps": 120,
+      "learning_rate": 0.0001,
+      "beta": 0.1,
+      "pairs": 15,
+      "supervise_eos": false,
+      "precision": "NF4/fp32 compute",
+      "source_sha256": "ced6ac03d5749ae9dc6e5b67221c844e84379189732de312b30299dcf5fc274c"
+    },
+    "dpo120_lr1e5": {
+      "steps": 40,
+      "learning_rate": 1e-05,
+      "beta": 0.1,
+      "pairs": 17,
+      "supervise_eos": false,
+      "precision": "NF4/fp32 compute",
+      "source_sha256": "ced6ac03d5749ae9dc6e5b67221c844e84379189732de312b30299dcf5fc274c"
+    },
+    "sft120_eos": {
+      "steps": 120,
+      "learning_rate": 0.0001,
+      "beta": 0.1,
+      "pairs": 15,
+      "supervise_eos": true,
+      "precision": "NF4/fp32 compute",
+      "source_sha256": "412176db62626cbfcd6e24e2b9386d1224dc089735ccdf791665b148f595ebb5"
+    },
+    "dpo120_eos_lr1e5": {
+      "steps": 40,
+      "learning_rate": 1e-05,
+      "beta": 0.1,
+      "pairs": 17,
+      "supervise_eos": true,
+      "precision": "NF4/fp32 compute",
+      "source_sha256": "ced6ac03d5749ae9dc6e5b67221c844e84379189732de312b30299dcf5fc274c"
+    }
+  }
 }

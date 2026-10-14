@@ -1,113 +1,109 @@
 # Assignment 05 — SmolVLM QLoRA and DPO
 
-A synthetic visual-question-answering experiment using **HuggingFaceTB/SmolVLM-256M-Instruct**. A hand-written training loop performs 4-bit NF4 QLoRA supervised fine-tuning (SFT), followed by direct preference optimization (DPO). The code includes 15 generated images, 15 questions, 12 original preference pairs and 5 additional pairs.
+This corrected experiment uses HuggingFaceTB/SmolVLM-256M-Instruct for synthetic visual question answering. Real runs include the required SFT60/DPO40 matrix, 12 versus 17 preference pairs, beta=0.05/0.1/0.5, and explicitly separated training-budget, learning-rate and EOS extensions.
 
-## Environment and model preparation
+## Correction
 
-The checked run used Python 3.12, PyTorch 2.8.0+cu128, transformers 4.57.6, peft 0.18.0 and bitsandbytes 0.48.2. Full training requires a compatible NVIDIA GPU; this program does not silently replace NF4 training with CPU LoRA. A Blackwell GPU requires a compatible CUDA wheel, such as the CUDA 12.8 build below.
+The first publication loaded original FP32 base weights for NF4-trained adapters and incorrectly interpreted the resulting scores as SFT deterioration. Matched NF4 inference gives SFT60 **11/15** and expanded DPO40 **10/15**, rather than 3/15 and 6/15. Those previous conclusions are withdrawn. FP32 adapter evaluations are retained only as explicit precision controls.
+
+The SFT120 EOS-only extension and its DPO40 continuation at lr=1e-5 achieve **15/15** on the training-overlap questions, with **15/15** generations ending in EOS. This does not establish independent-test generalization. All ten training runs pass save/reload comparisons for 15 raw generations and answer losses.
+
+## Preparation
+
+The checked environment is Python 3.12, torch 2.8.0+cu128, transformers 4.57.6, peft 0.18.0 and bitsandbytes 0.48.2. A compatible NVIDIA CUDA GPU is required.
 
 ```bash
 python -m venv .venv
-# Activate on Windows PowerShell
-.venv\Scripts\Activate.ps1
-# Or on Linux
-# source .venv/bin/activate
+# Windows: .venv\Scripts\Activate.ps1
+# Linux: source .venv/bin/activate
 python -m pip install torch==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cu128
 python -m pip install -r requirements.txt
-```
-
-Download the model once. ONNX assets are not needed:
-
-```bash
 hf download HuggingFaceTB/SmolVLM-256M-Instruct --local-dir models/SmolVLM-256M-Instruct --include "*.json" "*.safetensors" "*.txt" "*.model" "*.jinja" --exclude "onnx/*"
 ```
 
-The experiment loads the model **offline** from this local directory. If using another location, supply `--model-path`. For slow downloads, set `HF_HUB_DISABLE_XET=1`; an alternate endpoint such as the course-provided `https://hf-mirror.com` can be set during downloading. Model weights are not included in this repository.
+Model loading is offline; use `--model-path` for another local cache. Model and adapter weights are excluded.
 
-## Usage
+## Reproduction
 
 ```bash
-python hw5_dpo.py --mode make_data
 python hw5_dpo.py --mode verify
-python hw5_dpo.py --dpo_check 1.2,0.8,0.9,0.6,0.1
-python hw5_dpo.py --mode infer
-python hw5_dpo.py --mode sft
-python hw5_dpo.py --mode dpo --pairs expanded --beta 0.1
-python hw5_dpo.py --mode eval
+python hw5_dpo.py --mode all
+python run_corrected_experiments.py --resume
+python summarize_results.py --input-dir results_corrected --output-dir summarized
 ```
 
-`sft` saves to `results/sft/adapter`; individual `dpo` saves to `results/dpo/adapter`. Default `eval` compares the baseline, SFT and the individually saved DPO adapter, or the expanded beta=0.1 adapter from the complete suite when an individual adapter is absent.
+For the complete matrix from a fresh directory, run `python run_corrected_experiments.py` without `--resume`. Resume keeps completed training checkpoints and reruns evaluations; a fresh full run replaces its named result directories. Each DPO branch starts from its declared SFT checkpoint. Default `eval` uses corrected SFT60 and expanded DPO40. EOS120 remains a separately labeled extension.
 
-Run the complete experiment matrix and aggregate its outputs:
+Individual extension commands:
 
 ```bash
-python hw5_dpo.py --mode all
-python summarize_results.py --input-dir results --output-dir results
+python hw5_dpo.py --mode sft --steps 120 --supervise-eos --roundtrip-check --output results_corrected/sft120_eos
+python hw5_dpo.py --mode dpo --steps 40 --learning-rate 1e-5 --supervise-eos --checkpoint-every 10 --roundtrip-check --sft-adapter results_corrected/sft120_eos/adapter --output results_corrected/dpo120_eos_lr1e5
+python hw5_dpo.py --mode eval --adapter results_corrected/dpo120_eos_lr1e5/adapter --output results_corrected/final_eval
 ```
 
-The suite generates the baseline, SFT, four independent DPO runs and evaluations of the five added questions. Each DPO branch reloads the **same SFT checkpoint**, rather than continuing from the previous DPO branch. Re-running the suite overwrites its run directories.
-
-Redraw figures and check the uploaded results without downloading the model or training:
+To validate uploaded measurements without downloading the model or training:
 
 ```bash
 python summarize_results.py --input-dir artifacts --output-dir reproduced
 ```
 
-## Controlled settings
+## Controls and metrics
 
-| Setting | Value |
-| --- | --- |
-| Synthetic images / training seed | 42 / 42 |
-| Image and processor size | 256×256 source images; one 512-pixel vision patch; no image splitting |
-| Generation | Greedy, at most 24 new tokens; fp32 baseline for all adapter evaluations |
-| LoRA | r=8, alpha=16; q/k/v/o language projections and matching q/k/v vision projections |
-| SFT | 15 samples, 60 optimizer steps, batch=1, AdamW learning rate 1e-4, dropout=0.05 |
-| DPO | 40 optimizer steps, batch=1, AdamW learning rate 5e-5, dropout disabled |
-| DPO reference | Frozen NF4 base with its adapter disabled, not the SFT policy |
-| Preference data comparison | 12 pairs versus 17 pairs, beta=0.1 |
-| Beta scan | 17 pairs, beta=0.05 / 0.1 / 0.5 |
+All runs use seed42, original 256x256 images, a single 512-pixel vision patch without splitting, greedy generation and at most 24 new tokens. LoRA uses r=8, alpha=16, q/k/v/o projections (including matching vision q/k/v), SFT dropout0.05 and batch1. Required SFT uses 60 updates at lr=1e-4; required DPO uses 40 at lr=5e-5 with dropout disabled. The reference is the frozen NF4 base with its adapter disabled, following the guide. It is not silently replaced with a frozen SFT policy. Summed answer-token log probabilities and stable `-logsigmoid(margin)` are used.
 
-Only answer tokens contribute to SFT loss and sequence log probabilities. DPO uses **summed** answer-token log probabilities and `-logsigmoid(margin)`. Reference probabilities are computed without gradients and cached. The optimizer is ordinary AdamW, not a paged optimizer. `--mode verify` checks arithmetic, chosen/rejected gradient direction and the original substring scorer's existence false positive.
+`--eval-precision auto` uses FP32 for an unadapted baseline and NF4 for adapters. Explicit `fp32` adapter inference records the mismatch. `--supervise-eos` only appends the correct EOS to the original answer encoding; it does not change the assistant prefix. No generated answers are edited or replaced to improve scores.
 
-## Checked results
+Guide substring matching is preserved alongside a target-aware task check. The task check rejects unrelated text/table answers, yes/no contradictions and mismatched colors, and accepts equivalent English shape/number answers. Fidelity remains separate from answer correctness. The nine corrected answers were reviewed and the suggested scores confirmed by the user.
 
-Two scoring conventions are retained: the course-guide Chinese substring matcher and a fact check that accepts equivalent English answers while rejecting contradictions and responses about a different object.
+## Original 15 questions
 
-| Stage | Guide matcher | Fact check |
-| --- | --- | --- |
-| Baseline | 0/15 | 7/15 |
-| SFT, 60 steps | 3/15 | 3/15 |
-| DPO, 12 pairs, beta=0.1 | 4/15 | 4/15 |
-| DPO, 17 pairs, beta=0.1 | 5/15 | 6/15 |
-| DPO, 17 pairs, beta=0.05 | 4/15 | 5/15 |
-| DPO, 17 pairs, beta=0.5 | 4/15 | 4/15 |
+| Stage | Guide match | Task correct | Ended in EOS |
+|---|---:|---:|---:|
+| baseline | 0/15 | 7/15 | 9/15 |
+| baseline_nf4 | 0/15 | 7/15 | 14/15 |
+| sft | 11/15 | 11/15 | 14/15 |
+| dpo_original_b01 | 9/15 | 10/15 | 15/15 |
+| dpo_expanded_b01 | 10/15 | 10/15 | 14/15 |
+| dpo_expanded_b005 | 10/15 | 10/15 | 14/15 |
+| dpo_expanded_b05 | 10/15 | 10/15 | 15/15 |
+| dpo60_lr1e5 | 11/15 | 11/15 | 15/15 |
+| sft120 | 15/15 | 15/15 | 13/15 |
+| dpo120_lr1e5 | 15/15 | 15/15 | 13/15 |
+| sft120_eos | 15/15 | 15/15 | 15/15 |
+| dpo120_eos_lr1e5 | 15/15 | 15/15 | 15/15 |
 
-The baseline predominantly answers in English, so Chinese-only matching understates its task accuracy. SFT reduces training loss but worsens fact accuracy. Expanded DPO partially recovers that accuracy without exceeding the baseline. The beta=0.5 run has the lowest final DPO loss but lower accuracy than beta=0.1; losses across different beta values are scaled differently and cannot alone select a better policy.
+Beta branches all score 10/15 under matched NF4 inference; the former claim that beta0.1 beats beta0.5 on accuracy is withdrawn. Losses across beta values are scaled differently. Required DPO can hurt chosen answer probabilities while suppressing rejected probabilities more strongly; lower loss alone does not establish better generation.
 
-The five added questions obtain 1/5 fact-correct answers with SFT and 2/5 after expanded DPO. The model still answers “有。” when asked about an absent blue circle. The three-question fidelity sample was reviewed and confirmed by the human user; it is too small to represent overall preference performance.
+## Independent test
 
-Training and evaluation questions overlap. These are classroom behavior comparisons, **not independent-test generalization measurements**. The final executable adds stricter scoring and a three-stage default evaluation after the recorded training; training and generation settings are unchanged. A 45-output evaluation rerun reproduced the recorded three-stage outputs exactly.
+Thirty new images and questions are generated with seed20261014: 10 count, 10 attribute, 10 existence (balanced yes/no). They use nonoverlapping jittered layouts and new wording. The final model/configuration was fixed before test evaluation; test questions never enter training or checkpoint selection. Both visual layout and wording change, so this is a limited distribution-shift test.
 
-## Reproducibility artifacts
+| Stage | Task correct |
+|---|---:|
+| baseline | 9/30 |
+| baseline_nf4 | 7/30 |
+| sft | 10/30 |
+| dpo_expanded_b01 | 10/30 |
+| sft120_eos | 7/30 |
+| dpo120_eos_lr1e5 | 7/30 |
 
-- [Aggregate results](artifacts/results.csv)
-- [All 90 original-question outputs](artifacts/all_predictions.csv)
-- [20 added-question outputs](artifacts/probe_predictions.csv)
-- [Confirmed fidelity scores](artifacts/fidelity_scores.csv)
-- [DPO arithmetic and gradient checks](artifacts/dpo_checks.json)
-- [Parameter statistics](artifacts/parameter_stats.json)
-- [Configuration and software versions](artifacts/experiment_config.json)
-- [SFT history](artifacts/history_sft.csv)
-- [Original-pair DPO history](artifacts/history_dpo_original_b01.csv)
-- [Expanded-pair DPO history, beta=0.1](artifacts/history_dpo_expanded_b01.csv)
-- [Expanded-pair DPO history, beta=0.05](artifacts/history_dpo_expanded_b005.csv)
-- [Expanded-pair DPO history, beta=0.5](artifacts/history_dpo_expanded_b05.csv)
-- [Figures](figures/)
+The original 15 questions overlap SFT training. Their 15/15 score must not be presented as generalization accuracy. All test failures are retained.
 
-The report, guide, template, lecture slides, model and adapter weights, local-path logs, caches and document-generation utilities are excluded.
+## Evidence
+
+- [Aggregate original-question results](artifacts/results.csv) and [180 raw outputs](artifacts/all_predictions.csv)
+- [Independent-test results](artifacts/heldout_results.csv), [180 raw test outputs](artifacts/heldout_predictions.csv), and [fixed test manifest](artifacts/heldout_manifest.json)
+- [25 added-question outputs](artifacts/probe_predictions.csv)
+- [DPO checkpoints](artifacts/checkpoint_results.csv) and [FP32 precision-control outputs](artifacts/precision_control_predictions.csv)
+- [Fidelity scores and confirmation status](artifacts/fidelity_scores.csv)
+- [Roundtrip checks](artifacts/roundtrip_checks.json), [DPO arithmetic checks](artifacts/dpo_checks.json), [parameters](artifacts/parameter_stats.json), [configuration](artifacts/experiment_config.json)
+- [Histories](artifacts/) contain 580 optimizer updates; [figures](figures/) show recorded trajectories.
+
+The report, guide, template, lecture slides, student identifiers, local-path logs and caches are excluded. Training manifests record actual source hashes; required experiments precede the final target-aware scorer refinement, which does not change model updates or generation.
 
 ## References
 
-- [SmolVLM model card](https://huggingface.co/HuggingFaceTB/SmolVLM-256M-Instruct)
-- [Direct Preference Optimization](https://arxiv.org/abs/2305.18290)
-- [QLoRA](https://arxiv.org/abs/2305.14314)
+- [DPO paper](https://arxiv.org/abs/2305.18290)
+- [QLoRA paper](https://arxiv.org/abs/2305.14314)
+- [PEFT quantization documentation](https://huggingface.co/docs/peft/developer_guides/quantization)

@@ -1,0 +1,82 @@
+{
+  "sft": {
+    "all_15_generations_equal": true,
+    "max_answer_loss_difference": 0.0,
+    "loss_tolerance": 0.0001,
+    "saved_precision": "nf4",
+    "reloaded_precision": "nf4",
+    "passed": true
+  },
+  "dpo_original_b01": {
+    "all_15_generations_equal": true,
+    "max_answer_loss_difference": 0.0,
+    "loss_tolerance": 0.0001,
+    "saved_precision": "nf4",
+    "reloaded_precision": "nf4",
+    "passed": true
+  },
+  "dpo_expanded_b01": {
+    "all_15_generations_equal": true,
+    "max_answer_loss_difference": 0.0,
+    "loss_tolerance": 0.0001,
+    "saved_precision": "nf4",
+    "reloaded_precision": "nf4",
+    "passed": true
+  },
+  "dpo_expanded_b005": {
+    "all_15_generations_equal": true,
+    "max_answer_loss_difference": 0.0,
+    "loss_tolerance": 0.0001,
+    "saved_precision": "nf4",
+    "reloaded_precision": "nf4",
+    "passed": true
+  },
+  "dpo_expanded_b05": {
+    "all_15_generations_equal": true,
+    "max_answer_loss_difference": 0.0,
+    "loss_tolerance": 0.0001,
+    "saved_precision": "nf4",
+    "reloaded_precision": "nf4",
+    "passed": true
+  },
+  "dpo60_lr1e5": {
+    "all_15_generations_equal": true,
+    "max_answer_loss_difference": 0.0,
+    "loss_tolerance": 0.0001,
+    "saved_precision": "nf4",
+    "reloaded_precision": "nf4",
+    "passed": true
+  },
+  "sft120": {
+    "all_15_generations_equal": true,
+    "max_answer_loss_difference": 0.0,
+    "loss_tolerance": 0.0001,
+    "saved_precision": "nf4",
+    "reloaded_precision": "nf4",
+    "passed": true
+  },
+  "dpo120_lr1e5": {
+    "all_15_generations_equal": true,
+    "max_answer_loss_difference": 0.0,
+    "loss_tolerance": 0.0001,
+    "saved_precision": "nf4",
+    "reloaded_precision": "nf4",
+    "passed": true
+  },
+  "sft120_eos": {
+    "all_15_generations_equal": true,
+    "max_answer_loss_difference": 0.0,
+    "loss_tolerance": 0.0001,
+    "saved_precision": "nf4",
+    "reloaded_precision": "nf4",
+    "passed": true
+  },
+  "dpo120_eos_lr1e5": {
+    "all_15_generations_equal": true,
+    "max_answer_loss_difference": 0.0,
+    "loss_tolerance": 0.0001,
+    "saved_precision": "nf4",
+    "reloaded_precision": "nf4",
+    "passed": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "final_stage": "dpo120_eos_lr1e5",
+  "sft_steps": 120,
+  "dpo_steps": 40,
+  "eos_supervision": true,
+  "dpo_learning_rate": 1e-05,
+  "beta": 0.1,
+  "selection_data": "original training-overlap questions only",
+  "heldout_used_for_selection": false
+}

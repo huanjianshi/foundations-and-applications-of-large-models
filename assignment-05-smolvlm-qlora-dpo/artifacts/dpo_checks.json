@@ -40,5 +40,6 @@
   "chosen_gradient": -0.05000000074505806,
   "rejected_gradient": 0.05000000074505806,
   "gradient_direction_correct": true,
-  "guide_exist_false_positive_reproduced": true
+  "guide_exist_false_positive_reproduced": true,
+  "unrelated_target_rejected": true
 }

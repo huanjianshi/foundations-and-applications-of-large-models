@@ -1,25 +1,49 @@
-﻿stage,label,type,n,guide_correct,rule_correct,fact_correct
-baseline,基线,count,5,0,2,2
-baseline,基线,attr,5,0,3,3
-baseline,基线,exist,5,0,2,2
-baseline,基线,total,15,0,7,7
-sft,SFT,count,5,1,1,1
-sft,SFT,attr,5,0,0,0
-sft,SFT,exist,5,2,2,2
-sft,SFT,total,15,3,3,3
-dpo_original_b01,DPO原12组,count,5,2,2,2
-dpo_original_b01,DPO原12组,attr,5,0,0,0
-dpo_original_b01,DPO原12组,exist,5,2,2,2
-dpo_original_b01,DPO原12组,total,15,4,4,4
-dpo_expanded_b01,DPO扩展17组 β=0.1,count,5,3,3,3
-dpo_expanded_b01,DPO扩展17组 β=0.1,attr,5,0,1,1
-dpo_expanded_b01,DPO扩展17组 β=0.1,exist,5,2,2,2
-dpo_expanded_b01,DPO扩展17组 β=0.1,total,15,5,6,6
-dpo_expanded_b005,DPO扩展17组 β=0.05,count,5,2,2,2
-dpo_expanded_b005,DPO扩展17组 β=0.05,attr,5,0,1,1
-dpo_expanded_b005,DPO扩展17组 β=0.05,exist,5,2,2,2
-dpo_expanded_b005,DPO扩展17组 β=0.05,total,15,4,5,5
-dpo_expanded_b05,DPO扩展17组 β=0.5,count,5,1,1,1
-dpo_expanded_b05,DPO扩展17组 β=0.5,attr,5,1,1,1
-dpo_expanded_b05,DPO扩展17组 β=0.5,exist,5,2,2,2
-dpo_expanded_b05,DPO扩展17组 β=0.5,total,15,4,4,4
+﻿stage,label,type,n,guide_correct,rule_correct,fact_correct,ended_by_eos,reached_token_limit
+baseline,基线,count,5,0,2,2,4,1
+baseline,基线,attr,5,0,3,3,0,5
+baseline,基线,exist,5,0,2,2,5,0
+baseline,基线,total,15,0,7,7,9,6
+baseline_nf4,NF4基线,count,5,0,1,1,5,0
+baseline_nf4,NF4基线,attr,5,0,4,4,4,1
+baseline_nf4,NF4基线,exist,5,0,2,2,5,0
+baseline_nf4,NF4基线,total,15,0,7,7,14,1
+sft,SFT,count,5,4,4,4,5,0
+sft,SFT,attr,5,4,4,4,5,0
+sft,SFT,exist,5,3,3,3,4,1
+sft,SFT,total,15,11,11,11,14,1
+dpo_original_b01,DPO原12组,count,5,5,5,5,5,0
+dpo_original_b01,DPO原12组,attr,5,3,3,3,5,0
+dpo_original_b01,DPO原12组,exist,5,1,2,2,5,0
+dpo_original_b01,DPO原12组,total,15,9,10,10,15,0
+dpo_expanded_b01,DPO扩展17组 β=0.1,count,5,5,5,5,5,0
+dpo_expanded_b01,DPO扩展17组 β=0.1,attr,5,3,3,3,5,0
+dpo_expanded_b01,DPO扩展17组 β=0.1,exist,5,2,2,2,4,1
+dpo_expanded_b01,DPO扩展17组 β=0.1,total,15,10,10,10,14,1
+dpo_expanded_b005,DPO扩展17组 β=0.05,count,5,5,5,5,5,0
+dpo_expanded_b005,DPO扩展17组 β=0.05,attr,5,3,3,3,5,0
+dpo_expanded_b005,DPO扩展17组 β=0.05,exist,5,2,2,2,4,1
+dpo_expanded_b005,DPO扩展17组 β=0.05,total,15,10,10,10,14,1
+dpo_expanded_b05,DPO扩展17组 β=0.5,count,5,5,5,5,5,0
+dpo_expanded_b05,DPO扩展17组 β=0.5,attr,5,3,3,3,5,0
+dpo_expanded_b05,DPO扩展17组 β=0.5,exist,5,2,2,2,5,0
+dpo_expanded_b05,DPO扩展17组 β=0.5,total,15,10,10,10,15,0
+dpo60_lr1e5,SFT60+DPO低学习率,count,5,4,4,4,5,0
+dpo60_lr1e5,SFT60+DPO低学习率,attr,5,4,4,4,5,0
+dpo60_lr1e5,SFT60+DPO低学习率,exist,5,3,3,3,5,0
+dpo60_lr1e5,SFT60+DPO低学习率,total,15,11,11,11,15,0
+sft120,SFT120,count,5,5,5,5,5,0
+sft120,SFT120,attr,5,5,5,5,5,0
+sft120,SFT120,exist,5,5,5,5,3,2
+sft120,SFT120,total,15,15,15,15,13,2
+dpo120_lr1e5,SFT120+DPO低学习率,count,5,5,5,5,5,0
+dpo120_lr1e5,SFT120+DPO低学习率,attr,5,5,5,5,5,0
+dpo120_lr1e5,SFT120+DPO低学习率,exist,5,5,5,5,3,2
+dpo120_lr1e5,SFT120+DPO低学习率,total,15,15,15,15,13,2
+sft120_eos,SFT120加EOS,count,5,5,5,5,5,0
+sft120_eos,SFT120加EOS,attr,5,5,5,5,5,0
+sft120_eos,SFT120加EOS,exist,5,5,5,5,5,0
+sft120_eos,SFT120加EOS,total,15,15,15,15,15,0
+dpo120_eos_lr1e5,SFT120加EOS+DPO,count,5,5,5,5,5,0
+dpo120_eos_lr1e5,SFT120加EOS+DPO,attr,5,5,5,5,5,0
+dpo120_eos_lr1e5,SFT120加EOS+DPO,exist,5,5,5,5,5,0
+dpo120_eos_lr1e5,SFT120加EOS+DPO,total,15,15,15,15,15,0

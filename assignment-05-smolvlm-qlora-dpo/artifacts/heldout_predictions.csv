@@ -1,0 +1,199 @@
+﻿stage,id,type,img,q,gold,prediction,generated_tokens,ended_by_eos,reached_token_limit,guide_correct,initial_rule_correct,fact_correct
+baseline,H01,count,test_count_01,请数一数，图片里红色圆形一共有多少个？,1,The answer is 1.,7,1,0,1,1,1
+baseline,H02,count,test_count_02,请数一数，图片里蓝色方形一共有多少个？,2,The answer is: 1,7,1,0,0,0,0
+baseline,H03,count,test_count_03,请数一数，图片里绿色圆形一共有多少个？,3,1.0.,6,1,0,0,0,0
+baseline,H04,count,test_count_04,请数一数，图片里黄色方形一共有多少个？,4,1.0.,6,1,0,0,0,0
+baseline,H05,count,test_count_05,请数一数，图片里红色圆形一共有多少个？,1,1.1.,6,1,0,1,1,0
+baseline,H06,count,test_count_06,请数一数，图片里蓝色方形一共有多少个？,2,1.0.,6,1,0,0,0,0
+baseline,H07,count,test_count_07,请数一数，图片里绿色圆形一共有多少个？,3,The number of green squares in the image is 1.,13,1,0,0,0,0
+baseline,H08,count,test_count_08,请数一数，图片里黄色方形一共有多少个？,4,1.0.,6,1,0,0,0,0
+baseline,H09,count,test_count_09,请数一数，图片里红色圆形一共有多少个？,1,1.1.,6,1,0,1,1,0
+baseline,H10,count,test_count_10,请数一数，图片里蓝色方形一共有多少个？,2,1,3,1,0,0,0,0
+baseline,H11,attr,test_attr_01,请判断图片中红色图形的形状。,圆形,The image contains a square with a red circle inside it. The square is positioned in the center of the image. The,24,0,1,0,1,1
+baseline,H12,attr,test_attr_02,请判断图片中蓝色图形的形状。,方形,The image contains a square-shaped object with a green border. The square is positioned in the center of the image and,24,0,1,0,1,0
+baseline,H13,attr,test_attr_03,请判断图片中绿色图形的形状。,圆形,The image contains a square with a green circle inside it. The square is positioned in the center of the image. The,24,0,1,0,1,1
+baseline,H14,attr,test_attr_04,请判断图片中黄色图形的形状。,方形,The image contains a square with a red dot in the center. The square is positioned in the center of the image.,24,0,1,0,1,0
+baseline,H15,attr,test_attr_05,请判断图片中红色图形的形状。,圆形,其中，图片中的红色图形的形状,24,0,1,0,0,0
+baseline,H16,attr,test_attr_06,请判断图片中蓝色图形的形状。,方形,1.0.,6,1,0,0,0,0
+baseline,H17,attr,test_attr_07,请判断图片中绿色图形的形状。,圆形,The image shows a square-shaped object with a green circle inside it. The square is positioned in the center of the,24,0,1,0,1,1
+baseline,H18,attr,test_attr_08,请判断图片中黄色图形的形状。,方形,"1. The image is a square with a red dot in the center.
+2. The square is filled with",24,0,1,0,1,0
+baseline,H19,attr,test_attr_09,请判断图片中红色图形的形状。,圆形,The image contains a square shape with a red dot in the center. The square shape is a square with a red dot,24,0,1,0,0,0
+baseline,H20,attr,test_attr_10,请判断图片中蓝色图形的形状。,方形,在图片中，蓝色图形的形状是,24,0,1,0,0,0
+baseline,H21,exist,test_exist_01,这张图片中存在红色圆形吗？,有,"Yes, the image contains a red circle.",10,1,0,0,1,1
+baseline,H22,exist,test_exist_02,这张图片中存在蓝色方形吗？,有,"Yes, the image contains a blue square.",10,1,0,0,1,1
+baseline,H23,exist,test_exist_03,这张图片中存在绿色圆形吗？,有,"Yes, the image contains a green color.",10,1,0,0,1,1
+baseline,H24,exist,test_exist_04,这张图片中存在黄色方形吗？,有,"Yes, the image contains a yellow square.",10,1,0,0,1,1
+baseline,H25,exist,test_exist_05,这张图片中存在红色圆形吗？,有,"Yes, the image contains a red circle.",10,1,0,0,1,1
+baseline,H26,exist,test_exist_06,这张图片中存在蓝色方形吗？,没有,Yes.,3,1,0,0,0,0
+baseline,H27,exist,test_exist_07,这张图片中存在绿色圆形吗？,没有,Yes.,3,1,0,0,0,0
+baseline,H28,exist,test_exist_08,这张图片中存在黄色方形吗？,没有,"Yes, the image contains a red square.",10,1,0,0,0,0
+baseline,H29,exist,test_exist_09,这张图片中存在红色圆形吗？,没有,"Yes, the image contains a large, bright, and vibrant color circle. The circle is the main focus of the image",24,0,1,0,0,0
+baseline,H30,exist,test_exist_10,这张图片中存在蓝色方形吗？,没有,Yes.,3,1,0,0,0,0
+baseline_nf4,H01,count,test_count_01,请数一数，图片里红色圆形一共有多少个？,1,"The image is a screenshot of a page that contains a list of items. The list is titled ""P"" and is",24,0,1,0,0,0
+baseline_nf4,H02,count,test_count_02,请数一数，图片里蓝色方形一共有多少个？,2,The image contains a square with a circle in the center.,13,1,0,0,0,0
+baseline_nf4,H03,count,test_count_03,请数一数，图片里绿色圆形一共有多少个？,3,1.,4,1,0,0,0,0
+baseline_nf4,H04,count,test_count_04,请数一数，图片里黄色方形一共有多少个？,4,Answer: 5,5,1,0,0,0,0
+baseline_nf4,H05,count,test_count_05,请数一数，图片里红色圆形一共有多少个？,1,1.111111111111111111111,24,0,1,1,0,0
+baseline_nf4,H06,count,test_count_06,请数一数，图片里蓝色方形一共有多少个？,2,1.111111111111111111111,24,0,1,0,0,0
+baseline_nf4,H07,count,test_count_07,请数一数，图片里绿色圆形一共有多少个？,3,None,2,1,0,0,0,0
+baseline_nf4,H08,count,test_count_08,请数一数，图片里黄色方形一共有多少个？,4,"1
+- 1
+- 1
+- 1
+- 1
+- 1
+-",24,0,1,0,0,0
+baseline_nf4,H09,count,test_count_09,请数一数，图片里红色圆形一共有多少个？,1,1.111111111111111111111,24,0,1,1,0,0
+baseline_nf4,H10,count,test_count_10,请数一数，图片里蓝色方形一共有多少个？,2,"1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1",24,0,1,0,0,0
+baseline_nf4,H11,attr,test_attr_01,请判断图片中红色图形的形状。,圆形,The image contains a square with a red circle inside it.,13,1,0,0,1,1
+baseline_nf4,H12,attr,test_attr_02,请判断图片中蓝色图形的形状。,方形,The image is a square image with a square background.,12,1,0,0,0,0
+baseline_nf4,H13,attr,test_attr_03,请判断图片中绿色图形的形状。,圆形,The image contains a square.,7,1,0,0,0,0
+baseline_nf4,H14,attr,test_attr_04,请判断图片中黄色图形的形状。,方形,The image contains a square with a red circle in the center.,14,1,0,0,0,0
+baseline_nf4,H15,attr,test_attr_05,请判断图片中红色图形的形状。,圆形,The image contains a square with a red circle in the center.,14,1,0,0,1,1
+baseline_nf4,H16,attr,test_attr_06,请判断图片中蓝色图形的形状。,方形,The image contains a square and a circle.,10,1,0,0,0,0
+baseline_nf4,H17,attr,test_attr_07,请判断图片中绿色图形的形状。,圆形,The image is a square with a square in the center.,13,1,0,0,0,0
+baseline_nf4,H18,attr,test_attr_08,请判断图片中黄色图形的形状。,方形,The image is a square with a circle in the center.,13,1,0,0,0,0
+baseline_nf4,H19,attr,test_attr_09,请判断图片中红色图形的形状。,圆形,The image contains a square with a red dot in the center.,14,1,0,0,0,0
+baseline_nf4,H20,attr,test_attr_10,请判断图片中蓝色图形的形状。,方形,The image contains a square with a circle inside it.,12,1,0,0,0,0
+baseline_nf4,H21,exist,test_exist_01,这张图片中存在红色圆形吗？,有,Yes.,3,1,0,0,1,1
+baseline_nf4,H22,exist,test_exist_02,这张图片中存在蓝色方形吗？,有,Yes.,3,1,0,0,1,1
+baseline_nf4,H23,exist,test_exist_03,这张图片中存在绿色圆形吗？,有,Yes.,3,1,0,0,1,1
+baseline_nf4,H24,exist,test_exist_04,这张图片中存在黄色方形吗？,有,Yes.,3,1,0,0,1,1
+baseline_nf4,H25,exist,test_exist_05,这张图片中存在红色圆形吗？,有,Yes.,3,1,0,0,1,1
+baseline_nf4,H26,exist,test_exist_06,这张图片中存在蓝色方形吗？,没有,Yes.,3,1,0,0,0,0
+baseline_nf4,H27,exist,test_exist_07,这张图片中存在绿色圆形吗？,没有,Yes.,3,1,0,0,0,0
+baseline_nf4,H28,exist,test_exist_08,这张图片中存在黄色方形吗？,没有,Yes.,3,1,0,0,0,0
+baseline_nf4,H29,exist,test_exist_09,这张图片中存在红色圆形吗？,没有,Yes.,3,1,0,0,0,0
+baseline_nf4,H30,exist,test_exist_10,这张图片中存在蓝色方形吗？,没有,Yes.,3,1,0,0,0,0
+sft,H01,count,test_count_01,请数一数，图片里红色圆形一共有多少个？,1,2。。。。。。。。。。。。。。。。。。。。。。。,24,0,1,0,0,0
+sft,H02,count,test_count_02,请数一数，图片里蓝色方形一共有多少个？,2,2。,3,1,0,1,1,1
+sft,H03,count,test_count_03,请数一数，图片里绿色圆形一共有多少个？,3,3。。。。。。。。。。。。。。。。。。。。。。。,24,0,1,1,1,1
+sft,H04,count,test_count_04,请数一数，图片里黄色方形一共有多少个？,4,2。,3,1,0,0,0,0
+sft,H05,count,test_count_05,请数一数，图片里红色圆形一共有多少个？,1,1。,3,1,0,1,1,1
+sft,H06,count,test_count_06,请数一数，图片里蓝色方形一共有多少个？,2,2。,3,1,0,1,1,1
+sft,H07,count,test_count_07,请数一数，图片里绿色圆形一共有多少个？,3,4。,3,1,0,0,0,0
+sft,H08,count,test_count_08,请数一数，图片里黄色方形一共有多少个？,4,5,2,1,0,0,0,0
+sft,H09,count,test_count_09,请数一数，图片里红色圆形一共有多少个？,1,2。,3,1,0,0,0,0
+sft,H10,count,test_count_10,请数一数，图片里蓝色方形一共有多少个？,2,3。,3,1,0,0,0,0
+sft,H11,attr,test_attr_01,请判断图片中红色图形的形状。,圆形,面色图形。,10,1,0,0,0,0
+sft,H12,attr,test_attr_02,请判断图片中蓝色图形的形状。,方形,图片中蓝色。,12,1,0,0,0,0
+sft,H13,attr,test_attr_03,请判断图片中绿色图形的形状。,圆形,瓦瓦。,8,1,0,0,0,0
+sft,H14,attr,test_attr_04,请判断图片中黄色图形的形状。,方形,Pink.,4,1,0,0,0,0
+sft,H15,attr,test_attr_05,请判断图片中红色图形的形状。,圆形,圆形。,6,1,0,1,1,1
+sft,H16,attr,test_attr_06,请判断图片中蓝色图形的形状。,方形,图片中蓝色。,12,1,0,0,0,0
+sft,H17,attr,test_attr_07,请判断图片中绿色图形的形状。,圆形,2.,3,1,0,0,0,0
+sft,H18,attr,test_attr_08,请判断图片中黄色图形的形状。,方形,青石。,7,1,0,0,0,0
+sft,H19,attr,test_attr_09,请判断图片中红色图形的形状。,圆形,三个。,5,1,0,0,0,0
+sft,H20,attr,test_attr_10,请判断图片中蓝色图形的形状。,方形,图片中蓝色。,12,1,0,0,0,0
+sft,H21,exist,test_exist_01,这张图片中存在红色圆形吗？,有,Yes。。。。。。。。。。。。。。。。。。。。。。。,24,0,1,0,1,1
+sft,H22,exist,test_exist_02,这张图片中存在蓝色方形吗？,有,有。,3,1,0,1,1,1
+sft,H23,exist,test_exist_03,这张图片中存在绿色圆形吗？,有,Yes。。。。。。。。。。。。。。。。。。。。。。。,24,0,1,0,1,1
+sft,H24,exist,test_exist_04,这张图片中存在黄色方形吗？,有,Yes。。。。。。。。。。。。。。。。。。。。。。。,24,0,1,0,1,1
+sft,H25,exist,test_exist_05,这张图片中存在红色圆形吗？,有,Yes。。。。。。。。。。。。。。。。。。。。。。。,24,0,1,0,1,1
+sft,H26,exist,test_exist_06,这张图片中存在蓝色方形吗？,没有,有。。。。。。。。。。。。。。。。。。。。。。。,24,0,1,0,0,0
+sft,H27,exist,test_exist_07,这张图片中存在绿色圆形吗？,没有,Yes。。。。。。。。。。。。。。。。。。。。。。。,24,0,1,0,0,0
+sft,H28,exist,test_exist_08,这张图片中存在黄色方形吗？,没有,Yes。。。。。。。。。。。。。。。。。。。。。。。,24,0,1,0,0,0
+sft,H29,exist,test_exist_09,这张图片中存在红色圆形吗？,没有,Yes。。。。。。。。。。。。。。。。。。。。。。。,24,0,1,0,0,0
+sft,H30,exist,test_exist_10,这张图片中存在蓝色方形吗？,没有,Yes。。。。。。。。。。。。。。。。。。。。。。。,24,0,1,0,0,0
+dpo_expanded_b01,H01,count,test_count_01,请数一数，图片里红色圆形一共有多少个？,1,1。,3,1,0,1,1,1
+dpo_expanded_b01,H02,count,test_count_02,请数一数，图片里蓝色方形一共有多少个？,2,1.,4,1,0,0,0,0
+dpo_expanded_b01,H03,count,test_count_03,请数一数，图片里绿色圆形一共有多少个？,3,2,2,1,0,0,0,0
+dpo_expanded_b01,H04,count,test_count_04,请数一数，图片里黄色方形一共有多少个？,4,2.,3,1,0,0,0,0
+dpo_expanded_b01,H05,count,test_count_05,请数一数，图片里红色圆形一共有多少个？,1,1.,3,1,0,1,1,1
+dpo_expanded_b01,H06,count,test_count_06,请数一数，图片里蓝色方形一共有多少个？,2,2.,4,1,0,1,1,1
+dpo_expanded_b01,H07,count,test_count_07,请数一数，图片里绿色圆形一共有多少个？,3,4。,3,1,0,0,0,0
+dpo_expanded_b01,H08,count,test_count_08,请数一数，图片里黄色方形一共有多少个？,4,2,2,1,0,0,0,0
+dpo_expanded_b01,H09,count,test_count_09,请数一数，图片里红色圆形一共有多少个？,1,一。,3,1,0,0,0,1
+dpo_expanded_b01,H10,count,test_count_10,请数一数，图片里蓝色方形一共有多少个？,2,一。,3,1,0,0,0,0
+dpo_expanded_b01,H11,attr,test_attr_01,请判断图片中红色图形的形状。,圆形,方形。,5,1,0,0,0,0
+dpo_expanded_b01,H12,attr,test_attr_02,请判断图片中蓝色图形的形状。,方形,11.,4,1,0,0,0,0
+dpo_expanded_b01,H13,attr,test_attr_03,请判断图片中绿色图形的形状。,圆形,图片中绿色图形。,14,1,0,0,0,0
+dpo_expanded_b01,H14,attr,test_attr_04,请判断图片中黄色图形的形状。,方形,Square.,4,1,0,0,1,1
+dpo_expanded_b01,H15,attr,test_attr_05,请判断图片中红色图形的形状。,圆形,方形。,5,1,0,0,0,0
+dpo_expanded_b01,H16,attr,test_attr_06,请判断图片中蓝色图形的形状。,方形,2.,3,1,0,0,0,0
+dpo_expanded_b01,H17,attr,test_attr_07,请判断图片中绿色图形的形状。,圆形,双。,4,1,0,0,0,0
+dpo_expanded_b01,H18,attr,test_attr_08,请判断图片中黄色图形的形状。,方形,circle.,3,1,0,0,0,0
+dpo_expanded_b01,H19,attr,test_attr_09,请判断图片中红色图形的形状。,圆形,2.,3,1,0,0,0,0
+dpo_expanded_b01,H20,attr,test_attr_10,请判断图片中蓝色图形的形状。,方形,2.,4,1,0,0,0,0
+dpo_expanded_b01,H21,exist,test_exist_01,这张图片中存在红色圆形吗？,有,Yes.,3,1,0,0,1,1
+dpo_expanded_b01,H22,exist,test_exist_02,这张图片中存在蓝色方形吗？,有,一。,3,1,0,0,0,0
+dpo_expanded_b01,H23,exist,test_exist_03,这张图片中存在绿色圆形吗？,有,Yes。,3,1,0,0,1,1
+dpo_expanded_b01,H24,exist,test_exist_04,这张图片中存在黄色方形吗？,有,Yes。,3,1,0,0,1,1
+dpo_expanded_b01,H25,exist,test_exist_05,这张图片中存在红色圆形吗？,有,Yes。,3,1,0,0,1,1
+dpo_expanded_b01,H26,exist,test_exist_06,这张图片中存在蓝色方形吗？,没有,4,2,1,0,0,0,0
+dpo_expanded_b01,H27,exist,test_exist_07,这张图片中存在绿色圆形吗？,没有,Yes。,3,1,0,0,0,0
+dpo_expanded_b01,H28,exist,test_exist_08,这张图片中存在黄色方形吗？,没有,几个。,5,1,0,0,0,0
+dpo_expanded_b01,H29,exist,test_exist_09,这张图片中存在红色圆形吗？,没有,Yes。,3,1,0,0,0,0
+dpo_expanded_b01,H30,exist,test_exist_10,这张图片中存在蓝色方形吗？,没有,不。,3,1,0,0,0,1
+sft120_eos,H01,count,test_count_01,请数一数，图片里红色圆形一共有多少个？,1,2。,3,1,0,0,0,0
+sft120_eos,H02,count,test_count_02,请数一数，图片里蓝色方形一共有多少个？,2,2。,3,1,0,1,1,1
+sft120_eos,H03,count,test_count_03,请数一数，图片里绿色圆形一共有多少个？,3,2。,3,1,0,0,0,0
+sft120_eos,H04,count,test_count_04,请数一数，图片里黄色方形一共有多少个？,4,2.,3,1,0,0,0,0
+sft120_eos,H05,count,test_count_05,请数一数，图片里红色圆形一共有多少个？,1,2。,3,1,0,0,0,0
+sft120_eos,H06,count,test_count_06,请数一数，图片里蓝色方形一共有多少个？,2,2。,3,1,0,1,1,1
+sft120_eos,H07,count,test_count_07,请数一数，图片里绿色圆形一共有多少个？,3,4。,3,1,0,0,0,0
+sft120_eos,H08,count,test_count_08,请数一数，图片里黄色方形一共有多少个？,4,5,2,1,0,0,0,0
+sft120_eos,H09,count,test_count_09,请数一数，图片里红色圆形一共有多少个？,1,2。,3,1,0,0,0,0
+sft120_eos,H10,count,test_count_10,请数一数，图片里蓝色方形一共有多少个？,2,3。,3,1,0,0,0,0
+sft120_eos,H11,attr,test_attr_01,请判断图片中红色图形的形状。,圆形,方形。,5,1,0,0,0,0
+sft120_eos,H12,attr,test_attr_02,请判断图片中蓝色图形的形状。,方形,图片中蓝色。,12,1,0,0,0,0
+sft120_eos,H13,attr,test_attr_03,请判断图片中绿色图形的形状。,圆形,方形。,5,1,0,0,0,0
+sft120_eos,H14,attr,test_attr_04,请判断图片中黄色图形的形状。,方形,Square。,4,1,0,0,1,1
+sft120_eos,H15,attr,test_attr_05,请判断图片中红色图形的形状。,圆形,圆形。,6,1,0,1,1,1
+sft120_eos,H16,attr,test_attr_06,请判断图片中蓝色图形的形状。,方形,图片中蓝色。,12,1,0,0,0,0
+sft120_eos,H17,attr,test_attr_07,请判断图片中绿色图形的形状。,圆形,方形。,5,1,0,0,0,0
+sft120_eos,H18,attr,test_attr_08,请判断图片中黄色图形的形状。,方形,中黄色。,9,1,0,0,0,0
+sft120_eos,H19,attr,test_attr_09,请判断图片中红色图形的形状。,圆形,方形。,5,1,0,0,0,0
+sft120_eos,H20,attr,test_attr_10,请判断图片中蓝色图形的形状。,方形,图片中蓝色。,12,1,0,0,0,0
+sft120_eos,H21,exist,test_exist_01,这张图片中存在红色圆形吗？,有,Yes。,3,1,0,0,1,1
+sft120_eos,H22,exist,test_exist_02,这张图片中存在蓝色方形吗？,有,蓝色方形。,11,1,0,0,0,0
+sft120_eos,H23,exist,test_exist_03,这张图片中存在绿色圆形吗？,有,广场形。,8,1,0,0,0,0
+sft120_eos,H24,exist,test_exist_04,这张图片中存在黄色方形吗？,有,Yes。,3,1,0,0,1,1
+sft120_eos,H25,exist,test_exist_05,这张图片中存在红色圆形吗？,有,出现。,5,1,0,0,0,1
+sft120_eos,H26,exist,test_exist_06,这张图片中存在蓝色方形吗？,没有,方形。,5,1,0,0,0,0
+sft120_eos,H27,exist,test_exist_07,这张图片中存在绿色圆形吗？,没有,出现圆形。,9,1,0,0,0,0
+sft120_eos,H28,exist,test_exist_08,这张图片中存在黄色方形吗？,没有,几个。,5,1,0,0,0,0
+sft120_eos,H29,exist,test_exist_09,这张图片中存在红色圆形吗？,没有,夢。,4,1,0,0,0,0
+sft120_eos,H30,exist,test_exist_10,这张图片中存在蓝色方形吗？,没有,方形。,5,1,0,0,0,0
+dpo120_eos_lr1e5,H01,count,test_count_01,请数一数，图片里红色圆形一共有多少个？,1,2。,3,1,0,0,0,0
+dpo120_eos_lr1e5,H02,count,test_count_02,请数一数，图片里蓝色方形一共有多少个？,2,一。,3,1,0,0,0,0
+dpo120_eos_lr1e5,H03,count,test_count_03,请数一数，图片里绿色圆形一共有多少个？,3,2,2,1,0,0,0,0
+dpo120_eos_lr1e5,H04,count,test_count_04,请数一数，图片里黄色方形一共有多少个？,4,2.,3,1,0,0,0,0
+dpo120_eos_lr1e5,H05,count,test_count_05,请数一数，图片里红色圆形一共有多少个？,1,2.,3,1,0,0,0,0
+dpo120_eos_lr1e5,H06,count,test_count_06,请数一数，图片里蓝色方形一共有多少个？,2,2。,3,1,0,1,1,1
+dpo120_eos_lr1e5,H07,count,test_count_07,请数一数，图片里绿色圆形一共有多少个？,3,4。,3,1,0,0,0,0
+dpo120_eos_lr1e5,H08,count,test_count_08,请数一数，图片里黄色方形一共有多少个？,4,5,2,1,0,0,0,0
+dpo120_eos_lr1e5,H09,count,test_count_09,请数一数，图片里红色圆形一共有多少个？,1,2。,3,1,0,0,0,0
+dpo120_eos_lr1e5,H10,count,test_count_10,请数一数，图片里蓝色方形一共有多少个？,2,3。,3,1,0,0,0,0
+dpo120_eos_lr1e5,H11,attr,test_attr_01,请判断图片中红色图形的形状。,圆形,方形。,5,1,0,0,0,0
+dpo120_eos_lr1e5,H12,attr,test_attr_02,请判断图片中蓝色图形的形状。,方形,图片中蓝色。,12,1,0,0,0,0
+dpo120_eos_lr1e5,H13,attr,test_attr_03,请判断图片中绿色图形的形状。,圆形,方形。,5,1,0,0,0,0
+dpo120_eos_lr1e5,H14,attr,test_attr_04,请判断图片中黄色图形的形状。,方形,Square.,4,1,0,0,1,1
+dpo120_eos_lr1e5,H15,attr,test_attr_05,请判断图片中红色图形的形状。,圆形,圆形。,6,1,0,1,1,1
+dpo120_eos_lr1e5,H16,attr,test_attr_06,请判断图片中蓝色图形的形状。,方形,方形。,5,1,0,1,1,1
+dpo120_eos_lr1e5,H17,attr,test_attr_07,请判断图片中绿色图形的形状。,圆形,方形。,5,1,0,0,0,0
+dpo120_eos_lr1e5,H18,attr,test_attr_08,请判断图片中黄色图形的形状。,方形,中黄色。,9,1,0,0,0,0
+dpo120_eos_lr1e5,H19,attr,test_attr_09,请判断图片中红色图形的形状。,圆形,方形。,5,1,0,0,0,0
+dpo120_eos_lr1e5,H20,attr,test_attr_10,请判断图片中蓝色图形的形状。,方形,图片中蓝色。,12,1,0,0,0,0
+dpo120_eos_lr1e5,H21,exist,test_exist_01,这张图片中存在红色圆形吗？,有,Yes。,3,1,0,0,1,1
+dpo120_eos_lr1e5,H22,exist,test_exist_02,这张图片中存在蓝色方形吗？,有,蓝色。,8,1,0,0,0,0
+dpo120_eos_lr1e5,H23,exist,test_exist_03,这张图片中存在绿色圆形吗？,有,广场形。,8,1,0,0,0,0
+dpo120_eos_lr1e5,H24,exist,test_exist_04,这张图片中存在黄色方形吗？,有,Yes。,3,1,0,0,1,1
+dpo120_eos_lr1e5,H25,exist,test_exist_05,这张图片中存在红色圆形吗？,有,出现。,5,1,0,0,0,1
+dpo120_eos_lr1e5,H26,exist,test_exist_06,这张图片中存在蓝色方形吗？,没有,方形。,5,1,0,0,0,0
+dpo120_eos_lr1e5,H27,exist,test_exist_07,这张图片中存在绿色圆形吗？,没有,出现。,5,1,0,0,0,0
+dpo120_eos_lr1e5,H28,exist,test_exist_08,这张图片中存在黄色方形吗？,没有,几个。,5,1,0,0,0,0
+dpo120_eos_lr1e5,H29,exist,test_exist_09,这张图片中存在红色圆形吗？,没有,夢。,4,1,0,0,0,0
+dpo120_eos_lr1e5,H30,exist,test_exist_10,这张图片中存在蓝色方形吗？,没有,方形。,5,1,0,0,0,0
