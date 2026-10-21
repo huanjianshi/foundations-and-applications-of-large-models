@@ -1,0 +1,24 @@
+[
+  {
+    "id": "L01",
+    "prediction": "1. The image is a square grid with 4 rows and 4 columns.\n2. The grid is filled with a solid color, which is white.\n3. The grid is labeled with the number 4 in the top-left corner.\n4. The grid is labeled with the number",
+    "generated_tokens": 64,
+    "ended_by_eos": 0,
+    "reached_token_limit": 1,
+    "seconds": 2.439982500000042,
+    "correct": 0,
+    "format_valid": 0,
+    "iou": 0.0
+  },
+  {
+    "id": "L02",
+    "prediction": "1. 小明的第1行，第2行，第3行，第4行。\n2. 1. 2. 3. 4.\n3. 1. 2. 3. 4.\n4. 1",
+    "generated_tokens": 64,
+    "ended_by_eos": 0,
+    "reached_token_limit": 1,
+    "seconds": 2.3515277999999853,
+    "correct": 0,
+    "format_valid": 0,
+    "iou": 0.0
+  }
+]

@@ -1,0 +1,3 @@
+﻿round,pool_entries,unique_image_questions,direct_correct,self_calls,self_changes,tool_calls,final_correct,new_entries,verifier_false_accepts,wrong_to_right,right_to_wrong,end_accuracy
+1,17,15,1,0,0,14,2,2,0,1,0,0.2
+2,20,15,3,0,0,12,3,3,0,0,0,0.2

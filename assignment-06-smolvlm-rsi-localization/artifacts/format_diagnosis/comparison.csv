@@ -1,0 +1,5 @@
+﻿arm,loc_correct,loc_n,count_correct,exist_correct,total_correct,total_n,loc_format_valid,mean_iou,token_limit_count,guide_correct,seed_threshold_passed,prediction_source
+guide_noeos,0,8,2,0,2,15,0,0.0,8,2,False,saved original (rescored)
+guide_eos,0,8,1,0,1,15,0,0.0,8,2,False,fresh 10-step arm
+compact_noeos,0,8,2,0,2,15,0,0.0,8,2,False,fresh 10-step arm
+compact_eos,0,8,4,0,4,15,0,0.0,8,4,False,fresh 10-step arm

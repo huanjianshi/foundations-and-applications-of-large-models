@@ -1,0 +1,78 @@
+{
+  "model": "HuggingFaceTB/SmolVLM-256M-Instruct",
+  "python": "3.12",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "torchvision": "0.23.0+cu128",
+    "transformers": "4.57.6",
+    "peft": "0.18.0",
+    "accelerate": "1.15.0",
+    "pillow": "12.3.0",
+    "bitsandbytes": "0.48.2"
+  },
+  "precision": "FP32 LoRA, not 4-bit QLoRA",
+  "image_size": 256,
+  "processor_longest_edge": 512,
+  "image_splitting": false,
+  "data_seeds": {
+    "train": 2026,
+    "eval": 42,
+    "heldout": 20261020
+  },
+  "training_seed": 2026,
+  "lora": {
+    "r": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ]
+  },
+  "learning_rate": 0.0001,
+  "supervise_eos": false,
+  "greedy": true,
+  "max_new_tokens": 24,
+  "self_check_max_new_tokens": 16,
+  "seed_question_types": {
+    "loc": 8,
+    "count": 4,
+    "exist": 3
+  },
+  "independent_question_types": {
+    "loc": 16,
+    "count": 8,
+    "exist": 6
+  },
+  "trainable_parameters": 1363968,
+  "total_parameters": 257848896,
+  "training_eval_overlap": true,
+  "heldout_used_for_training_or_selection": false,
+  "budgets": {
+    "required_grid4": [
+      10,
+      10,
+      10
+    ],
+    "b1_grid4": [
+      120,
+      10,
+      10
+    ],
+    "required_grid8": [
+      10,
+      10,
+      10
+    ]
+  },
+  "score": "correct: ambiguity/echo-aware audit; guide_correct: literal reference matching with shared coordinate parsing",
+  "portability_changes": [
+    "model defaults to assignment-local models folder",
+    "matrix runner rebuilds the original 10-step seed instead of requiring a private cached adapter",
+    "output/device/model path CLI and explicit low-accuracy opt-in"
+  ],
+  "original_main_sha256": "4a1ac2ef0f3bebe758d37367e92d0381c20a39f3a140bba359bc6f50808fb7b1",
+  "published_main_sha256": "b48ccb70c08c7e75e4b7cf9d6350c0ab07daf19f13c5074cf362ac0558618006"
+}

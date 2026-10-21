@@ -1,0 +1,24 @@
+[
+  {
+    "id": "L01",
+    "prediction": "1. 小明的第1行，第2行，第3行，第4行。\n2. 1. 2. 3. 4.\n3. 1. 2. 3. 4.\n4. 1",
+    "generated_tokens": 64,
+    "ended_by_eos": 0,
+    "reached_token_limit": 1,
+    "seconds": 2.3900538000000324,
+    "correct": 0,
+    "format_valid": 0,
+    "iou": 0.0
+  },
+  {
+    "id": "L02",
+    "prediction": "1. 小明的第1行，第2行，第3行，第4行。\n2. 1. 2. 3. 4.\n3. 1. 2. 3. 4.\n4. 1",
+    "generated_tokens": 64,
+    "ended_by_eos": 0,
+    "reached_token_limit": 1,
+    "seconds": 2.3488830999999664,
+    "correct": 0,
+    "format_valid": 0,
+    "iou": 0.0
+  }
+]

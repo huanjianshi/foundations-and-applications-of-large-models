@@ -1,0 +1,24 @@
+[
+  {
+    "id": "L01",
+    "prediction": "1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.",
+    "generated_tokens": 64,
+    "ended_by_eos": 0,
+    "reached_token_limit": 1,
+    "seconds": 2.349394699999948,
+    "correct": 0,
+    "format_valid": 0,
+    "iou": 0.0
+  },
+  {
+    "id": "L02",
+    "prediction": "1. 在第几行第几列？\nAnswer: 1.",
+    "generated_tokens": 25,
+    "ended_by_eos": 1,
+    "reached_token_limit": 0,
+    "seconds": 0.9668608000001768,
+    "correct": 0,
+    "format_valid": 0,
+    "iou": 0.0
+  }
+]

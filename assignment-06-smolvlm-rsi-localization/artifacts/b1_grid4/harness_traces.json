@@ -1,0 +1,1158 @@
+[
+  {
+    "id": "L01",
+    "img": "e00",
+    "type": "loc",
+    "target": "红方",
+    "question": "图中的红色方形位于第几行第几列？请用「第 X 行第 Y 列」回答（共4行4列）。",
+    "original": {
+      "prediction": "第1行第2列第3列第4列第5列第6列",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.8960747000000993
+    },
+    "self_called": false,
+    "tool_called": false,
+    "pre_tool_passed": true,
+    "pre_tool_evidence": {
+      "color": "红",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            65,
+            43,
+            107,
+            85
+          ],
+          608
+        ]
+      ],
+      "pixels": 608,
+      "shape_aware": false,
+      "best_overlap": 0.5
+    },
+    "final": {
+      "prediction": "第1行第2列第3列第4列第5列第6列",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.8960747000000993
+    },
+    "verifier_passed": true,
+    "final_evidence": {
+      "color": "红",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            65,
+            43,
+            107,
+            85
+          ],
+          608
+        ]
+      ],
+      "pixels": 608,
+      "shape_aware": false,
+      "best_overlap": 0.5
+    },
+    "original_score": {
+      "correct": 1,
+      "format_valid": 1,
+      "iou": 0.17514239218877137
+    },
+    "self_score": null,
+    "final_score": {
+      "correct": 1,
+      "format_valid": 1,
+      "iou": 0.17514239218877137
+    }
+  },
+  {
+    "id": "L02",
+    "img": "e01",
+    "type": "loc",
+    "target": "红方",
+    "question": "图中的红色方形位于第几行第几列？请用「第 X 行第 Y 列」回答（共4行4列）。",
+    "original": {
+      "prediction": "第1行第2列第3列第4列第5列第6列",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.8759010999997372
+    },
+    "self_called": false,
+    "tool_called": true,
+    "pre_tool_passed": false,
+    "pre_tool_evidence": {
+      "color": "红",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            15,
+            31,
+            51,
+            67
+          ],
+          512
+        ]
+      ],
+      "pixels": 512,
+      "shape_aware": false,
+      "best_overlap": 0.0
+    },
+    "hint": "预测格覆盖该颜色连通块的最大面积比例为0%，请重新观察位置并给出网格坐标。",
+    "tool_answer": {
+      "prediction": "第1行第2列第3列第4列第5列第6列",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 1.070830399999977
+    },
+    "final": {
+      "prediction": "第1行第2列第3列第4列第5列第6列",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 1.070830399999977
+    },
+    "verifier_passed": false,
+    "final_evidence": {
+      "color": "红",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            15,
+            31,
+            51,
+            67
+          ],
+          512
+        ]
+      ],
+      "pixels": 512,
+      "shape_aware": false,
+      "best_overlap": 0.0
+    },
+    "original_score": {
+      "correct": 0,
+      "format_valid": 1,
+      "iou": 0.0
+    },
+    "self_score": null,
+    "final_score": {
+      "correct": 0,
+      "format_valid": 1,
+      "iou": 0.0
+    }
+  },
+  {
+    "id": "L03",
+    "img": "e02",
+    "type": "loc",
+    "target": "蓝圆",
+    "question": "图中的蓝色圆形位于第几行第几列？请用「第 X 行第 Y 列」回答（共4行4列）。",
+    "original": {
+      "prediction": "第4行第4列第4列为1，第1行第1列为",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 1.0174180000003616
+    },
+    "self_called": false,
+    "tool_called": true,
+    "pre_tool_passed": false,
+    "pre_tool_evidence": {
+      "color": "蓝",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            58,
+            191,
+            110,
+            243
+          ],
+          592
+        ]
+      ],
+      "pixels": 592,
+      "shape_aware": false
+    },
+    "hint": "输出不是有效网格坐标，请按指定格式重新作答。",
+    "tool_answer": {
+      "prediction": "第4行第4列第4列第4列第4列第4列",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.8863016000000243
+    },
+    "final": {
+      "prediction": "第4行第4列第4列第4列第4列第4列",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.8863016000000243
+    },
+    "verifier_passed": false,
+    "final_evidence": {
+      "color": "蓝",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            58,
+            191,
+            110,
+            243
+          ],
+          592
+        ]
+      ],
+      "pixels": 592,
+      "shape_aware": false,
+      "best_overlap": 0.0
+    },
+    "original_score": {
+      "correct": 0,
+      "format_valid": 0,
+      "iou": 0.0
+    },
+    "self_score": null,
+    "final_score": {
+      "correct": 0,
+      "format_valid": 1,
+      "iou": 0.0
+    }
+  },
+  {
+    "id": "L04",
+    "img": "e03",
+    "type": "loc",
+    "target": "蓝方",
+    "question": "图中的蓝色方形位于第几行第几列？请用「第 X 行第 Y 列」回答（共4行4列）。",
+    "original": {
+      "prediction": "第1行第1列第2列第3列第4列第5列",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.8595390999998926
+    },
+    "self_called": false,
+    "tool_called": true,
+    "pre_tool_passed": false,
+    "pre_tool_evidence": {
+      "color": "蓝",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            79,
+            47,
+            124,
+            92
+          ],
+          656
+        ]
+      ],
+      "pixels": 656,
+      "shape_aware": false,
+      "best_overlap": 0.0
+    },
+    "hint": "预测格覆盖该颜色连通块的最大面积比例为0%，请重新观察位置并给出网格坐标。",
+    "tool_answer": {
+      "prediction": "第1行第1列第1列比例为0%，请重新",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.873196999999891
+    },
+    "final": {
+      "prediction": "第1行第1列第1列比例为0%，请重新",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.873196999999891
+    },
+    "verifier_passed": false,
+    "final_evidence": {
+      "color": "蓝",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            79,
+            47,
+            124,
+            92
+          ],
+          656
+        ]
+      ],
+      "pixels": 656,
+      "shape_aware": false,
+      "best_overlap": 0.0
+    },
+    "original_score": {
+      "correct": 0,
+      "format_valid": 1,
+      "iou": 0.0
+    },
+    "self_score": null,
+    "final_score": {
+      "correct": 0,
+      "format_valid": 1,
+      "iou": 0.0
+    }
+  },
+  {
+    "id": "L05",
+    "img": "e04",
+    "type": "loc",
+    "target": "绿圆",
+    "question": "图中的绿色圆形位于第几行第几列？请用「第 X 行第 Y 列」回答（共4行4列）。",
+    "original": {
+      "prediction": "第1行第2列第3列第4列第5列第6列",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.8299315999997816
+    },
+    "self_called": false,
+    "tool_called": false,
+    "pre_tool_passed": true,
+    "pre_tool_evidence": {
+      "color": "绿",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            75,
+            19,
+            142,
+            73
+          ],
+          1174
+        ]
+      ],
+      "pixels": 1174,
+      "shape_aware": false
+    },
+    "final": {
+      "prediction": "第1行第2列第3列第4列第5列第6列",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.8299315999997816
+    },
+    "verifier_passed": true,
+    "final_evidence": {
+      "color": "绿",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            75,
+            19,
+            142,
+            73
+          ],
+          1174
+        ]
+      ],
+      "pixels": 1174,
+      "shape_aware": false
+    },
+    "original_score": {
+      "correct": 1,
+      "format_valid": 1,
+      "iou": 0.15807560137457044
+    },
+    "self_score": null,
+    "final_score": {
+      "correct": 1,
+      "format_valid": 1,
+      "iou": 0.15807560137457044
+    }
+  },
+  {
+    "id": "L06",
+    "img": "e05",
+    "type": "loc",
+    "target": "绿圆",
+    "question": "图中的绿色圆形位于第几行第几列？请用「第 X 行第 Y 列」回答（共4行4列）。",
+    "original": {
+      "prediction": "第4行第4列第4列为第1行第2列第3",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.8447194999998828
+    },
+    "self_called": false,
+    "tool_called": true,
+    "pre_tool_passed": false,
+    "pre_tool_evidence": {
+      "color": "绿",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            19,
+            177,
+            56,
+            214
+          ],
+          408
+        ]
+      ],
+      "pixels": 408,
+      "shape_aware": false
+    },
+    "hint": "输出不是有效网格坐标，请按指定格式重新作答。",
+    "tool_answer": {
+      "prediction": "第4行第4列第4列不是有效网格坐标",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.9600335000000086
+    },
+    "final": {
+      "prediction": "第4行第4列第4列不是有效网格坐标",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.9600335000000086
+    },
+    "verifier_passed": false,
+    "final_evidence": {
+      "color": "绿",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            19,
+            177,
+            56,
+            214
+          ],
+          408
+        ]
+      ],
+      "pixels": 408,
+      "shape_aware": false,
+      "best_overlap": 0.0
+    },
+    "original_score": {
+      "correct": 0,
+      "format_valid": 0,
+      "iou": 0.0
+    },
+    "self_score": null,
+    "final_score": {
+      "correct": 0,
+      "format_valid": 1,
+      "iou": 0.0
+    }
+  },
+  {
+    "id": "L07",
+    "img": "e06",
+    "type": "loc",
+    "target": "红圆",
+    "question": "图中的红色圆形位于第几行第几列？请用「第 X 行第 Y 列」回答（共4行4列）。",
+    "original": {
+      "prediction": "第1行第2列第3列第4列第5列第6列",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 1.004129400000238
+    },
+    "self_called": false,
+    "tool_called": true,
+    "pre_tool_passed": false,
+    "pre_tool_evidence": {
+      "color": "红",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            194,
+            70,
+            246,
+            122
+          ],
+          592
+        ]
+      ],
+      "pixels": 592,
+      "shape_aware": false,
+      "best_overlap": 0.0
+    },
+    "hint": "预测格覆盖该颜色连通块的最大面积比例为0%，请重新观察位置并给出网格坐标。",
+    "tool_answer": {
+      "prediction": "第1行第2列第3列第4列第5列第6列",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 1.0286796999998842
+    },
+    "final": {
+      "prediction": "第1行第2列第3列第4列第5列第6列",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 1.0286796999998842
+    },
+    "verifier_passed": false,
+    "final_evidence": {
+      "color": "红",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            194,
+            70,
+            246,
+            122
+          ],
+          592
+        ]
+      ],
+      "pixels": 592,
+      "shape_aware": false,
+      "best_overlap": 0.0
+    },
+    "original_score": {
+      "correct": 0,
+      "format_valid": 1,
+      "iou": 0.0
+    },
+    "self_score": null,
+    "final_score": {
+      "correct": 0,
+      "format_valid": 1,
+      "iou": 0.0
+    }
+  },
+  {
+    "id": "L08",
+    "img": "e07",
+    "type": "loc",
+    "target": "黄方",
+    "question": "图中的黄色方形位于第几行第几列？请用「第 X 行第 Y 列」回答（共4行4列）。",
+    "original": {
+      "prediction": "第4行第4列第4列为12行第1列第2列",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.886526799999956
+    },
+    "self_called": false,
+    "tool_called": false,
+    "pre_tool_passed": true,
+    "pre_tool_evidence": {
+      "color": "黄",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            171,
+            184,
+            214,
+            227
+          ],
+          624
+        ]
+      ],
+      "pixels": 624,
+      "shape_aware": false
+    },
+    "final": {
+      "prediction": "第4行第4列第4列为12行第1列第2列",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.886526799999956
+    },
+    "verifier_passed": true,
+    "final_evidence": {
+      "color": "黄",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            171,
+            184,
+            214,
+            227
+          ],
+          624
+        ]
+      ],
+      "pixels": 624,
+      "shape_aware": false
+    },
+    "original_score": {
+      "correct": 1,
+      "format_valid": 1,
+      "iou": 0.13874854255732608
+    },
+    "self_score": null,
+    "final_score": {
+      "correct": 1,
+      "format_valid": 1,
+      "iou": 0.13874854255732608
+    }
+  },
+  {
+    "id": "C01",
+    "img": "e00",
+    "type": "count",
+    "target": "红方",
+    "question": "图中有几个红色方形？",
+    "original": {
+      "prediction": "1个红色方形？",
+      "generated_tokens": 13,
+      "ended_by_eos": 1,
+      "reached_token_limit": 0,
+      "seconds": 0.5079585999997107
+    },
+    "self_called": false,
+    "tool_called": true,
+    "pre_tool_passed": false,
+    "pre_tool_evidence": {
+      "color": "红",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            65,
+            43,
+            107,
+            85
+          ],
+          608
+        ]
+      ],
+      "pixels": 608,
+      "shape_aware": false
+    },
+    "hint": "颜色分析发现该颜色有1个连通块，请核对数量。",
+    "tool_answer": {
+      "prediction": "1个连通块。",
+      "generated_tokens": 10,
+      "ended_by_eos": 1,
+      "reached_token_limit": 0,
+      "seconds": 0.38902900000039153
+    },
+    "final": {
+      "prediction": "1个连通块。",
+      "generated_tokens": 10,
+      "ended_by_eos": 1,
+      "reached_token_limit": 0,
+      "seconds": 0.38902900000039153
+    },
+    "verifier_passed": true,
+    "final_evidence": {
+      "color": "红",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            65,
+            43,
+            107,
+            85
+          ],
+          608
+        ]
+      ],
+      "pixels": 608,
+      "shape_aware": false
+    },
+    "original_score": {
+      "correct": 0,
+      "format_valid": 0,
+      "iou": null
+    },
+    "self_score": null,
+    "final_score": {
+      "correct": 1,
+      "format_valid": 1,
+      "iou": null
+    }
+  },
+  {
+    "id": "C02",
+    "img": "e01",
+    "type": "count",
+    "target": "红方",
+    "question": "图中有几个红色方形？",
+    "original": {
+      "prediction": "1个红色方形？",
+      "generated_tokens": 13,
+      "ended_by_eos": 1,
+      "reached_token_limit": 0,
+      "seconds": 0.4985119999996641
+    },
+    "self_called": false,
+    "tool_called": true,
+    "pre_tool_passed": false,
+    "pre_tool_evidence": {
+      "color": "红",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            15,
+            31,
+            51,
+            67
+          ],
+          512
+        ]
+      ],
+      "pixels": 512,
+      "shape_aware": false
+    },
+    "hint": "颜色分析发现该颜色有1个连通块，请核对数量。",
+    "tool_answer": {
+      "prediction": "1个连通块。",
+      "generated_tokens": 10,
+      "ended_by_eos": 1,
+      "reached_token_limit": 0,
+      "seconds": 0.40844590000006065
+    },
+    "final": {
+      "prediction": "1个连通块。",
+      "generated_tokens": 10,
+      "ended_by_eos": 1,
+      "reached_token_limit": 0,
+      "seconds": 0.40844590000006065
+    },
+    "verifier_passed": true,
+    "final_evidence": {
+      "color": "红",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            15,
+            31,
+            51,
+            67
+          ],
+          512
+        ]
+      ],
+      "pixels": 512,
+      "shape_aware": false
+    },
+    "original_score": {
+      "correct": 0,
+      "format_valid": 0,
+      "iou": null
+    },
+    "self_score": null,
+    "final_score": {
+      "correct": 1,
+      "format_valid": 1,
+      "iou": null
+    }
+  },
+  {
+    "id": "C03",
+    "img": "e02",
+    "type": "count",
+    "target": "蓝圆",
+    "question": "图中有几个蓝色圆形？",
+    "original": {
+      "prediction": "1个蓝色圆形？",
+      "generated_tokens": 15,
+      "ended_by_eos": 1,
+      "reached_token_limit": 0,
+      "seconds": 0.5820708000001105
+    },
+    "self_called": false,
+    "tool_called": true,
+    "pre_tool_passed": false,
+    "pre_tool_evidence": {
+      "color": "蓝",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            58,
+            191,
+            110,
+            243
+          ],
+          592
+        ]
+      ],
+      "pixels": 592,
+      "shape_aware": false
+    },
+    "hint": "颜色分析发现该颜色有1个连通块，请核对数量。",
+    "tool_answer": {
+      "prediction": "1个连通块。",
+      "generated_tokens": 10,
+      "ended_by_eos": 1,
+      "reached_token_limit": 0,
+      "seconds": 0.38081030000012106
+    },
+    "final": {
+      "prediction": "1个连通块。",
+      "generated_tokens": 10,
+      "ended_by_eos": 1,
+      "reached_token_limit": 0,
+      "seconds": 0.38081030000012106
+    },
+    "verifier_passed": true,
+    "final_evidence": {
+      "color": "蓝",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            58,
+            191,
+            110,
+            243
+          ],
+          592
+        ]
+      ],
+      "pixels": 592,
+      "shape_aware": false
+    },
+    "original_score": {
+      "correct": 0,
+      "format_valid": 0,
+      "iou": null
+    },
+    "self_score": null,
+    "final_score": {
+      "correct": 1,
+      "format_valid": 1,
+      "iou": null
+    }
+  },
+  {
+    "id": "C04",
+    "img": "e03",
+    "type": "count",
+    "target": "蓝方",
+    "question": "图中有几个蓝色方形？",
+    "original": {
+      "prediction": "1个蓝色方形？",
+      "generated_tokens": 14,
+      "ended_by_eos": 1,
+      "reached_token_limit": 0,
+      "seconds": 0.5153406999997969
+    },
+    "self_called": false,
+    "tool_called": true,
+    "pre_tool_passed": false,
+    "pre_tool_evidence": {
+      "color": "蓝",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            79,
+            47,
+            124,
+            92
+          ],
+          656
+        ]
+      ],
+      "pixels": 656,
+      "shape_aware": false
+    },
+    "hint": "颜色分析发现该颜色有1个连通块，请核对数量。",
+    "tool_answer": {
+      "prediction": "1个连通块。",
+      "generated_tokens": 10,
+      "ended_by_eos": 1,
+      "reached_token_limit": 0,
+      "seconds": 0.380703899999844
+    },
+    "final": {
+      "prediction": "1个连通块。",
+      "generated_tokens": 10,
+      "ended_by_eos": 1,
+      "reached_token_limit": 0,
+      "seconds": 0.380703899999844
+    },
+    "verifier_passed": true,
+    "final_evidence": {
+      "color": "蓝",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            79,
+            47,
+            124,
+            92
+          ],
+          656
+        ]
+      ],
+      "pixels": 656,
+      "shape_aware": false
+    },
+    "original_score": {
+      "correct": 0,
+      "format_valid": 0,
+      "iou": null
+    },
+    "self_score": null,
+    "final_score": {
+      "correct": 1,
+      "format_valid": 1,
+      "iou": null
+    }
+  },
+  {
+    "id": "E01",
+    "img": "e00",
+    "type": "exist",
+    "target": "红方",
+    "question": "图里有没有红色方形？",
+    "original": {
+      "prediction": "有没有红色方形？",
+      "generated_tokens": 16,
+      "ended_by_eos": 1,
+      "reached_token_limit": 0,
+      "seconds": 0.5979913000001034
+    },
+    "self_called": false,
+    "tool_called": true,
+    "pre_tool_passed": false,
+    "pre_tool_evidence": {
+      "color": "红",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            65,
+            43,
+            107,
+            85
+          ],
+          608
+        ]
+      ],
+      "pixels": 608,
+      "shape_aware": false
+    },
+    "hint": "颜色分析发现该颜色像素数为608，请核对存在性。",
+    "tool_answer": {
+      "prediction": "有红色方形？",
+      "generated_tokens": 12,
+      "ended_by_eos": 1,
+      "reached_token_limit": 0,
+      "seconds": 0.4556323000001612
+    },
+    "final": {
+      "prediction": "有红色方形？",
+      "generated_tokens": 12,
+      "ended_by_eos": 1,
+      "reached_token_limit": 0,
+      "seconds": 0.4556323000001612
+    },
+    "verifier_passed": false,
+    "final_evidence": {
+      "color": "红",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            65,
+            43,
+            107,
+            85
+          ],
+          608
+        ]
+      ],
+      "pixels": 608,
+      "shape_aware": false
+    },
+    "original_score": {
+      "correct": 0,
+      "format_valid": 0,
+      "iou": null
+    },
+    "self_score": null,
+    "final_score": {
+      "correct": 0,
+      "format_valid": 0,
+      "iou": null
+    }
+  },
+  {
+    "id": "E02",
+    "img": "e01",
+    "type": "exist",
+    "target": "红方",
+    "question": "图里有没有红色方形？",
+    "original": {
+      "prediction": "有没有红色方形？",
+      "generated_tokens": 16,
+      "ended_by_eos": 1,
+      "reached_token_limit": 0,
+      "seconds": 0.600601000000097
+    },
+    "self_called": false,
+    "tool_called": true,
+    "pre_tool_passed": false,
+    "pre_tool_evidence": {
+      "color": "红",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            15,
+            31,
+            51,
+            67
+          ],
+          512
+        ]
+      ],
+      "pixels": 512,
+      "shape_aware": false
+    },
+    "hint": "颜色分析发现该颜色像素数为512，请核对存在性。",
+    "tool_answer": {
+      "prediction": "有512颜色的颜色像素数为5",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.8728805999999167
+    },
+    "final": {
+      "prediction": "有512颜色的颜色像素数为5",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.8728805999999167
+    },
+    "verifier_passed": true,
+    "final_evidence": {
+      "color": "红",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            15,
+            31,
+            51,
+            67
+          ],
+          512
+        ]
+      ],
+      "pixels": 512,
+      "shape_aware": false
+    },
+    "original_score": {
+      "correct": 0,
+      "format_valid": 0,
+      "iou": null
+    },
+    "self_score": null,
+    "final_score": {
+      "correct": 1,
+      "format_valid": 1,
+      "iou": null
+    }
+  },
+  {
+    "id": "E03",
+    "img": "e02",
+    "type": "exist",
+    "target": "蓝圆",
+    "question": "图里有没有蓝色圆形？",
+    "original": {
+      "prediction": "有没有蓝色圆形？",
+      "generated_tokens": 18,
+      "ended_by_eos": 1,
+      "reached_token_limit": 0,
+      "seconds": 0.6906388000002153
+    },
+    "self_called": false,
+    "tool_called": true,
+    "pre_tool_passed": false,
+    "pre_tool_evidence": {
+      "color": "蓝",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            58,
+            191,
+            110,
+            243
+          ],
+          592
+        ]
+      ],
+      "pixels": 592,
+      "shape_aware": false
+    },
+    "hint": "颜色分析发现该颜色像素数为592，请核对存在性。",
+    "tool_answer": {
+      "prediction": "有592颜色的颜色像素数为5",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.8525293000002421
+    },
+    "final": {
+      "prediction": "有592颜色的颜色像素数为5",
+      "generated_tokens": 24,
+      "ended_by_eos": 0,
+      "reached_token_limit": 1,
+      "seconds": 0.8525293000002421
+    },
+    "verifier_passed": true,
+    "final_evidence": {
+      "color": "蓝",
+      "components": 1,
+      "boxes": [
+        [
+          [
+            58,
+            191,
+            110,
+            243
+          ],
+          592
+        ]
+      ],
+      "pixels": 592,
+      "shape_aware": false
+    },
+    "original_score": {
+      "correct": 0,
+      "format_valid": 0,
+      "iou": null
+    },
+    "self_score": null,
+    "final_score": {
+      "correct": 1,
+      "format_valid": 1,
+      "iou": null
+    }
+  }
+]

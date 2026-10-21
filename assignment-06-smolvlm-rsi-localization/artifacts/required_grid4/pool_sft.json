@@ -1,0 +1,107 @@
+[
+  {
+    "img": "e00",
+    "prompt": "图中的红色方形位于第几行第几列？请用「第 X 行第 Y 列」回答（共4行4列）。",
+    "answer": "第1行第2列",
+    "source": "GT seed",
+    "question_id": "L01"
+  },
+  {
+    "img": "e01",
+    "prompt": "图中的红色方形位于第几行第几列？请用「第 X 行第 Y 列」回答（共4行4列）。",
+    "answer": "第1行第1列",
+    "source": "GT seed",
+    "question_id": "L02"
+  },
+  {
+    "img": "e02",
+    "prompt": "图中的蓝色圆形位于第几行第几列？请用「第 X 行第 Y 列」回答（共4行4列）。",
+    "answer": "第4行第2列",
+    "source": "GT seed",
+    "question_id": "L03"
+  },
+  {
+    "img": "e03",
+    "prompt": "图中的蓝色方形位于第几行第几列？请用「第 X 行第 Y 列」回答（共4行4列）。",
+    "answer": "第2行第2列",
+    "source": "GT seed",
+    "question_id": "L04"
+  },
+  {
+    "img": "e04",
+    "prompt": "图中的绿色圆形位于第几行第几列？请用「第 X 行第 Y 列」回答（共4行4列）。",
+    "answer": "第1行第2列",
+    "source": "GT seed",
+    "question_id": "L05"
+  },
+  {
+    "img": "e05",
+    "prompt": "图中的绿色圆形位于第几行第几列？请用「第 X 行第 Y 列」回答（共4行4列）。",
+    "answer": "第4行第1列",
+    "source": "GT seed",
+    "question_id": "L06"
+  },
+  {
+    "img": "e06",
+    "prompt": "图中的红色圆形位于第几行第几列？请用「第 X 行第 Y 列」回答（共4行4列）。",
+    "answer": "第2行第4列",
+    "source": "GT seed",
+    "question_id": "L07"
+  },
+  {
+    "img": "e07",
+    "prompt": "图中的黄色方形位于第几行第几列？请用「第 X 行第 Y 列」回答（共4行4列）。",
+    "answer": "第4行第4列",
+    "source": "GT seed",
+    "question_id": "L08"
+  },
+  {
+    "img": "e00",
+    "prompt": "图中有几个红色方形？",
+    "answer": "1个",
+    "source": "GT seed",
+    "question_id": "C01"
+  },
+  {
+    "img": "e01",
+    "prompt": "图中有几个红色方形？",
+    "answer": "1个",
+    "source": "GT seed",
+    "question_id": "C02"
+  },
+  {
+    "img": "e02",
+    "prompt": "图中有几个蓝色圆形？",
+    "answer": "1个",
+    "source": "GT seed",
+    "question_id": "C03"
+  },
+  {
+    "img": "e03",
+    "prompt": "图中有几个蓝色方形？",
+    "answer": "1个",
+    "source": "GT seed",
+    "question_id": "C04"
+  },
+  {
+    "img": "e00",
+    "prompt": "图里有没有红色方形？",
+    "answer": "有",
+    "source": "GT seed",
+    "question_id": "E01"
+  },
+  {
+    "img": "e01",
+    "prompt": "图里有没有红色方形？",
+    "answer": "有",
+    "source": "GT seed",
+    "question_id": "E02"
+  },
+  {
+    "img": "e02",
+    "prompt": "图里有没有蓝色圆形？",
+    "answer": "有",
+    "source": "GT seed",
+    "question_id": "E03"
+  }
+]

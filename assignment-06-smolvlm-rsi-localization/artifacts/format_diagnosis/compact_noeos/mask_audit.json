@@ -1,0 +1,122 @@
+[
+  {
+    "id": "L01",
+    "prompt_tokens": 154,
+    "answer_tokens": 8,
+    "supervised_text": "第1行第2列",
+    "supervise_eos": false,
+    "last_label_is_eos": false
+  },
+  {
+    "id": "L02",
+    "prompt_tokens": 154,
+    "answer_tokens": 8,
+    "supervised_text": "第1行第1列",
+    "supervise_eos": false,
+    "last_label_is_eos": false
+  },
+  {
+    "id": "L03",
+    "prompt_tokens": 156,
+    "answer_tokens": 8,
+    "supervised_text": "第4行第2列",
+    "supervise_eos": false,
+    "last_label_is_eos": false
+  },
+  {
+    "id": "L04",
+    "prompt_tokens": 155,
+    "answer_tokens": 8,
+    "supervised_text": "第2行第2列",
+    "supervise_eos": false,
+    "last_label_is_eos": false
+  },
+  {
+    "id": "L05",
+    "prompt_tokens": 155,
+    "answer_tokens": 8,
+    "supervised_text": "第1行第2列",
+    "supervise_eos": false,
+    "last_label_is_eos": false
+  },
+  {
+    "id": "L06",
+    "prompt_tokens": 155,
+    "answer_tokens": 8,
+    "supervised_text": "第4行第1列",
+    "supervise_eos": false,
+    "last_label_is_eos": false
+  },
+  {
+    "id": "L07",
+    "prompt_tokens": 155,
+    "answer_tokens": 8,
+    "supervised_text": "第2行第4列",
+    "supervise_eos": false,
+    "last_label_is_eos": false
+  },
+  {
+    "id": "L08",
+    "prompt_tokens": 155,
+    "answer_tokens": 8,
+    "supervised_text": "第4行第4列",
+    "supervise_eos": false,
+    "last_label_is_eos": false
+  },
+  {
+    "id": "C01",
+    "prompt_tokens": 91,
+    "answer_tokens": 2,
+    "supervised_text": "1个",
+    "supervise_eos": false,
+    "last_label_is_eos": false
+  },
+  {
+    "id": "C02",
+    "prompt_tokens": 91,
+    "answer_tokens": 2,
+    "supervised_text": "1个",
+    "supervise_eos": false,
+    "last_label_is_eos": false
+  },
+  {
+    "id": "C03",
+    "prompt_tokens": 93,
+    "answer_tokens": 2,
+    "supervised_text": "1个",
+    "supervise_eos": false,
+    "last_label_is_eos": false
+  },
+  {
+    "id": "C04",
+    "prompt_tokens": 92,
+    "answer_tokens": 2,
+    "supervised_text": "1个",
+    "supervise_eos": false,
+    "last_label_is_eos": false
+  },
+  {
+    "id": "E01",
+    "prompt_tokens": 93,
+    "answer_tokens": 1,
+    "supervised_text": "有",
+    "supervise_eos": false,
+    "last_label_is_eos": false
+  },
+  {
+    "id": "E02",
+    "prompt_tokens": 93,
+    "answer_tokens": 1,
+    "supervised_text": "有",
+    "supervise_eos": false,
+    "last_label_is_eos": false
+  },
+  {
+    "id": "E03",
+    "prompt_tokens": 95,
+    "answer_tokens": 1,
+    "supervised_text": "有",
+    "supervise_eos": false,
+    "last_label_is_eos": false
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "ids": [
+    "L01",
+    "L02"
+  ],
+  "before": [
+    "1. The image is a square grid with 4 rows and 4 columns.\n2. The grid is",
+    "1. 小明的第1行，第2行，第3行，"
+  ],
+  "after": [
+    "1. The image is a square grid with 4 rows and 4 columns.\n2. The grid is",
+    "1. 小明的第1行，第2行，第3行，"
+  ],
+  "equal": true
+}

@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.log
+.venv/
+models/
+results/
+diagnostics/
+hw6_imgs/
+.qa/
+sft_data.json
+rsi_memory.json
+*.pt
+*.safetensors
