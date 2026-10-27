@@ -1,0 +1,7 @@
+{
+  "name": "probe_f16",
+  "purpose": "precision/convolution diagnostic; not part ofA-E",
+  "sampling_seconds": 1.2,
+  "vae_seconds": 0.51,
+  "generation_seconds": 2.63
+}

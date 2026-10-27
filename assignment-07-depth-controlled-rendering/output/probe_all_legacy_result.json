@@ -1,0 +1,7 @@
+{
+  "name": "probe_all_legacy",
+  "purpose": "precision/convolution diagnostic; not part ofA-E",
+  "sampling_seconds": 1.03,
+  "vae_seconds": 0.52,
+  "generation_seconds": 2.27
+}

@@ -1,0 +1,19 @@
+{
+  "run": "C",
+  "resolution": 512,
+  "steps": 8,
+  "cfg": 1.2,
+  "control_strength": 0.9,
+  "seed": 42,
+  "sampler": "euler",
+  "scheduler": "discrete",
+  "threads": 8,
+  "sampling_seconds": 2.13,
+  "vae_seconds": 0.52,
+  "generation_seconds": 3.36,
+  "process_seconds": 4.3885862000006455,
+  "blender_seconds": 3.507770399999572,
+  "total_seconds": 7.896356600000217,
+  "image": "output/C_photoreal.png",
+  "control_image": "output/demo512_depth_0001.png"
+}

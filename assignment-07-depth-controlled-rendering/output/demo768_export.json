@@ -1,0 +1,20 @@
+{
+  "name": "demo768",
+  "resolution": 768,
+  "samples": 64,
+  "device": "Cycles CPU",
+  "blender_version": "4.0.1",
+  "visible_vertices": 4250,
+  "map_view_transform": "Raw",
+  "clay_view_transform": "AgX",
+  "mist_start": 11.11976514036107,
+  "mist_depth": 2.6832829546936114,
+  "percentiles": [
+    2,
+    98
+  ],
+  "render_seconds": 5.23005910000029,
+  "export_seconds": 5.246802899999238,
+  "timing_note": "clay/depth/normal share one render; export_seconds excludes Blender startup",
+  "blender_process_seconds": 6.318135999999868
+}

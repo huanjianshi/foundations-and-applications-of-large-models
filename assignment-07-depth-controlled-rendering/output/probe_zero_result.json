@@ -1,0 +1,19 @@
+{
+  "run": "probe_zero",
+  "resolution": 512,
+  "steps": 4,
+  "cfg": 1.2,
+  "control_strength": 0,
+  "seed": 42,
+  "sampler": "euler",
+  "scheduler": "discrete",
+  "threads": 8,
+  "sampling_seconds": 1.19,
+  "vae_seconds": 0.51,
+  "generation_seconds": 2.4,
+  "process_seconds": 3.4268757999998343,
+  "blender_seconds": 0,
+  "total_seconds": 3.4268757999998343,
+  "image": "output/probe_zero_photoreal.png",
+  "control_image": "output/demo512_depth_0001.png"
+}

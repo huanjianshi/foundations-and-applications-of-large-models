@@ -1,0 +1,19 @@
+{
+  "run": "probe_inverse",
+  "resolution": 512,
+  "steps": 4,
+  "cfg": 1.2,
+  "control_strength": 0.9,
+  "seed": 42,
+  "sampler": "euler",
+  "scheduler": "discrete",
+  "threads": 8,
+  "sampling_seconds": 1.18,
+  "vae_seconds": 0.52,
+  "generation_seconds": 2.43,
+  "process_seconds": 3.4213999999992666,
+  "blender_seconds": 0,
+  "total_seconds": 3.4213999999992666,
+  "image": "output/probe_inverse_photoreal.png",
+  "control_image": "output/probe_inverted_depth.png"
+}

@@ -1,0 +1,19 @@
+{
+  "run": "B",
+  "resolution": 768,
+  "steps": 4,
+  "cfg": 1.2,
+  "control_strength": 0.9,
+  "seed": 42,
+  "sampler": "euler",
+  "scheduler": "discrete",
+  "threads": 8,
+  "sampling_seconds": 2.52,
+  "vae_seconds": 0.92,
+  "generation_seconds": 4.47,
+  "process_seconds": 5.569201399999656,
+  "blender_seconds": 6.318135999999868,
+  "total_seconds": 11.887337399999524,
+  "image": "output/B_photoreal.png",
+  "control_image": "output/demo768_depth_0001.png"
+}

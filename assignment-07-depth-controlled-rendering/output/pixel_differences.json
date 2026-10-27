@@ -1,0 +1,18 @@
+{
+  "D": {
+    "mean_absolute_pixel_difference": 26.359933217366535,
+    "identical": false
+  },
+  "E": {
+    "mean_absolute_pixel_difference": 8.688054402669271,
+    "identical": false
+  },
+  "probe_zero": {
+    "mean_absolute_pixel_difference": 34.99662780761719,
+    "identical": false
+  },
+  "probe_inverse": {
+    "mean_absolute_pixel_difference": 37.81152852376302,
+    "identical": false
+  }
+}

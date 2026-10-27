@@ -1,0 +1,6 @@
+run,resolution,steps,cfg,control_strength,seed,sampler,scheduler,threads,sampling_seconds,vae_seconds,generation_seconds,process_seconds,blender_seconds,total_seconds,image,control_image
+A,512,4,1.2,0.9,42,euler,discrete,8,1.19,0.51,2.41,3.4834491000001435,3.507770399999572,6.9912194999997155,output/A_photoreal.png,output/demo512_depth_0001.png
+B,768,4,1.2,0.9,42,euler,discrete,8,2.52,0.92,4.47,5.569201399999656,6.318135999999868,11.887337399999524,output/B_photoreal.png,output/demo768_depth_0001.png
+C,512,8,1.2,0.9,42,euler,discrete,8,2.13,0.52,3.36,4.3885862000006455,3.507770399999572,7.896356600000217,output/C_photoreal.png,output/demo512_depth_0001.png
+D,512,4,1.2,0.5,42,euler,discrete,8,1.2,0.51,2.42,3.4267643000002863,3.507770399999572,6.934534699999858,output/D_photoreal.png,output/demo512_depth_0001.png
+E,512,4,1.0,0.9,42,euler,discrete,8,0.71,0.52,1.92,2.9143438000010065,3.507770399999572,6.422114200000578,output/E_photoreal.png,output/demo512_depth_0001.png

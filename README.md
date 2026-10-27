@@ -12,5 +12,6 @@ Coursework repository for the course **Foundations and Applications of Large Mod
 | [Assignment 04](assignment-04-rag-comparison/) | Vector RAG, GraphRAG, WikiRAG, and Hybrid Retrieval | Source code, retrieval benchmarks, evidence-level results, and figures |
 | [Assignment 05](assignment-05-smolvlm-qlora-dpo/) | SmolVLM QLoRA Fine-Tuning and DPO Preference Alignment | Source code, controlled beta scan, verified predictions, training histories, and figures |
 | [Assignment 06](assignment-06-smolvlm-rsi-localization/) | SmolVLM Localization and Recursive Self-Improvement | Portable source code, failure-inclusive RSI experiments, independent tests, training histories, and figures |
+| [Assignment 07](assignment-07-depth-controlled-rendering/) | White-Model Rendering with SD-Turbo and Depth ControlNet | Blender scene/export code, CUDA pipeline, five controlled runs, diagnostics, and verified outputs |
 
 Additional assignments will be added in separate `assignment-XX-*` directories.
