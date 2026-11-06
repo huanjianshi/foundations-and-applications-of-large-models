@@ -1,0 +1,824 @@
+{
+  "baseline": {
+    "teacher_c160": {
+      "name": "teacher_c160",
+      "width": 160,
+      "params": 737280,
+      "steps": 200,
+      "train_seconds": 1.306010200000003,
+      "train_loss": 0.7626728266477585,
+      "last_batch_ce": 0.7668421268463135,
+      "val_loss": 0.9985560148954391,
+      "ppl": 2.714359502560373,
+      "agreement": null,
+      "T": null,
+      "alpha": 0.0,
+      "feature_weight": 0.0,
+      "audit": {
+        "initial_sha256": "20bfd14682a054270ed5f1fc952df34b4ac28fe9496a731fc5dba8e4c7efc5ef",
+        "batch_sha256": "c8fcad10c90b500f6efc6b0bc7cee62ffbf591ea3ade350d260f01143e8c0074",
+        "teacher_has_grad": false
+      },
+      "sample": "月了一夜看，默然无语。牧童静听道：“暮云可惜。”欣然归去。阿远长亭送去落花，欣然归去。归客在长叹一声。书生恰遇道：“青山可"
+    },
+    "scratch": {
+      "name": "scratch",
+      "width": 64,
+      "params": 147456,
+      "steps": 120,
+      "train_seconds": 0.8789184000000887,
+      "train_loss": 1.0543103456497191,
+      "last_batch_ce": 1.0734124183654785,
+      "val_loss": 1.5060152173042298,
+      "ppl": 4.508728646919946,
+      "agreement": 0.6186197916666667,
+      "T": null,
+      "alpha": 0.0,
+      "feature_weight": 0.0,
+      "audit": {
+        "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+        "batch_sha256": "67a35720bc3a786c67f04399a3ee0da1ac30e5520489b177b94ce2299dc420ec",
+        "teacher_has_grad": false
+      },
+      "sample": "月，忽忆旧游子静听，长亭梦见落花可怜。故人江边又逢秋草依旧游。小红城楼空忆道：“寒江，长叹一声。小明想起远帆了一笑而别。阿"
+    },
+    "kd": {
+      "name": "kd",
+      "width": 64,
+      "params": 147456,
+      "steps": 120,
+      "train_seconds": 0.7748822000000928,
+      "train_loss": 0.9904850900173188,
+      "last_batch_ce": 0.9760315418243408,
+      "val_loss": 1.4511000394821167,
+      "ppl": 4.267806689767784,
+      "agreement": 0.683984375,
+      "T": 4.0,
+      "alpha": 0.5,
+      "feature_weight": 0.0,
+      "audit": {
+        "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+        "batch_sha256": "67a35720bc3a786c67f04399a3ee0da1ac30e5520489b177b94ce2299dc420ec",
+        "teacher_has_grad": false
+      },
+      "sample": "月，忽忆旧游子在野渡口暮云了一夜守，泪湿衣襟。孤客静听，一夜忆旧游。孤客望见道：“远帆依旧。”默然无语。山了一笑而别。孤舟"
+    },
+    "ablation": [
+      {
+        "name": "ablate_T1_a0.3",
+        "width": 64,
+        "params": 147456,
+        "steps": 80,
+        "train_seconds": 0.38676590000000033,
+        "train_loss": 1.2049737095832824,
+        "last_batch_ce": 1.1930124759674072,
+        "val_loss": 1.7240449368953705,
+        "ppl": 5.607163276837032,
+        "agreement": 0.6103732638888889,
+        "T": 1,
+        "alpha": 0.3,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "14dd52577955220e64cb2c8c9962ae6976ce53822414f699ecb7745597c88390",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆，不觉天明。阿远帆，心中惆怅。故人江，泪湿衣襟。山僧在松间独对落花可惜。旅人在舟中秋草，泪湿衣襟。”一夜看，欣然归"
+      },
+      {
+        "name": "ablate_T1_a0.5",
+        "width": 64,
+        "params": 147456,
+        "steps": 80,
+        "train_seconds": 0.38709449999998924,
+        "train_loss": 1.2008581936359406,
+        "last_batch_ce": 1.1924192905426025,
+        "val_loss": 1.7248072683811189,
+        "ppl": 5.611439423662288,
+        "agreement": 0.6274739583333333,
+        "T": 1,
+        "alpha": 0.5,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "14dd52577955220e64cb2c8c9962ae6976ce53822414f699ecb7745597c88390",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆，不觉天明。阿远帆，心中惆怅。故人江，泪湿衣襟。山僧在长亭独对落花可惜。旅人在舟中秋草，泪湿衣襟。”默然归去。孤客"
+      },
+      {
+        "name": "ablate_T1_a0.7",
+        "width": 64,
+        "params": 147456,
+        "steps": 80,
+        "train_seconds": 0.38566400000001977,
+        "train_loss": 1.2005969285964966,
+        "last_batch_ce": 1.1956993341445923,
+        "val_loss": 1.7299967765808106,
+        "ppl": 5.640635726265576,
+        "agreement": 0.639453125,
+        "T": 1,
+        "alpha": 0.7,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "14dd52577955220e64cb2c8c9962ae6976ce53822414f699ecb7745597c88390",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆，不觉天明。阿远帆，心中惆怅。故人在窗前落花可惜。阿远帆，默然归客独对寒江可惜。”忽忆旧游子想起远帆了一笑而别。阿"
+      },
+      {
+        "name": "ablate_T1_a0.9",
+        "width": 64,
+        "params": 147456,
+        "steps": 80,
+        "train_seconds": 0.3946316999999908,
+        "train_loss": 1.2035054802894591,
+        "last_batch_ce": 1.2026445865631104,
+        "val_loss": 1.7370793402194977,
+        "ppl": 5.680727697133697,
+        "agreement": 0.6516927083333334,
+        "T": 1,
+        "alpha": 0.9,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "14dd52577955220e64cb2c8c9962ae6976ce53822414f699ecb7745597c88390",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆，不觉天明。阿远帆了一夜守，泪湿衣襟。孤客在窗前细雨，长亭独对落花可惜。旅人在舟中惆怅。小明想起远帆了一笑而别。阿"
+      },
+      {
+        "name": "ablate_T2_a0.3",
+        "width": 64,
+        "params": 147456,
+        "steps": 80,
+        "train_seconds": 0.4080043999999816,
+        "train_loss": 1.1923260748386384,
+        "last_batch_ce": 1.1708407402038574,
+        "val_loss": 1.734778207540512,
+        "ppl": 5.667670617787057,
+        "agreement": 0.5990885416666667,
+        "T": 2,
+        "alpha": 0.3,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "14dd52577955220e64cb2c8c9962ae6976ce53822414f699ecb7745597c88390",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆，不觉天明。阿远帆了一夜守，泪湿衣襟。孤客在窗前细雨，长亭送去道：“归去。归去。”忽忆旧游子想起远帆了一笑而别。阿"
+      },
+      {
+        "name": "ablate_T2_a0.5",
+        "width": 64,
+        "params": 147456,
+        "steps": 80,
+        "train_seconds": 0.3669110000000728,
+        "train_loss": 1.2045986115932465,
+        "last_batch_ce": 1.1811542510986328,
+        "val_loss": 1.7476050078868866,
+        "ppl": 5.740836938978408,
+        "agreement": 0.6103298611111111,
+        "T": 2,
+        "alpha": 0.5,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "14dd52577955220e64cb2c8c9962ae6976ce53822414f699ecb7745597c88390",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆，不觉天明。阿远帆了一夜守，泪湿衣襟。孤客在窗前细雨，长亭独对落花可惜。旅人在舟中惆怅。小明。”欣然归雁，不觉天明"
+      },
+      {
+        "name": "ablate_T2_a0.7",
+        "width": 64,
+        "params": 147456,
+        "steps": 80,
+        "train_seconds": 0.3797888999999941,
+        "train_loss": 1.227796483039856,
+        "last_batch_ce": 1.205322504043579,
+        "val_loss": 1.7742198884487153,
+        "ppl": 5.8956800537609135,
+        "agreement": 0.6310329861111111,
+        "T": 2,
+        "alpha": 0.7,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "14dd52577955220e64cb2c8c9962ae6976ce53822414f699ecb7745597c88390",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆，不觉天明。阿远帆了一夜守，泪湿衣襟。孤客在窗前细雨，长亭独对落花了一夜忆，此意难平。”泪湿衣襟。”默然归去。孤客"
+      },
+      {
+        "name": "ablate_T2_a0.9",
+        "width": 64,
+        "params": 147456,
+        "steps": 80,
+        "train_seconds": 0.3999926999999843,
+        "train_loss": 1.2498927533626556,
+        "last_batch_ce": 1.2507226467132568,
+        "val_loss": 1.7963699758052827,
+        "ppl": 6.027726907893611,
+        "agreement": 0.6431423611111111,
+        "T": 2,
+        "alpha": 0.9,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "14dd52577955220e64cb2c8c9962ae6976ce53822414f699ecb7745597c88390",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆，长叹一笑而别。牧童在竹林秋草了一夜守，欣然归去。”心中惆怅。牧童在溪桥明。旅人梦见道：“秋草了一夜看，欣然归去。"
+      },
+      {
+        "name": "ablate_T4_a0.3",
+        "width": 64,
+        "params": 147456,
+        "steps": 80,
+        "train_seconds": 0.4046025999999756,
+        "train_loss": 1.198127156496048,
+        "last_batch_ce": 1.1860501766204834,
+        "val_loss": 1.6796611309051515,
+        "ppl": 5.3637380580613545,
+        "agreement": 0.5876736111111112,
+        "T": 4,
+        "alpha": 0.3,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "14dd52577955220e64cb2c8c9962ae6976ce53822414f699ecb7745597c88390",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆，不觉天明。阿远帆了一夜守，泪湿衣襟。孤客溪桥白雪了一夜看，欣然归去。山，欣然归客在长亭远在渡口远帆了一笑而别。阿"
+      },
+      {
+        "name": "ablate_T4_a0.5",
+        "width": 64,
+        "params": 147456,
+        "steps": 80,
+        "train_seconds": 0.40212770000005094,
+        "train_loss": 1.1794112861156463,
+        "last_batch_ce": 1.1945163011550903,
+        "val_loss": 1.6572169482707977,
+        "ppl": 5.24469425909766,
+        "agreement": 0.6018663194444445,
+        "T": 4,
+        "alpha": 0.5,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "14dd52577955220e64cb2c8c9962ae6976ce53822414f699ecb7745597c88390",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆，不觉天明。阿远帆了一夜守，泪湿衣襟。孤客溪桥送去道：“远帆了一夜听，欲语怅。”欲语。”泪湿衣襟。”一夜看，欣然归"
+      },
+      {
+        "name": "ablate_T4_a0.7",
+        "width": 64,
+        "params": 147456,
+        "steps": 80,
+        "train_seconds": 0.43037200000003395,
+        "train_loss": 1.194999760389328,
+        "last_batch_ce": 1.198048710823059,
+        "val_loss": 1.6686761915683745,
+        "ppl": 5.305140157311816,
+        "agreement": 0.6380642361111111,
+        "T": 4,
+        "alpha": 0.7,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "14dd52577955220e64cb2c8c9962ae6976ce53822414f699ecb7745597c88390",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆，不觉天明。阿远帆了一夜守，泪湿衣襟。孤客溪桥送去道：“远帆了一夜听，欲语。旅人梦见明月，此意难平。归雁，不觉天道"
+      },
+      {
+        "name": "ablate_T4_a0.9",
+        "width": 64,
+        "params": 147456,
+        "steps": 80,
+        "train_seconds": 0.3993947000000162,
+        "train_loss": 1.3099326372146607,
+        "last_batch_ce": 1.3149484395980835,
+        "val_loss": 1.771393394470215,
+        "ppl": 5.879039477912069,
+        "agreement": 0.6059895833333333,
+        "T": 4,
+        "alpha": 0.9,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "14dd52577955220e64cb2c8c9962ae6976ce53822414f699ecb7745597c88390",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆，不明。牧童在篱下青：“寒江，欣然归去。”一夜看，欣然归去。孤客舟中惆怅。归去。”忽忆旧。阿远在山，一夜看，欣然归"
+      },
+      {
+        "name": "ablate_T8_a0.3",
+        "width": 64,
+        "params": 147456,
+        "steps": 80,
+        "train_seconds": 0.4005269000000453,
+        "train_loss": 1.2081496596336365,
+        "last_batch_ce": 1.1955426931381226,
+        "val_loss": 1.6646790325641632,
+        "ppl": 5.283976993007268,
+        "agreement": 0.5856336805555555,
+        "T": 8,
+        "alpha": 0.3,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "14dd52577955220e64cb2c8c9962ae6976ce53822414f699ecb7745597c88390",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆，不觉天明。阿远帆了一夜守，泪湿衣襟。孤客溪桥送去道：“远城楼空忆道：“寒江，长叹一夜看，此意难平。归雁正好。孤客"
+      },
+      {
+        "name": "ablate_T8_a0.5",
+        "width": 64,
+        "params": 147456,
+        "steps": 80,
+        "train_seconds": 0.3880537000000004,
+        "train_loss": 1.2011629939079285,
+        "last_batch_ce": 1.1956119537353516,
+        "val_loss": 1.6486228466033936,
+        "ppl": 5.199813952611575,
+        "agreement": 0.5851128472222222,
+        "T": 8,
+        "alpha": 0.5,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "14dd52577955220e64cb2c8c9962ae6976ce53822414f699ecb7745597c88390",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆，不觉天明。阿远帆了一夜守，泪湿衣襟。孤客溪桥送去道：“远城楼空忆道：“寒江，长叹一夜看道：“寒江了一夜看，欣然无"
+      },
+      {
+        "name": "ablate_T8_a0.7",
+        "width": 64,
+        "params": 147456,
+        "steps": 80,
+        "train_seconds": 0.39623759999994945,
+        "train_loss": 1.2104943692684174,
+        "last_batch_ce": 1.2109109163284302,
+        "val_loss": 1.648585695028305,
+        "ppl": 5.199620774921518,
+        "agreement": 0.6157986111111111,
+        "T": 8,
+        "alpha": 0.7,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "14dd52577955220e64cb2c8c9962ae6976ce53822414f699ecb7745597c88390",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆，不觉天明。阿远帆了一夜守，泪湿衣襟。孤客窗前送去道：“远“孤客望见晚钟，欣然归客在长亭远在渡口远帆了一夜守，此意"
+      },
+      {
+        "name": "ablate_T8_a0.9",
+        "width": 64,
+        "params": 147456,
+        "steps": 80,
+        "train_seconds": 0.39337879999993675,
+        "train_loss": 1.3978499054908753,
+        "last_batch_ce": 1.3941867351531982,
+        "val_loss": 1.8041920363903046,
+        "ppl": 6.075061036826054,
+        "agreement": 0.5911458333333334,
+        "T": 8,
+        "alpha": 0.9,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "14dd52577955220e64cb2c8c9962ae6976ce53822414f699ecb7745597c88390",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆，不觉天人梦见暮云了一夜守，泪湿衣襟。孤客溪桥送去。归去。小红空忆道：“寒在荒村听，长亭远在渡残灯了一夜看，欣然归"
+      }
+    ],
+    "fitnet": {
+      "name": "fitnet",
+      "width": 64,
+      "params": 147456,
+      "steps": 120,
+      "train_seconds": 0.8175037999999404,
+      "train_loss": 0.9793867319822311,
+      "last_batch_ce": 0.9879990816116333,
+      "val_loss": 1.4287763297557832,
+      "ppl": 4.173588969313888,
+      "agreement": 0.6905381944444444,
+      "T": 4.0,
+      "alpha": 0.5,
+      "feature_weight": 0.1,
+      "audit": {
+        "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+        "batch_sha256": "67a35720bc3a786c67f04399a3ee0da1ac30e5520489b177b94ce2299dc420ec",
+        "teacher_has_grad": false
+      },
+      "sample": "月，忽忆旧游子在野渡口暮云了一夜守，泪湿衣襟。孤客静听，一夜忆旧游。孤客望见道：“远帆依旧。”默然无语。山了一笑而别。孤客"
+    },
+    "quantization": [
+      {
+        "precision": "fp32",
+        "file_bytes": 674643,
+        "val_loss": 1.4511000335216522,
+        "median_forward_ms": 4.898016666667597,
+        "forward_ms_batches": [
+          5.094083333335675,
+          5.3039133333337904,
+          4.898016666667597,
+          4.791509999999259,
+          4.622263333332436
+        ],
+        "batch_size": 24,
+        "block": 96,
+        "threads": 8,
+        "reload_max_abs_diff": 0.0
+      },
+      {
+        "precision": "int8",
+        "file_bytes": 324607,
+        "val_loss": 1.4513664305210114,
+        "median_forward_ms": 5.064243333333707,
+        "forward_ms_batches": [
+          4.99838666666695,
+          5.064243333333707,
+          5.1247033333349155,
+          5.054213333331366,
+          5.1395966666670265
+        ],
+        "batch_size": 24,
+        "block": 96,
+        "threads": 8,
+        "reload_max_abs_diff": 0.0
+      }
+    ],
+    "teacher_scan": [
+      {
+        "width": 96,
+        "teacher": {
+          "name": "teacher_c96",
+          "width": 96,
+          "params": 294912,
+          "steps": 200,
+          "train_seconds": 1.0152122000000645,
+          "train_loss": 0.7911348015069961,
+          "last_batch_ce": 0.7826563715934753,
+          "val_loss": 1.126334583759308,
+          "ppl": 3.0843304006288386,
+          "agreement": null,
+          "T": null,
+          "alpha": 0.0,
+          "feature_weight": 0.0,
+          "audit": {
+            "initial_sha256": "3e83e31aa6753665fa1bdd8764a642ddc5e53983b98a186ec11cf7e40a334960",
+            "batch_sha256": "c8fcad10c90b500f6efc6b0bc7cee62ffbf591ea3ade350d260f01143e8c0074",
+            "teacher_has_grad": false
+          },
+          "sample": "月，忽忆旧游。小明梦见道：“落花可怜。”欣然归去。牧童长亭寻到白雪，欣然归去。游子在荒村残灯了一夜看，忽忆旧游。故人又逢道"
+        },
+        "student": {
+          "name": "kd_teacher_c96",
+          "width": 64,
+          "params": 147456,
+          "steps": 120,
+          "train_seconds": 0.798538199999939,
+          "train_loss": 0.9987374991178513,
+          "last_batch_ce": 1.003564715385437,
+          "val_loss": 1.4569574773311615,
+          "ppl": 4.292878458685494,
+          "agreement": 0.6853298611111112,
+          "T": 4.0,
+          "alpha": 0.5,
+          "feature_weight": 0.0,
+          "audit": {
+            "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+            "batch_sha256": "67a35720bc3a786c67f04399a3ee0da1ac30e5520489b177b94ce2299dc420ec",
+            "teacher_has_grad": false
+          },
+          "sample": "月，忽忆旧游子静听见道：“青山正好。”欣然归去。”忽忆旧游。小红在城楼落花，欣然归客在舟中秋草了一夜忆，此意难平。书生望见"
+        }
+      },
+      {
+        "width": 160,
+        "teacher": {
+          "name": "teacher_c160",
+          "width": 160,
+          "params": 737280,
+          "steps": 200,
+          "train_seconds": 1.306010200000003,
+          "train_loss": 0.7626728266477585,
+          "last_batch_ce": 0.7668421268463135,
+          "val_loss": 0.9985560148954391,
+          "ppl": 2.714359502560373,
+          "agreement": null,
+          "T": null,
+          "alpha": 0.0,
+          "feature_weight": 0.0,
+          "audit": {
+            "initial_sha256": "20bfd14682a054270ed5f1fc952df34b4ac28fe9496a731fc5dba8e4c7efc5ef",
+            "batch_sha256": "c8fcad10c90b500f6efc6b0bc7cee62ffbf591ea3ade350d260f01143e8c0074",
+            "teacher_has_grad": false
+          },
+          "sample": "月了一夜看，默然无语。牧童静听道：“暮云可惜。”欣然归去。阿远长亭送去落花，欣然归去。归客在长叹一声。书生恰遇道：“青山可"
+        },
+        "student": {
+          "name": "kd",
+          "width": 64,
+          "params": 147456,
+          "steps": 120,
+          "train_seconds": 0.7748822000000928,
+          "train_loss": 0.9904850900173188,
+          "last_batch_ce": 0.9760315418243408,
+          "val_loss": 1.4511000394821167,
+          "ppl": 4.267806689767784,
+          "agreement": 0.683984375,
+          "T": 4.0,
+          "alpha": 0.5,
+          "feature_weight": 0.0,
+          "audit": {
+            "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+            "batch_sha256": "67a35720bc3a786c67f04399a3ee0da1ac30e5520489b177b94ce2299dc420ec",
+            "teacher_has_grad": false
+          },
+          "sample": "月，忽忆旧游子在野渡口暮云了一夜守，泪湿衣襟。孤客静听，一夜忆旧游。孤客望见道：“远帆依旧。”默然无语。山了一笑而别。孤舟"
+        }
+      },
+      {
+        "width": 256,
+        "teacher": {
+          "name": "teacher_c256",
+          "width": 256,
+          "params": 1769472,
+          "steps": 200,
+          "train_seconds": 1.2500806999998986,
+          "train_loss": 0.7633056342601776,
+          "last_batch_ce": 0.7784079313278198,
+          "val_loss": 0.934759920835495,
+          "ppl": 2.5466019982625347,
+          "agreement": null,
+          "T": null,
+          "alpha": 0.0,
+          "feature_weight": 0.0,
+          "audit": {
+            "initial_sha256": "0abef8a4dae74ed2c6e5fdb6a57a4ce1a647b9521d348df49a11080e4794adf2",
+            "batch_sha256": "c8fcad10c90b500f6efc6b0bc7cee62ffbf591ea3ade350d260f01143e8c0074",
+            "teacher_has_grad": false
+          },
+          "sample": "月，忽忆旧游。小明梦见道：“落花可怜。”欣然归去。牧童长亭寻到白雪，欣然归去。书生在荒村残灯了一夜听，欲语还休。书生又逢道"
+        },
+        "student": {
+          "name": "kd_teacher_c256",
+          "width": 64,
+          "params": 147456,
+          "steps": 120,
+          "train_seconds": 0.7831826999999976,
+          "train_loss": 1.0000964134931565,
+          "last_batch_ce": 1.0163323879241943,
+          "val_loss": 1.4550872564315795,
+          "ppl": 4.284857330651314,
+          "agreement": 0.6373697916666666,
+          "T": 4.0,
+          "alpha": 0.5,
+          "feature_weight": 0.0,
+          "audit": {
+            "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+            "batch_sha256": "67a35720bc3a786c67f04399a3ee0da1ac30e5520489b177b94ce2299dc420ec",
+            "teacher_has_grad": false
+          },
+          "sample": "月，忽忆旧游。小明窗前想起青山寺望见暮云，默然归客窗前道：“归雁已“孤客松间月了一夜看。”忽忆旧游。归去。”一笑而别。孤舟"
+        }
+      }
+    ]
+  },
+  "repairs": [
+    {
+      "round": 1,
+      "change": "student_iters:120->150 for both arms",
+      "teacher_checkpoint_sha256": "b653e96bb55c6e57e9052ff312f6f577a0d5190b4a23e041053bfe6bbf5f5fbf",
+      "scratch": {
+        "name": "scratch150",
+        "width": 64,
+        "params": 147456,
+        "steps": 150,
+        "train_seconds": 1.0185010000000148,
+        "train_loss": 0.911929726600647,
+        "last_batch_ce": 1.178784728050232,
+        "val_loss": 1.3642697930335999,
+        "ppl": 3.9128648074237127,
+        "agreement": 0.7046440972222222,
+        "T": null,
+        "alpha": 0.0,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "827c8efba71b881d6d87a422b39616d6b3f6e6cbfe90b6de7f134e890d3e6152",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆旧游。小明窗前想起道：“寒江正好。”长亭梦见残灯可怜。小红城楼空忆道：“寒江，长叹一声。小明渡在山寺白雪正好。孤舟"
+      },
+      "kd": {
+        "name": "kd150",
+        "width": 64,
+        "params": 147456,
+        "steps": 150,
+        "train_seconds": 0.9453866999999718,
+        "train_loss": 0.8803607106208802,
+        "last_batch_ce": 1.132619857788086,
+        "val_loss": 1.3293761998414992,
+        "ppl": 3.7786855076037247,
+        "agreement": 0.7307725694444445,
+        "T": 4.0,
+        "alpha": 0.5,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "827c8efba71b881d6d87a422b39616d6b3f6e6cbfe90b6de7f134e890d3e6152",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆旧游子静听见道：“青山可怜。”欣然归雁，欣然归客山僧在松间了一夜忆，欣然归客想起道：“白雪可惜。”默然归客梦见道："
+      }
+    },
+    {
+      "round": 2,
+      "steps": 150,
+      "T": 8.0,
+      "alpha": 0.5,
+      "change": "T:4->8",
+      "teacher_checkpoint_sha256": "b653e96bb55c6e57e9052ff312f6f577a0d5190b4a23e041053bfe6bbf5f5fbf",
+      "scratch": {
+        "name": "scratch150",
+        "width": 64,
+        "params": 147456,
+        "steps": 150,
+        "train_seconds": 1.1086027999999715,
+        "train_loss": 0.911929726600647,
+        "last_batch_ce": 1.178784728050232,
+        "val_loss": 1.3642697930335999,
+        "ppl": 3.9128648074237127,
+        "agreement": 0.7046440972222222,
+        "T": null,
+        "alpha": 0.0,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "827c8efba71b881d6d87a422b39616d6b3f6e6cbfe90b6de7f134e890d3e6152",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆旧游。小明窗前想起道：“寒江正好。”长亭梦见残灯可怜。小红城楼空忆道：“寒江，长叹一声。小明渡在山寺白雪正好。孤舟"
+      },
+      "kd": {
+        "name": "kd150",
+        "width": 64,
+        "params": 147456,
+        "steps": 150,
+        "train_seconds": 1.1654857999999422,
+        "train_loss": 0.8890342652797699,
+        "last_batch_ce": 1.1233534812927246,
+        "val_loss": 1.3206147760152818,
+        "ppl": 3.745723450495895,
+        "agreement": 0.7210069444444445,
+        "T": 8.0,
+        "alpha": 0.5,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "827c8efba71b881d6d87a422b39616d6b3f6e6cbfe90b6de7f134e890d3e6152",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆旧游子静听孤舟中惆怅。书生在渡口孤舟，泪湿衣襟。游子在松间明月了一夜守，泪湿衣襟。书生梦见道：“远帆可怜。”欣然归"
+      }
+    },
+    {
+      "round": 3,
+      "steps": 180,
+      "T": 8.0,
+      "alpha": 0.5,
+      "change": "student_iters:150->180 for both arms",
+      "teacher_checkpoint_sha256": "b653e96bb55c6e57e9052ff312f6f577a0d5190b4a23e041053bfe6bbf5f5fbf",
+      "scratch": {
+        "name": "scratch180",
+        "width": 64,
+        "params": 147456,
+        "steps": 180,
+        "train_seconds": 1.1760213999999678,
+        "train_loss": 0.8487297356128692,
+        "last_batch_ce": 0.8448517322540283,
+        "val_loss": 1.2890497386455535,
+        "ppl": 3.6293360987575394,
+        "agreement": 0.7098524305555556,
+        "T": null,
+        "alpha": 0.0,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "a75faf7eaee45474c8f36e5633b3f1fc3ecb72c7cf8fc56dc8ff33796663b5ad",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆旧游。小明窗前想起道：“寒江正好。”长亭听见残灯可怜。小明城楼空忆远在江，不觉天明。小明月了一夜忆，一笑而别。孤客"
+      },
+      "kd": {
+        "name": "kd180",
+        "width": 64,
+        "params": 147456,
+        "steps": 180,
+        "train_seconds": 1.1492769999999837,
+        "train_loss": 0.8402804523706436,
+        "last_batch_ce": 0.8306750059127808,
+        "val_loss": 1.2529557168483734,
+        "ppl": 3.5006746842555696,
+        "agreement": 0.7280815972222222,
+        "T": 8.0,
+        "alpha": 0.5,
+        "feature_weight": 0.0,
+        "audit": {
+          "initial_sha256": "259c0f847c60572ccb6529b3d4ffa7141b99b8fabc362dca618f4db21dca73b7",
+          "batch_sha256": "a75faf7eaee45474c8f36e5633b3f1fc3ecb72c7cf8fc56dc8ff33796663b5ad",
+          "teacher_has_grad": false
+        },
+        "sample": "月，忽忆旧游。小明在长亭落花了一夜看，欣然归去。阿远望见道：“白雪可惜。”泪湿衣襟。旅人荒村空忆落花，忽忆旧游。故人在窗前"
+      }
+    }
+  ],
+  "final_quantization": [
+    {
+      "precision": "fp32",
+      "file_bytes": 674643,
+      "val_loss": 1.2529557049274445,
+      "median_forward_ms": 3.896646666665523,
+      "forward_ms_batches": [
+        5.820586666671565,
+        4.203303333338226,
+        3.896646666665523,
+        3.7209400000013675,
+        3.8049100000004428
+      ],
+      "batch_size": 24,
+      "block": 96,
+      "threads": 8,
+      "reload_max_abs_diff": 0.0
+    },
+    {
+      "precision": "int8",
+      "file_bytes": 324607,
+      "val_loss": 1.2535977959632874,
+      "median_forward_ms": 4.268650000002102,
+      "forward_ms_batches": [
+        4.268650000002102,
+        4.401466666665025,
+        4.274713333332633,
+        4.067119999998188,
+        4.2296800000031
+      ],
+      "batch_size": 24,
+      "block": 96,
+      "threads": 8,
+      "reload_max_abs_diff": 0.0
+    }
+  ],
+  "checks": {
+    "baseline_same_initialization": true,
+    "baseline_same_batches": true,
+    "baseline_same_steps": true,
+    "baseline_teacher_no_grad": true,
+    "scratch_reload": true,
+    "scratch_sample_length": true,
+    "kd_reload": true,
+    "kd_sample_length": true,
+    "repair1_same_initialization": true,
+    "repair1_same_batches": true,
+    "repair1_same_steps": true,
+    "repair1_teacher_no_grad": true,
+    "scratch150_reload": true,
+    "scratch150_sample_length": true,
+    "kd150_reload": true,
+    "kd150_sample_length": true,
+    "repair2_same_initialization": true,
+    "repair2_same_batches": true,
+    "repair2_same_steps": true,
+    "repair2_teacher_no_grad": true,
+    "repair3_same_initialization": true,
+    "repair3_same_batches": true,
+    "repair3_same_steps": true,
+    "repair3_teacher_no_grad": true,
+    "scratch180_reload": true,
+    "scratch180_sample_length": true,
+    "kd180_reload": true,
+    "kd180_sample_length": true,
+    "ablation_16": true,
+    "ablation_same_initialization": true,
+    "ablation_same_batches": true,
+    "fitnet_same_batches": true,
+    "fitnet_same_initialization": true,
+    "scan_c96_same_batches": true,
+    "scan_c160_same_batches": true,
+    "scan_c256_same_batches": true,
+    "teacher_cache_matches_repairs": true,
+    "quant_reload": true
+  }
+}

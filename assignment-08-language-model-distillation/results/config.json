@@ -1,0 +1,56 @@
+{
+  "device": "cuda",
+  "teacher_iters": 200,
+  "student_iters": 120,
+  "abl_iters": 80,
+  "batch_size": 24,
+  "lr": 0.003,
+  "T": 4.0,
+  "alpha": 0.5,
+  "feat": 0.0,
+  "seed": 0,
+  "threads": 8,
+  "vocab": 322,
+  "train_chars": 49457,
+  "val_chars": 5357,
+  "train_sha256": "658d67691e5ede4a5a4ebcc3821e8b2d892384a97609f2544c7aec5be5072419",
+  "val_sha256": "219c13b4782956d57993ce10a96bd48f2fe7334447ddf6f5000ba1ffb0bc35b3",
+  "python": "3.12",
+  "torch": "2.8.0+cu128",
+  "precision": "FP32",
+  "tf32": false,
+  "repairs": [
+    {
+      "steps": 150,
+      "T": 4,
+      "alpha": 0.5
+    },
+    {
+      "steps": 150,
+      "T": 8,
+      "alpha": 0.5
+    },
+    {
+      "steps": 180,
+      "T": 8,
+      "alpha": 0.5
+    }
+  ],
+  "evaluation": {
+    "val_iters": 20,
+    "val_seed": 1234,
+    "agreement_iters": 10,
+    "agreement_seed": 4321
+  },
+  "ablation_cache": {
+    "batches": 32,
+    "seed": 2024
+  },
+  "generation": {
+    "prompt": "月",
+    "new_tokens": 60,
+    "temperature": 0.9,
+    "top_k": 20,
+    "seed": 20261106
+  }
+}
