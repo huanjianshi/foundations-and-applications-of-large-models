@@ -1,0 +1,663 @@
+[
+  {
+    "id": "Q01a",
+    "text": "梯度下降怎样更新参数？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C01"
+    ],
+    "rationale": "问题针对「梯度下降」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q01b",
+    "text": "知道误差后，网络应该朝哪个方向调整权重？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C01"
+    ],
+    "rationale": "问题针对「梯度下降」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q02a",
+    "text": "反向传播的作用是什么？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C02"
+    ],
+    "rationale": "问题针对「反向传播」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q02b",
+    "text": "误差信息如何从输出端传回前面的神经网络层？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C02"
+    ],
+    "rationale": "问题针对「反向传播」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q03a",
+    "text": "学习率太大和太小分别有什么影响？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C03"
+    ],
+    "rationale": "问题针对「学习率」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q03b",
+    "text": "训练走得很慢，或者每次调整都跳过合适位置，应该检查哪个超参数？",
+    "type": "confusion",
+    "split": "test",
+    "relevant": [
+      "C03"
+    ],
+    "rationale": "问题针对「学习率」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q04a",
+    "text": "什么是过拟合？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C04"
+    ],
+    "rationale": "问题针对「过拟合」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q04b",
+    "text": "为什么练过的题都能答对，一换新题就频繁出错？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C04"
+    ],
+    "rationale": "问题针对「过拟合」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q05a",
+    "text": "Dropout在训练和推理时有何区别？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C05"
+    ],
+    "rationale": "问题针对「Dropout正则化」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q05b",
+    "text": "每次测试同一输入结果都在随机变化，哪种正则层的模式可能没切对？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C05"
+    ],
+    "rationale": "问题针对「Dropout正则化」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q06a",
+    "text": "开发集与独立测试集分别用来做什么？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C06"
+    ],
+    "rationale": "问题针对「独立测试集」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q06b",
+    "text": "能不能看完最终考试答案，再改系统并把新的分数当成独立测评？",
+    "type": "confusion",
+    "split": "test",
+    "relevant": [
+      "C06"
+    ],
+    "rationale": "问题针对「独立测试集」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q07a",
+    "text": "Transformer为什么需要位置编码？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C07"
+    ],
+    "rationale": "问题针对「位置编码」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q07b",
+    "text": "句子包含相同的词，调换先后次序却意思不同，模型如何获得顺序线索？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C07"
+    ],
+    "rationale": "问题针对「位置编码」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q08a",
+    "text": "自注意力中的Q、K、V有什么作用？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C08"
+    ],
+    "rationale": "问题针对「自注意力」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q08b",
+    "text": "一个词怎样从句子里其他位置挑出需要的信息并整合进自身表示？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C08"
+    ],
+    "rationale": "问题针对「自注意力」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q09a",
+    "text": "因果注意力掩码屏蔽什么？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C09"
+    ],
+    "rationale": "问题针对「因果注意力掩码」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q09b",
+    "text": "训练续写模型时，怎样阻止它偷看后面还没写出的词？",
+    "type": "confusion",
+    "split": "test",
+    "relevant": [
+      "C09"
+    ],
+    "rationale": "问题针对「因果注意力掩码」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q10a",
+    "text": "Token数是否等于汉字数？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C10"
+    ],
+    "rationale": "问题针对「Token与分词」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q10b",
+    "text": "输入限制是一百多个单位，为什么不能直接按中文字符数判断是否超长？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C10"
+    ],
+    "rationale": "问题针对「Token与分词」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q11a",
+    "text": "温度参数怎样影响文本采样？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C11"
+    ],
+    "rationale": "问题针对「温度采样」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q11b",
+    "text": "想让同一个模型写得更随机一些，需要重新训练还是调整生成分布？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C11"
+    ],
+    "rationale": "问题针对「温度采样」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q12a",
+    "text": "Top-k采样怎样筛选候选token？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C12"
+    ],
+    "rationale": "问题针对「Top-k采样」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q12b",
+    "text": "只从最可能的几个后续词中抽一个，这属于哪种生成策略？",
+    "type": "confusion",
+    "split": "test",
+    "relevant": [
+      "C12"
+    ],
+    "rationale": "问题针对「Top-k采样」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q13a",
+    "text": "句向量是什么，均值池化为何需要掩码？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C13"
+    ],
+    "rationale": "问题针对「句向量嵌入」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q13b",
+    "text": "如何把长短不同的句子变成等长数字列表，以便比较它们的意思？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C13"
+    ],
+    "rationale": "问题针对「句向量嵌入」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q14a",
+    "text": "归一化向量怎样计算余弦相似度？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C14"
+    ],
+    "rationale": "问题针对「余弦相似度」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q14b",
+    "text": "两个文本向量的数值大小不同，怎样主要比较它们的方向接近程度？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C14"
+    ],
+    "rationale": "问题针对「余弦相似度」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q15a",
+    "text": "字符TF-IDF检索为什么可能漏掉同义表达？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C15"
+    ],
+    "rationale": "问题针对「字符TF-IDF检索」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q15b",
+    "text": "不用神经模型，只凭相邻文字片段的出现次数和稀有程度，能怎样搜索资料？",
+    "type": "confusion",
+    "split": "test",
+    "relevant": [
+      "C15"
+    ],
+    "rationale": "问题针对「字符TF-IDF检索」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q16a",
+    "text": "RRF为什么可以融合不同量纲的检索结果？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C16"
+    ],
+    "rationale": "问题针对「RRF排名融合」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q16b",
+    "text": "两套搜索系统打分尺度不同，怎样只看名次把列表合成一个？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C16"
+    ],
+    "rationale": "问题针对「RRF排名融合」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q17a",
+    "text": "有两个相关文档只找到一个，Recall是多少？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C17"
+    ],
+    "rationale": "问题针对「Recall召回率」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q17b",
+    "text": "只要找到一条答案就算全对，这和找全所有相关资料的指标一样吗？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C17"
+    ],
+    "rationale": "问题针对「Recall召回率」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q18a",
+    "text": "MRR@K如何计算？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C18"
+    ],
+    "rationale": "问题针对「MRR倒数排名」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q18b",
+    "text": "两次搜索都找到答案，但一个排第一一个排第三，什么指标能区分这种差别？",
+    "type": "confusion",
+    "split": "test",
+    "relevant": [
+      "C18"
+    ],
+    "rationale": "问题针对「MRR倒数排名」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q19a",
+    "text": "检索增强生成包括哪些环节？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C19"
+    ],
+    "rationale": "问题针对「检索增强生成」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q19b",
+    "text": "把查到的资料交给语言模型再写回答，与只返回原文片段有什么区别？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C19"
+    ],
+    "rationale": "问题针对「检索增强生成」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q20a",
+    "text": "图结构检索依赖什么信息？",
+    "type": "direct",
+    "split": "dev",
+    "relevant": [
+      "C20"
+    ],
+    "rationale": "问题针对「图结构检索」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q20b",
+    "text": "除了比较两段文字的意思，能否沿人物和事物之间的联系查找材料？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C20"
+    ],
+    "rationale": "问题针对「图结构检索」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q21a",
+    "text": "LoRA为什么减少可训练参数？",
+    "type": "direct",
+    "split": "test",
+    "relevant": [
+      "C21"
+    ],
+    "rationale": "问题针对「LoRA低秩适配」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q21b",
+    "text": "想少训练一些权重，能否冻结原模型，只学习一个低秩的增量？",
+    "type": "confusion",
+    "split": "test",
+    "relevant": [
+      "C21"
+    ],
+    "rationale": "问题针对「LoRA低秩适配」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q22a",
+    "text": "LoRA和四比特QLoRA有什么区别？",
+    "type": "direct",
+    "split": "test",
+    "relevant": [
+      "C21",
+      "C22"
+    ],
+    "rationale": "问题针对「量化与QLoRA」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q22b",
+    "text": "只训练了适配器但基座仍是全精度，是否就已经做了四比特训练？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C22"
+    ],
+    "rationale": "问题针对「量化与QLoRA」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q23a",
+    "text": "SFT为什么把提示位置标签设为-100？",
+    "type": "direct",
+    "split": "test",
+    "relevant": [
+      "C23"
+    ],
+    "rationale": "问题针对「监督微调SFT」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q23b",
+    "text": "训练问答模型时，怎样只要求它学会回答，而不让它重复学习输入问题？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C23"
+    ],
+    "rationale": "问题针对「监督微调SFT」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q24a",
+    "text": "DPO用什么形式的数据进行训练？",
+    "type": "direct",
+    "split": "test",
+    "relevant": [
+      "C24"
+    ],
+    "rationale": "问题针对「DPO偏好优化」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q24b",
+    "text": "没有逐词标准答案，却知道两个回答中更喜欢哪一个，可以如何改进模型？",
+    "type": "confusion",
+    "split": "test",
+    "relevant": [
+      "C24"
+    ],
+    "rationale": "问题针对「DPO偏好优化」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q25a",
+    "text": "DPO参考模型为什么不更新？",
+    "type": "direct",
+    "split": "test",
+    "relevant": [
+      "C25"
+    ],
+    "rationale": "问题针对「DPO参考策略」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q25b",
+    "text": "偏好训练中用来衡量变化幅度的原始策略，应该跟着当前模型一起学吗？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C25"
+    ],
+    "rationale": "问题针对「DPO参考策略」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q26a",
+    "text": "chosen与rejected标反会怎样？",
+    "type": "direct",
+    "split": "test",
+    "relevant": [
+      "C26"
+    ],
+    "rationale": "问题针对「偏好对质量」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q26b",
+    "text": "如果训练资料把胡说的回答标成更好，优化过程会不会反而奖励错误？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C26"
+    ],
+    "rationale": "问题针对「偏好对质量」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q27a",
+    "text": "IoU如何衡量定位结果？",
+    "type": "direct",
+    "split": "test",
+    "relevant": [
+      "C27"
+    ],
+    "rationale": "问题针对「交并比IoU」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q27b",
+    "text": "模型认出了是什么物体，但框的位置偏离了，该怎样量化重叠程度？",
+    "type": "confusion",
+    "split": "test",
+    "relevant": [
+      "C27"
+    ],
+    "rationale": "问题针对「交并比IoU」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q28a",
+    "text": "自举训练为什么需要可靠的验证器？",
+    "type": "direct",
+    "split": "test",
+    "relevant": [
+      "C28"
+    ],
+    "rationale": "问题针对「自举反馈与验证」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q28b",
+    "text": "让模型拿自己写的答案继续学习，如果没人正确把关，会产生什么问题？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C28"
+    ],
+    "rationale": "问题针对「自举反馈与验证」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q29a",
+    "text": "关键词匹配为何不等于回答事实正确？",
+    "type": "direct",
+    "split": "test",
+    "relevant": [
+      "C29"
+    ],
+    "rationale": "问题针对「事实忠实度」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q29b",
+    "text": "回答复述了问题中的词，却没有给出资料支持的结论，能算答对吗？",
+    "type": "paraphrase",
+    "split": "test",
+    "relevant": [
+      "C29"
+    ],
+    "rationale": "问题针对「事实忠实度」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q30a",
+    "text": "可训练参数少是否保证推理更快？",
+    "type": "direct",
+    "split": "test",
+    "relevant": [
+      "C30"
+    ],
+    "rationale": "问题针对「参数量与推理耗时」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  },
+  {
+    "id": "Q30b",
+    "text": "只改了很少的模型权重，为什么运行时仍然可能要花不少时间？",
+    "type": "confusion",
+    "split": "test",
+    "relevant": [
+      "C30"
+    ],
+    "rationale": "问题针对「参数量与推理耗时」；相关卡片直接定义其机制或区别。",
+    "human_reviewed": false
+  }
+]

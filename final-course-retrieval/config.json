@@ -1,0 +1,14 @@
+{
+  "model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+  "threads": 4,
+  "rrf_constant": 60,
+  "repeats": 3,
+  "seed": 42,
+  "tokenization": "Lowercase ASCII, retain CJK U+4E00..U+9FFF/ASCII letters/digits, concatenate, character bigrams",
+  "tf": "raw count",
+  "idf": "log((1+N)/(1+df))+1",
+  "ranking_tie_break": "card id ascending",
+  "input": "title + Chinese full stop + body",
+  "timing": "CPU; query encoding+matching+ranking+result packaging; excludes model load/index; 1 warmup per method; per-query median of 3 runs"
+}

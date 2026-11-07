@@ -1,0 +1,62 @@
+[
+  {
+    "split": "dev",
+    "method": "lexical",
+    "n": 20,
+    "recall@1": 1.0,
+    "recall@3": 1.0,
+    "recall@5": 1.0,
+    "mrr@5": 1.0,
+    "median_query_ms": 0.0413500000604472
+  },
+  {
+    "split": "dev",
+    "method": "semantic",
+    "n": 20,
+    "recall@1": 0.95,
+    "recall@3": 0.95,
+    "recall@5": 0.95,
+    "mrr@5": 0.95,
+    "median_query_ms": 9.540900000047259
+  },
+  {
+    "split": "dev",
+    "method": "hybrid",
+    "n": 20,
+    "recall@1": 0.95,
+    "recall@3": 0.95,
+    "recall@5": 0.95,
+    "mrr@5": 0.95,
+    "median_query_ms": 9.460999999987507
+  },
+  {
+    "split": "test",
+    "method": "lexical",
+    "n": 40,
+    "recall@1": 0.6625,
+    "recall@3": 0.8,
+    "recall@5": 0.8,
+    "mrr@5": 0.7291666666666666,
+    "median_query_ms": 0.044799999955102976
+  },
+  {
+    "split": "test",
+    "method": "semantic",
+    "n": 40,
+    "recall@1": 0.4375,
+    "recall@3": 0.675,
+    "recall@5": 0.85,
+    "mrr@5": 0.5804166666666667,
+    "median_query_ms": 10.34469999990506
+  },
+  {
+    "split": "test",
+    "method": "hybrid",
+    "n": 40,
+    "recall@1": 0.5625,
+    "recall@3": 0.8,
+    "recall@5": 0.875,
+    "mrr@5": 0.6858333333333333,
+    "median_query_ms": 10.321400000066205
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "version": "1.1",
+  "frozen_before_evaluation": true,
+  "cards": 30,
+  "dev": 20,
+  "test": 40,
+  "hashes": {
+    "cards.json": "8f3e87114f8281d8b99a4aa8501251e4c9b727f7e8805779d8de7e09832fc0de",
+    "questions.json": "69fd9f680265de6fe2bbb052c851efb79b1515416b6f690a88658f3b9c2dad5b",
+    "sources.json": "bb63d2274e244e24f1e852690f393b004c88d840a042afb4589396e476e03d39"
+  },
+  "author": "CODEX",
+  "human_review_status": "pending; all labels are provisional until user review",
+  "selection": "Fixed design, no model scores used to author or select queries."
+}

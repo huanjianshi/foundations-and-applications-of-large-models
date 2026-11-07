@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-07",
+  "reviewer": "student",
+  "scope": "Three representative query-to-concept mappings, confirmed directly in chat; not a full benchmark audit",
+  "confirmed": [
+    {"query_id": "Q04b", "relevant": ["C04"], "judgment": "reasonable"},
+    {"query_id": "Q13b", "relevant": ["C13"], "judgment": "reasonable"},
+    {"query_id": "Q22b", "relevant": ["C22"], "judgment": "reasonable"}
+  ],
+  "remaining_queries": 57,
+  "frozen_data_changed": false
+}

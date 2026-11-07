@@ -1,0 +1,26 @@
+[
+  {
+    "variant": "full",
+    "source_method": "hybrid",
+    "recall@1": 0.5625,
+    "recall@3": 0.8,
+    "recall@5": 0.875,
+    "mrr@5": 0.6858333333333333
+  },
+  {
+    "variant": "without_lexical",
+    "source_method": "semantic",
+    "recall@1": 0.4375,
+    "recall@3": 0.675,
+    "recall@5": 0.85,
+    "mrr@5": 0.5804166666666667
+  },
+  {
+    "variant": "without_semantic",
+    "source_method": "lexical",
+    "recall@1": 0.6625,
+    "recall@3": 0.8,
+    "recall@5": 0.8,
+    "mrr@5": 0.7291666666666666
+  }
+]

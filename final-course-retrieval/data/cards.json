@@ -1,0 +1,242 @@
+[
+  {
+    "id": "C01",
+    "title": "梯度下降",
+    "text": "梯度下降沿损失对参数的负梯度方向更新权重。学习率控制更新步长；目标是降低训练目标，而非保证每个样本的损失都下降。",
+    "source": "https://www.deeplearningbook.org/contents/optimization.html",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C02",
+    "title": "反向传播",
+    "text": "反向传播通过链式法则计算损失对各层参数的导数，再交给优化器更新。求梯度与参数更新是两个步骤，计算图连接二者。",
+    "source": "https://www.deeplearningbook.org/contents/optimization.html",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C03",
+    "title": "学习率",
+    "text": "学习率决定参数每次移动的步长。过大可能越过较优区域或造成数值不稳定，过小可能收敛缓慢。损失波动本身不等于发散。",
+    "source": "https://www.deeplearningbook.org/contents/optimization.html",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C04",
+    "title": "过拟合",
+    "text": "过拟合表现为训练表现较好而未见数据上的表现变差。模型可能记住样本细节或噪声；降低训练损失不能单独证明泛化改善。",
+    "source": "https://www.deeplearningbook.org/contents/regularization.html",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C05",
+    "title": "Dropout正则化",
+    "text": "Dropout在训练期间随机屏蔽部分单元，减轻对特定特征组合的依赖。推理阶段关闭随机屏蔽；应切换模型的训练和评估模式。",
+    "source": "https://www.deeplearningbook.org/contents/regularization.html",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C06",
+    "title": "独立测试集",
+    "text": "开发数据用于调试和选择设置，独立测试数据用于最终评估。若反复依据测试成绩修改模型，测试集就参与了选择，评估会过于乐观。",
+    "source": "https://www.deeplearningbook.org/contents/regularization.html",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C07",
+    "title": "位置编码",
+    "text": "自注意力需要额外信息区分输入顺序。位置编码将位置信息加入表示，帮助模型识别相同词语在不同排列中的作用。",
+    "source": "https://arxiv.org/abs/1706.03762",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C08",
+    "title": "自注意力",
+    "text": "自注意力由输入计算查询Q、键K和值V，按Q与K的匹配权重聚合V。不同位置之间可以交换信息，形成依赖上下文的表示。",
+    "source": "https://arxiv.org/abs/1706.03762",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C09",
+    "title": "因果注意力掩码",
+    "text": "自回归语言模型的因果掩码阻止当前位置读取未来token。这样训练时的可见信息与逐步生成一致，避免利用尚未生成的答案。",
+    "source": "https://arxiv.org/abs/1706.03762",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C10",
+    "title": "Token与分词",
+    "text": "分词器把文本映射为token编号，token可能是字、词或子词，并不固定等于一个汉字。截断上限按token数计算，会包含特殊符号的开销。",
+    "source": "https://huggingface.co/docs/transformers/main_classes/text_generation",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C11",
+    "title": "温度采样",
+    "text": "温度在采样前缩放logits。较低温度通常使概率更集中，较高温度通常增加随机性；它改变生成分布，不更新模型权重。",
+    "source": "https://huggingface.co/docs/transformers/main_classes/text_generation",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C12",
+    "title": "Top-k采样",
+    "text": "Top-k采样先保留概率最高的k个候选token，再在其中重新归一化并抽样。这里的k控制生成候选集合，与检索返回条数不是同一操作。",
+    "source": "https://huggingface.co/docs/transformers/main_classes/text_generation",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C13",
+    "title": "句向量嵌入",
+    "text": "句向量把文本映射到定长稠密空间，用于相似度比较。当前MiniLM模型输出384维；注意力掩码均值池化避免把padding当作有效词平均。",
+    "source": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C14",
+    "title": "余弦相似度",
+    "text": "余弦相似度比较两个非零向量的方向，等于内积除以两者模长的乘积。L2归一化后可直接用内积计算，但相似度不是答案正确概率。",
+    "source": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C15",
+    "title": "字符TF-IDF检索",
+    "text": "字符二元组TF-IDF按相邻字符片段建立稀疏表示，词频乘以逆文档频率后归一化。它依赖词面重合，对不同说法的同义问题可能漏检。",
+    "source": "https://scikit-learn.org/stable/modules/feature_extraction.html#tfidf-term-weighting",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C16",
+    "title": "RRF排名融合",
+    "text": "RRF将不同检索器的排名转为1除以常数加名次，再相加排序。它融合名次而非直接混加不同量纲分数；本文预先固定常数60。",
+    "source": "https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C17",
+    "title": "Recall召回率",
+    "text": "Recall@K等于前K项中命中的相关资料数除以全部标注相关资料数。若一道题有两个相关文档只找回一个，召回率是二分之一而不是一。",
+    "source": "https://sbert.net/docs/package_reference/sentence_transformer/evaluation.html",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C18",
+    "title": "MRR倒数排名",
+    "text": "MRR@K对每题计算前K项中第一个相关结果名次的倒数，再求平均。未命中记零；首个正确结果越靠前，得分越高。",
+    "source": "https://sbert.net/docs/package_reference/sentence_transformer/evaluation.html",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C19",
+    "title": "检索增强生成",
+    "text": "RAG先从外部资料检索证据，再由生成模型结合证据组织回答。检索与回答生成是不同环节；本项目只实现检索，不把原文展示叫作模型生成。",
+    "source": "https://arxiv.org/abs/2005.11401",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C20",
+    "title": "图结构检索",
+    "text": "图结构检索利用实体、关系和社区等结构组织信息。构图质量会影响检索，预置关系或摘要必须能追溯到来源，不能当作自动抽取结果。",
+    "source": "https://arxiv.org/abs/2404.16130",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C21",
+    "title": "LoRA低秩适配",
+    "text": "LoRA冻结基础权重，用两个低秩矩阵的乘积表示增量更新。训练参数量减少，但基础模型仍参与前向计算，不代表整模型参数消失。",
+    "source": "https://arxiv.org/abs/2106.09685",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C22",
+    "title": "量化与QLoRA",
+    "text": "量化用较低精度表示基础模型以节省内存。QLoRA结合量化基座与低秩适配；只用了LoRA而没量化时，不能称为实际四比特QLoRA。",
+    "source": "https://arxiv.org/abs/2305.14314",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C23",
+    "title": "监督微调SFT",
+    "text": "监督微调用提示与目标回答训练模型。只监督回答时，将提示位置标签设为-100，使其不参与损失；答案结束符的监督也需明确。",
+    "source": "https://arxiv.org/abs/2305.18290",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C24",
+    "title": "DPO偏好优化",
+    "text": "DPO利用同一提示下偏好与非偏好回答的概率对比训练模型，并用参考策略约束变化。偏好数据质量和训练预算会影响实际生成表现。",
+    "source": "https://arxiv.org/abs/2305.18290",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C25",
+    "title": "DPO参考策略",
+    "text": "DPO参考策略提供固定概率基准，不进行梯度更新。LoRA场景可用关闭适配器的基座表示参考策略，但必须确认它确实保持冻结。",
+    "source": "https://arxiv.org/abs/2305.18290",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C26",
+    "title": "偏好对质量",
+    "text": "偏好对包含同一提示下的chosen与rejected。顺序颠倒或把错误回答标为优选会给出错误学习信号；降低偏好损失不等于事实正确。",
+    "source": "https://arxiv.org/abs/2305.18290",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C27",
+    "title": "交并比IoU",
+    "text": "IoU等于预测区域和真实区域交集面积除以并集面积，常用于检测定位。类别答对不保证位置正确；预测不合法时需按固定规则处理。",
+    "source": "https://arxiv.org/abs/1902.09630",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C28",
+    "title": "自举反馈与验证",
+    "text": "自举式改进用模型产生并筛选的新样本继续训练。若验证器会误接收错误，错误可循环放大；样本池变大不直接证明能力提高。",
+    "source": "https://arxiv.org/abs/2203.14465",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C29",
+    "title": "事实忠实度",
+    "text": "事实忠实度关注回答是否被资料支持。关键词出现不等于正确，回声、否定和矛盾回答都需检查；应区分字面匹配与实质判断。",
+    "source": "https://arxiv.org/abs/2005.11401",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  },
+  {
+    "id": "C30",
+    "title": "参数量与推理耗时",
+    "text": "总参数量、可训练参数量和推理耗时是不同概念。冻结权重不免除计算；计时应区分加载、建索引和单次查询，明确设备与测量范围。",
+    "source": "https://arxiv.org/abs/2106.09685",
+    "provenance": "CODEX原创教学概括，来源为相关技术依据，非原文摘录",
+    "human_reviewed": false
+  }
+]

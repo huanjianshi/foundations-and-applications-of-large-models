@@ -1,0 +1,17 @@
+{
+  "DL": "https://www.deeplearningbook.org/contents/optimization.html",
+  "REG": "https://www.deeplearningbook.org/contents/regularization.html",
+  "ATT": "https://arxiv.org/abs/1706.03762",
+  "GEN": "https://huggingface.co/docs/transformers/main_classes/text_generation",
+  "EMB": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "IR": "https://sbert.net/docs/package_reference/sentence_transformer/evaluation.html",
+  "TFIDF": "https://scikit-learn.org/stable/modules/feature_extraction.html#tfidf-term-weighting",
+  "RRF": "https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf",
+  "LORA": "https://arxiv.org/abs/2106.09685",
+  "QLORA": "https://arxiv.org/abs/2305.14314",
+  "DPO": "https://arxiv.org/abs/2305.18290",
+  "RAG": "https://arxiv.org/abs/2005.11401",
+  "IOU": "https://arxiv.org/abs/1902.09630",
+  "GRAPH": "https://arxiv.org/abs/2404.16130",
+  "SELF": "https://arxiv.org/abs/2203.14465"
+}

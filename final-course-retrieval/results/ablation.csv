@@ -1,0 +1,4 @@
+﻿variant,source_method,recall@1,recall@3,recall@5,mrr@5
+full,hybrid,0.5625,0.8,0.875,0.6858333333333333
+without_lexical,semantic,0.4375,0.675,0.85,0.5804166666666667
+without_semantic,lexical,0.6625,0.8,0.8,0.7291666666666666
