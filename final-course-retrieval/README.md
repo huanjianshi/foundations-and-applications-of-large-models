@@ -25,34 +25,41 @@
 
 ## 安装与模型
 
-Python 3.12。已有环境可直接用；新电脑可创建环境后安装requirements.txt。CUDA不是纯词法查询必需条件。
+GitHub目录下方的本说明及结果图可以直接浏览。交互检索使用Python后端，需要先在本机启动服务；点击仓库中的demo/index.html或直接双击该文件不会启动检索接口。本仓库当前未部署在线演示。
+
+以下命令都在final-course-retrieval目录执行，使用Python 3.12。已有环境可直接用；新电脑先创建环境。纯BM25演示仅需NumPy，不需要下载模型或安装PyTorch：
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-python -B query.py '什么是过拟合？' --method bm25
-python -B demo/app.py --lexical-only
+.\.venv\Scripts\python.exe -m pip install numpy==2.5.2
+.\.venv\Scripts\python.exe -B query.py '什么是过拟合？' --method bm25
+.\.venv\Scripts\python.exe -B demo/app.py --lexical-only
 ```
 
 纯词法模式只加载NumPy/CPU索引，不加载任何神经权重。浏览器访问 http://127.0.0.1:8765/ ，Ctrl+C结束；直接双击HTML不能运行接口。
 
-如需完整神经对比，明确下载官方固定版本模型：
+如需完整神经对比，在同一个环境安装依赖并下载两个官方固定版本模型：
 
 ```powershell
-python prepare_model.py
-$env:COURSE_MODEL_PATH = (Resolve-Path '.\models\minilm').Path
-python download_optimization_models.py
-python -B demo/app.py
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -B download_optimization_models.py
+.\.venv\Scripts\python.exe -B demo/app.py
 ```
 
-原MiniLM约0.47GB；新增BGE-small-zh约96MB、reranker-base约1.11GB，模型不随仓库发布。下载脚本固定revision，来源为官方Hugging Face，全部缓存和模型留在项目下。两个BGE模型MIT许可，MiniLM为Apache-2.0。没有GPU时完整演示可加 --device cpu，时延会不同。
+完整演示默认显示BM25，并允许切换BGE、候选排名融合和两种神经重排；启动时会预加载BGE和重排器。纯词法模式不加载神经权重，仅支持BM25。没有GPU时，在完整演示启动命令末尾加 --device cpu，时延会不同。
 
-## 一条命令复跑评分
+BGE-small-zh约96MB、reranker-base约1.11GB，模型不随仓库发布。下载脚本固定revision，来源为官方Hugging Face，模型保存在models目录。两个BGE模型MIT许可。原MiniLM约0.47GB、Apache-2.0许可，仅在完整实验复跑时作为旧方法对照需要，演示网页不需要它。
+
+## 复跑评分
+
+已完成上面的完整依赖和BGE模型准备后，再下载旧MiniLM对照，使用已锁定配置评价并重算更正标注：
 
 ```powershell
-python -B -m unittest discover -s tests -v
-python -B optimize.py test --out results_v2/reproduce
-python -B experiments/audit_qrels.py --results results_v2/reproduce
+.\.venv\Scripts\python.exe -B prepare_model.py
+$env:COURSE_MODEL_PATH = (Resolve-Path '.\models\minilm').Path
+.\.venv\Scripts\python.exe -B -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe -B optimize.py test --out results_v2/reproduce
+.\.venv\Scripts\python.exe -B experiments/audit_qrels.py --results results_v2/reproduce
 ```
 
 使用已发布的锁定配置，不重新调参；已有结果目录拒绝覆盖。无GPU可在optimize.py中显式加 --device cpu，报告会标记设备改变。原始指标在new_test_summary.json，更正指标在audited_summary.json。界面读取正式results_v2/audited_summary.json，不会悄悄用任意复跑目录替换正式统计。
@@ -73,4 +80,4 @@ python -B experiments/audit_qrels.py --results results_v2/reproduce
 
 [BM25](https://doi.org/10.1561/1500000019)、[Sentence-BERT](https://arxiv.org/abs/1908.10084)、[BGE / C-Pack](https://arxiv.org/abs/2309.07597)、[BGE-small-zh](https://huggingface.co/BAAI/bge-small-zh-v1.5)、[重排器](https://huggingface.co/BAAI/bge-reranker-base)、[RRF](https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf)。
 
-只做原文检索，不生成回答或检测资料外问题。归一化分数不是正确概率。中文报告和LaTeX源文件在本地审阅，不属于公开代码附件。
+只做原文检索，不生成回答或检测资料外问题。归一化分数不是正确概率。报告及教师材料在本地保留，不属于公开代码附件。
