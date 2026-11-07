@@ -1,0 +1,10 @@
+{
+  "paired_mrr_difference": 0.0674074074074074,
+  "conditional_bootstrap_95_ci": [
+    0.014444444444444446,
+    0.12259259259259259
+  ],
+  "replicates": 5000,
+  "seed": 20261107,
+  "scope": "Conditional on AI-authored queries, not an independent-human or public-benchmark guarantee."
+}

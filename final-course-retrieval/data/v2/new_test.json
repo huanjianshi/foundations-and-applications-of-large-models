@@ -1,0 +1,905 @@
+[
+  {
+    "id": "N011",
+    "text": "梯度下降的更新方向由什么决定？",
+    "type": "term",
+    "relevant": [
+      "C01"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N012",
+    "text": "参数已经有了导数，怎样据此使目标函数变小？",
+    "type": "description",
+    "relevant": [
+      "C01"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N013",
+    "text": "计算各层导数和按导数移动权重是不是同一步？",
+    "type": "contrast",
+    "relevant": [
+      "C01",
+      "C02"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N021",
+    "text": "反向传播为什么要使用链式法则？",
+    "type": "term",
+    "relevant": [
+      "C02"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N022",
+    "text": "损失在最后一层，前面几层怎样得到各自应承担的误差导数？",
+    "type": "description",
+    "relevant": [
+      "C02"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N023",
+    "text": "负责计算梯度的过程是否也必然负责直接改变权重？",
+    "type": "contrast",
+    "relevant": [
+      "C02"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N031",
+    "text": "学习率控制的是哪一步的幅度？",
+    "type": "term",
+    "relevant": [
+      "C03"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N032",
+    "text": "优化时一步迈得太大导致来回越过低谷，该调哪个数？",
+    "type": "description",
+    "relevant": [
+      "C03"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N033",
+    "text": "学习率过大时看到几次loss上升，是否足以断言训练已经发散？",
+    "type": "contrast",
+    "relevant": [
+      "C03"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N041",
+    "text": "训练误差小但泛化差是什么现象？",
+    "type": "term",
+    "relevant": [
+      "C04"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N042",
+    "text": "模型把练习中的噪声也背了下来，考试遇到陌生样本就失灵。",
+    "type": "description",
+    "relevant": [
+      "C04"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N043",
+    "text": "训练损失一直变小，为什么不能直接推出没见过的数据也会答得更好？",
+    "type": "contrast",
+    "relevant": [
+      "C04"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N051",
+    "text": "评估时Dropout还应随机丢弃单元吗？",
+    "type": "term",
+    "relevant": [
+      "C05"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N052",
+    "text": "我希望同一个输入在测试时保持稳定，而训练时随机让部分神经元不工作。",
+    "type": "description",
+    "relevant": [
+      "C05"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N053",
+    "text": "训练中的随机屏蔽与推理中的模型模式应该怎样配合？",
+    "type": "contrast",
+    "relevant": [
+      "C05"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N061",
+    "text": "验证开发集和最终测试集的职责如何区分？",
+    "type": "term",
+    "relevant": [
+      "C06"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N062",
+    "text": "每次看到留作验收的题答错，就修改程序再测，最后这个成绩还可信吗？",
+    "type": "description",
+    "relevant": [
+      "C06"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N063",
+    "text": "用来选择配置的数据与用来最终报分的数据能否反复混用？",
+    "type": "contrast",
+    "relevant": [
+      "C06"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N071",
+    "text": "位置编码为注意力模型补充哪类信息？",
+    "type": "term",
+    "relevant": [
+      "C07"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N072",
+    "text": "同一组词前后顺序改变，如何让不带循环结构的网络识别这种差别？",
+    "type": "description",
+    "relevant": [
+      "C07"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N073",
+    "text": "文本里每个词都一样，仅顺序不同，单靠无位置信息的注意力够不够？",
+    "type": "contrast",
+    "relevant": [
+      "C07"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N081",
+    "text": "自注意力怎样从Q和K得到对V的权重？",
+    "type": "term",
+    "relevant": [
+      "C08"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N082",
+    "text": "一个位置想汇总整段话中对自己有用的内容，这种按匹配程度取信息的机制是什么？",
+    "type": "description",
+    "relevant": [
+      "C08"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N083",
+    "text": "注意力中的查询、键和值，哪些负责匹配，哪个负责被汇总？",
+    "type": "contrast",
+    "relevant": [
+      "C08"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N091",
+    "text": "自回归训练为什么需要causal mask？",
+    "type": "term",
+    "relevant": [
+      "C09"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N092",
+    "text": "写到第三个词时不许读取第四个及以后的词，训练时怎么实现这个限制？",
+    "type": "description",
+    "relevant": [
+      "C09"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N093",
+    "text": "让当前位置看到未来答案，与真正逐词生成时的信息条件是否一致？",
+    "type": "contrast",
+    "relevant": [
+      "C09"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N101",
+    "text": "token上限会不会还包含特殊符号？",
+    "type": "term",
+    "relevant": [
+      "C10"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N102",
+    "text": "中文输入没到限制的字数却被切掉了，计数单位可能有什么不同？",
+    "type": "description",
+    "relevant": [
+      "C10"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N103",
+    "text": "一个汉字与一个token能否始终一一对应？",
+    "type": "contrast",
+    "relevant": [
+      "C10"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N111",
+    "text": "采样温度是在训练后改变什么量？",
+    "type": "term",
+    "relevant": [
+      "C11"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N112",
+    "text": "我想让续写的词选择更分散一些，而不想调整已经学好的权重。",
+    "type": "description",
+    "relevant": [
+      "C11"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N113",
+    "text": "提高temperature和提高训练学习率，改变的是同一过程吗？",
+    "type": "contrast",
+    "relevant": [
+      "C03",
+      "C11"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N121",
+    "text": "生成中的top-k限制哪一个候选集合？",
+    "type": "term",
+    "relevant": [
+      "C12"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N122",
+    "text": "预测下一个词时先删掉低概率选项，再从剩下的少量词中抽取。",
+    "type": "description",
+    "relevant": [
+      "C12"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N123",
+    "text": "检索Top-K文档与生成时保留Top-k词，是不是同一种计算？",
+    "type": "contrast",
+    "relevant": [
+      "C12"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N131",
+    "text": "句向量模型为什么需要池化？",
+    "type": "term",
+    "relevant": [
+      "C13"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N132",
+    "text": "输入有十个词或二十个词，最后都想得到相同长度的语义编码。",
+    "type": "description",
+    "relevant": [
+      "C13"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N133",
+    "text": "均值池化时若把补齐长度的空位也算进去，会有什么问题？",
+    "type": "contrast",
+    "relevant": [
+      "C13"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N141",
+    "text": "余弦相似度对向量方向还是模长更敏感？",
+    "type": "term",
+    "relevant": [
+      "C14"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N142",
+    "text": "想比较两组文本数字表示的朝向是否接近，不希望长度大小直接主导结果。",
+    "type": "description",
+    "relevant": [
+      "C14"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N143",
+    "text": "两条L2归一化向量的点积能否作为答案正确概率？",
+    "type": "contrast",
+    "relevant": [
+      "C14"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N151",
+    "text": "TF-IDF中的IDF由哪些文档统计得到？",
+    "type": "term",
+    "relevant": [
+      "C15"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N152",
+    "text": "一段问法与资料意思一样，却没共享相邻的字片段，为什么文字搜索可能找不到？",
+    "type": "description",
+    "relevant": [
+      "C15"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N153",
+    "text": "使用字符二元组的稀疏检索，和用神经向量理解意思有什么差别？",
+    "type": "contrast",
+    "relevant": [
+      "C15"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N161",
+    "text": "倒数排名融合为什么不用统一两个原始分数的尺度？",
+    "type": "term",
+    "relevant": [
+      "C16"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N162",
+    "text": "两份搜索列表只有名次值得相信，怎样依据名次合并出一个顺序？",
+    "type": "description",
+    "relevant": [
+      "C16"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N163",
+    "text": "将余弦分数与词法分数直接相加，和RRF按名次融合有什么不同？",
+    "type": "contrast",
+    "relevant": [
+      "C16"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N171",
+    "text": "Recall@K的分母是返回条数还是相关资料总数？",
+    "type": "term",
+    "relevant": [
+      "C17"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N172",
+    "text": "一个问题有四条应该找回的资料，前五项只覆盖两条，该怎样衡量找全程度？",
+    "type": "description",
+    "relevant": [
+      "C17"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N173",
+    "text": "命中任意一条就记1，与召回全部相关项的比例是同一个指标吗？",
+    "type": "contrast",
+    "relevant": [
+      "C17"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N181",
+    "text": "首个相关文档在第4位时倒数排名是多少？",
+    "type": "term",
+    "relevant": [
+      "C18"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N182",
+    "text": "结果里都有正确材料，但有时要翻到后面才看到，怎样让评价反映这种不便？",
+    "type": "description",
+    "relevant": [
+      "C18"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N183",
+    "text": "前五项完全没有相关文档时，MRR@5该怎样记分？",
+    "type": "contrast",
+    "relevant": [
+      "C18"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N191",
+    "text": "RAG为什么既需要检索又需要生成？",
+    "type": "term",
+    "relevant": [
+      "C19"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N192",
+    "text": "先到资料库里查依据，再让语言模型依据查到的材料写一段回答。",
+    "type": "description",
+    "relevant": [
+      "C19"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N193",
+    "text": "把匹配资料直接展示出来，能否说已经完成了检索增强的回答生成？",
+    "type": "contrast",
+    "relevant": [
+      "C19"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N201",
+    "text": "实体关系与社区如何参与图检索？",
+    "type": "term",
+    "relevant": [
+      "C20"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N202",
+    "text": "资料间的联系已经整理成节点和边，能否顺着这些联系找信息？",
+    "type": "description",
+    "relevant": [
+      "C20"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N203",
+    "text": "预先手写的关系或社区摘要，能否标成模型自动从文档中抽取的结果？",
+    "type": "contrast",
+    "relevant": [
+      "C20"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N211",
+    "text": "低秩适配中的增量由什么矩阵组成？",
+    "type": "term",
+    "relevant": [
+      "C21"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N212",
+    "text": "希望保留原网络不动，用两个较小矩阵学出需要叠加的变化。",
+    "type": "description",
+    "relevant": [
+      "C21"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N213",
+    "text": "可训练参数大幅减少，是否意味着基础模型的参数已经被删除？",
+    "type": "contrast",
+    "relevant": [
+      "C21"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N221",
+    "text": "QLoRA与普通LoRA的基座精度有什么差别？",
+    "type": "term",
+    "relevant": [
+      "C22"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N222",
+    "text": "适配器在学习，但原始大模型仍用全精度存储，这是不是低比特微调？",
+    "type": "description",
+    "relevant": [
+      "C22"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N223",
+    "text": "低秩增量与基础权重的量化分别解决什么资源问题？",
+    "type": "contrast",
+    "relevant": [
+      "C21",
+      "C22"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N231",
+    "text": "监督微调中标签-100表示什么？",
+    "type": "term",
+    "relevant": [
+      "C23"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N232",
+    "text": "输入是一段提问接一段答复，我只想让损失约束答复部分。",
+    "type": "description",
+    "relevant": [
+      "C23"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N233",
+    "text": "提示词位置不计损失，是否就意味着模型完全不读取提示词？",
+    "type": "contrast",
+    "relevant": [
+      "C23"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N241",
+    "text": "直接偏好优化需要怎样的回答对？",
+    "type": "term",
+    "relevant": [
+      "C24"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N242",
+    "text": "同一道题有两段答复，只有哪段更受偏好的比较信息，该如何利用？",
+    "type": "description",
+    "relevant": [
+      "C24"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N243",
+    "text": "DPO的损失下降之后，能否仅凭这一点认定生成内容事实更正确？",
+    "type": "contrast",
+    "relevant": [
+      "C24"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N251",
+    "text": "偏好训练中参考策略为何保持固定？",
+    "type": "term",
+    "relevant": [
+      "C25"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N252",
+    "text": "当前策略在不断改变，另一个提供原始概率基准的网络需要如何处理梯度？",
+    "type": "description",
+    "relevant": [
+      "C25"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N253",
+    "text": "关闭LoRA适配器作为参考模型时，需要确认什么冻结条件？",
+    "type": "contrast",
+    "relevant": [
+      "C25"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N261",
+    "text": "chosen和rejected的含义能否互换？",
+    "type": "term",
+    "relevant": [
+      "C26"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N262",
+    "text": "如果标注把明显错误的回答选成优选，继续优化会受到什么影响？",
+    "type": "description",
+    "relevant": [
+      "C26"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N263",
+    "text": "偏好对排序质量与训练目标下降，哪一个能直接保证资料标签没有反向？",
+    "type": "contrast",
+    "relevant": [
+      "C26"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N271",
+    "text": "定位评估的交集与并集如何组成IoU？",
+    "type": "term",
+    "relevant": [
+      "C27"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N272",
+    "text": "模型说对了物体类别，但画出的矩形与真实区域几乎不重合。",
+    "type": "description",
+    "relevant": [
+      "C27"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N273",
+    "text": "类别识别正确与位置重叠好，能否用同一个字面答案匹配代替？",
+    "type": "contrast",
+    "relevant": [
+      "C27"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N281",
+    "text": "自举学习的新增样本应由什么机制筛选？",
+    "type": "term",
+    "relevant": [
+      "C28"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N282",
+    "text": "模型给自己的作答打分，再拿这些作答继续学，错误可能怎样越积越多？",
+    "type": "description",
+    "relevant": [
+      "C28"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N283",
+    "text": "记忆池里的记录增加了，能否单凭数量说明能力已经进步？",
+    "type": "contrast",
+    "relevant": [
+      "C28"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N291",
+    "text": "忠实度检查为什么要识别否定和矛盾？",
+    "type": "term",
+    "relevant": [
+      "C29"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N292",
+    "text": "回答出现了资料中的关键词，却否认了资料真正表达的结论。",
+    "type": "description",
+    "relevant": [
+      "C29"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N293",
+    "text": "把问题原样复述一遍恰好含有正确词语，是否应算作有依据的回答？",
+    "type": "contrast",
+    "relevant": [
+      "C29"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N301",
+    "text": "模型参数总量与可训练参数量如何区分？",
+    "type": "term",
+    "relevant": [
+      "C30"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N302",
+    "text": "某种适配只更新很少权重，推理时是不是就不必经过原网络？",
+    "type": "description",
+    "relevant": [
+      "C30"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  },
+  {
+    "id": "N303",
+    "text": "比较两种检索速度时，把一次性加载时间算进去会带来什么混淆？",
+    "type": "contrast",
+    "relevant": [
+      "C30"
+    ],
+    "rationale": "依据问题核心定义或显式比较的两个概念确定相关卡片；不将仅有主题关联的卡片全部计为相关。",
+    "human_reviewed": false
+  }
+]

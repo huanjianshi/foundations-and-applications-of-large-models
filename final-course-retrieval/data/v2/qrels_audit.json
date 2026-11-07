@@ -1,0 +1,89 @@
+{
+  "stage": "post-evaluation annotation audit; no subsequent model/configuration tuning",
+  "reviewer": "CODEX, not independent human",
+  "questions_reviewed": 90,
+  "corrections": 7,
+  "criteria": "Relevant iff the card directly defines the requested mechanism/distinction; explicit comparisons may require more than one card. Mere topic association is insufficient.",
+  "question_text_sha256": "cec4a52dbf9f86ac5b23d8f6ed17f3668a50b1326520b8cf38d21eeaa688e760",
+  "rankings_unchanged": true,
+  "changes": [
+    {
+      "query_id": "N023",
+      "old_relevant": [
+        "C02"
+      ],
+      "new_relevant": [
+        "C01",
+        "C02"
+      ],
+      "reason": "显式区分导数计算与参数更新；C02说明两个步骤，C01直接定义更新过程，二者均支持问题。"
+    },
+    {
+      "query_id": "N031",
+      "old_relevant": [
+        "C03"
+      ],
+      "new_relevant": [
+        "C01",
+        "C03"
+      ],
+      "reason": "C01与C03都直接说明学习率控制更新步长，不能将C01的正确首位命中判错。"
+    },
+    {
+      "query_id": "N153",
+      "old_relevant": [
+        "C15"
+      ],
+      "new_relevant": [
+        "C13",
+        "C15"
+      ],
+      "reason": "显式比较神经向量与字符检索；需要同时计入句向量与词法表示。"
+    },
+    {
+      "query_id": "N221",
+      "old_relevant": [
+        "C22"
+      ],
+      "new_relevant": [
+        "C21",
+        "C22"
+      ],
+      "reason": "比较LoRA与QLoRA，与原开发问题Q22a采用相同的双相关项口径。"
+    },
+    {
+      "query_id": "N241",
+      "old_relevant": [
+        "C24"
+      ],
+      "new_relevant": [
+        "C24",
+        "C26"
+      ],
+      "reason": "DPO卡片和偏好对质量卡片都明确描述同一提示下的偏好/非偏好回答对。"
+    },
+    {
+      "query_id": "N243",
+      "old_relevant": [
+        "C24"
+      ],
+      "new_relevant": [
+        "C26",
+        "C29"
+      ],
+      "reason": "原C24没有直接给出“loss下降不等于事实正确”；C26明确给出该限制，C29定义事实支持的检查。"
+    },
+    {
+      "query_id": "N302",
+      "old_relevant": [
+        "C30"
+      ],
+      "new_relevant": [
+        "C21",
+        "C30"
+      ],
+      "reason": "两卡片均直接说明冻结/少量更新不免除基础模型前向计算。"
+    }
+  ],
+  "original_results_retained": true
+}

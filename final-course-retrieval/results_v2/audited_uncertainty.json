@@ -1,0 +1,10 @@
+{
+  "paired_mrr_difference": 0.07537037037037038,
+  "conditional_bootstrap_95_ci": [
+    0.02907407407407408,
+    0.12444444444444444
+  ],
+  "replicates": 5000,
+  "seed": 20261107,
+  "warning": "Conditional on this small AI-authored dataset; does not remove annotation/source bias."
+}

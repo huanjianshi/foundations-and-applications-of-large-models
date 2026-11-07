@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "role": "Previously unseen queries, held out from optimization configuration selection; not independently human authored.",
+  "n": 90,
+  "type_counts": {
+    "term": 30,
+    "description": 30,
+    "contrast": 30
+  },
+  "query_sha256": "3fe4791b1b79032cb08f5522e31b1982cc4adb5d6023cd458c7bd1efe832175a",
+  "cards_sha256": "8f3e87114f8281d8b99a4aa8501251e4c9b727f7e8805779d8de7e09832fc0de",
+  "author": "CODEX",
+  "human_reviewed": false,
+  "old_queries_role": "All original 60 queries are diagnostic/development data after user requested optimization.",
+  "no_test_evaluation_before_config_lock": true
+}

@@ -14,6 +14,6 @@ Coursework repository for the course **Foundations and Applications of Large Mod
 | [Assignment 06](assignment-06-smolvlm-rsi-localization/) | SmolVLM Localization and Recursive Self-Improvement | Portable source code, failure-inclusive RSI experiments, independent tests, training histories, and figures |
 | [Assignment 07](assignment-07-depth-controlled-rendering/) | White-Model Rendering with SD-Turbo and Depth ControlNet | Blender scene/export code, CUDA pipeline, five controlled runs, diagnostics, and verified outputs |
 | [Assignment 08](assignment-08-language-model-distillation/) | Character-Level Language Model Knowledge Distillation | Teacher/student controls, 16-run ablation, three paired repairs, feature KD, dynamic INT8 quantization, and reproducibility evidence |
-| [Final project](final-course-retrieval/) | Chinese Course Knowledge Retrieval | CPU lexical/semantic/RRF comparison, frozen queries, ablations, reproducibility data, and a local interactive demo |
+| [Final project](final-course-retrieval/) | Chinese Course Retrieval Optimization | BM25, Chinese BGE and reranking; 90 frozen queries, annotation audit, ablations, reproducibility records, and local CPU/GPU demo |
 
 Additional assignments will be added in separate `assignment-XX-*` directories.

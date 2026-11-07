@@ -1,5 +1,6 @@
-# Validated direct dependencies, Python 3.12, CPU inference.
-# CUDA is unnecessary. torch==2.8.0 accepts the validated local 2.8.0+cu128 build.
+# Validated direct dependencies, Python 3.12. Pure BM25 needs NumPy only.
+# Full neural comparison measured on CUDA; --device cpu is also supported.
+# torch==2.8.0 accepts the validated local 2.8.0+cu128 build.
 torch==2.8.0
 transformers==4.57.6
 numpy==2.5.2

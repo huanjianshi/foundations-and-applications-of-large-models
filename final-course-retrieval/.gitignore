@@ -4,3 +4,4 @@ __pycache__/
 models/
 tmp/
 results/reproduce*/
+results_v2/reproduce*/

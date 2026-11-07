@@ -1,0 +1,89 @@
+{
+  "test_queries": 90,
+  "development_queries": 60,
+  "test_label_review": "CODEX authored; not yet individually human audited",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "threads": 4,
+  "precision": "float32",
+  "versions": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.6",
+    "numpy": "2.5.2"
+  },
+  "model_parameters": {
+    "minilm": 117653760,
+    "bge": 23953920,
+    "reranker": 278044417
+  },
+  "config": {
+    "title_weight": 1,
+    "instruction": true,
+    "lex_weight": 0.25,
+    "fusion_depth": 10,
+    "rerank_depth": 10,
+    "final_weights": [
+      0.5,
+      0,
+      0.5
+    ],
+    "baseline_bm25_title_weight": 3,
+    "device": "cuda",
+    "threads": 4,
+    "rrf_constant": 60,
+    "precision": "float32",
+    "version": "2.1"
+  },
+  "lock": {
+    "config_sha256": "c7c180fcf3aa951571895dce00a70afadb155b6e523a1d50687f4c43475d159f",
+    "old_queries_sha256": "69fd9f680265de6fe2bbb052c851efb79b1515416b6f690a88658f3b9c2dad5b",
+    "new_test_sha256": "3fe4791b1b79032cb08f5522e31b1982cc4adb5d6023cd458c7bd1efe832175a",
+    "cards_sha256": "8f3e87114f8281d8b99a4aa8501251e4c9b727f7e8805779d8de7e09832fc0de",
+    "selection": "Old 60 queries only: MRR@5 then Recall@5; compare pure reranking (120 variants), single-branch baselines, and within-candidate min-max score fusion (180 variants). Stage-1 lock superseded before any new-test evaluation.",
+    "configurations": 120,
+    "model_records": [
+      {
+        "repo": "BAAI/bge-small-zh-v1.5",
+        "revision": "7999e1d3359715c523056ef9478215996d62a620",
+        "weights": "model.safetensors",
+        "bytes": 96407134,
+        "seconds": 24.89,
+        "official_source": "https://huggingface.co/BAAI/bge-small-zh-v1.5"
+      },
+      {
+        "repo": "BAAI/bge-reranker-base",
+        "revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+        "weights": "model.safetensors",
+        "bytes": 1134409728,
+        "seconds": 325.26,
+        "official_source": "https://huggingface.co/BAAI/bge-reranker-base"
+      }
+    ],
+    "code_hashes": {
+      "advanced_retrieval.py": "4aff6971577e450f875a72922a93e9b8aa0f2fb6465b83b0474055b47c2cc39e",
+      "optimize.py": "6b3f3aeb0de0d64a0a8b9309f91567e2b5f8093c80dd5521b29ccdb2021194e2",
+      "select_final_config.py": "bf18266f93d19d0d072f115cef09f479618b9e61353f00f9aa4af0c909342da4"
+    },
+    "new_test_evaluated": false,
+    "configurations_stage1": 120,
+    "configurations_stage2": 180,
+    "development_best": {
+      "title_weight": 1,
+      "instruction": true,
+      "depth": 10,
+      "lex": 0.5,
+      "dense": 0,
+      "cross": 0.5,
+      "recall@1": 0.875,
+      "recall@3": 0.95,
+      "recall@5": 0.9666666666666667,
+      "mrr@5": 0.9180555555555556
+    },
+    "benchmark_policy": "Main BM25 baseline uses its own best development title weight 3, not the fusion-selected title weight 1."
+  },
+  "candidate_recall_at_selected_depth": 0.9777777777777777,
+  "latency": "15 predefined questions (first five cards × 3 types), 3 repeats, per-query median then median across queries; GPU synchronized; no model load/index in query timer",
+  "timing_rows": 450,
+  "all_sampled_rankings_consistent": true,
+  "new_test_tuning": false
+}

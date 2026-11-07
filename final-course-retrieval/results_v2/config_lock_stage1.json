@@ -1,0 +1,31 @@
+{
+  "config_sha256": "3560bbb24d4edeb2d4a9aae8b67651cb14788f8ba5866c052de5b798cafc3e80",
+  "old_queries_sha256": "69fd9f680265de6fe2bbb052c851efb79b1515416b6f690a88658f3b9c2dad5b",
+  "new_test_sha256": "3fe4791b1b79032cb08f5522e31b1982cc4adb5d6023cd458c7bd1efe832175a",
+  "cards_sha256": "8f3e87114f8281d8b99a4aa8501251e4c9b727f7e8805779d8de7e09832fc0de",
+  "selection": "MRR@5 then Recall@5 on old 60 queries; deterministic efficiency/preference tie-break; no new-test scores accessed.",
+  "configurations": 120,
+  "model_records": [
+    {
+      "repo": "BAAI/bge-small-zh-v1.5",
+      "revision": "7999e1d3359715c523056ef9478215996d62a620",
+      "weights": "model.safetensors",
+      "bytes": 96407134,
+      "seconds": 24.89,
+      "official_source": "https://huggingface.co/BAAI/bge-small-zh-v1.5"
+    },
+    {
+      "repo": "BAAI/bge-reranker-base",
+      "revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+      "weights": "model.safetensors",
+      "bytes": 1134409728,
+      "seconds": 325.26,
+      "official_source": "https://huggingface.co/BAAI/bge-reranker-base"
+    }
+  ],
+  "code_hashes": {
+    "advanced_retrieval.py": "37296e70dc7245e89eca3128c8badd89ae56bce2b1ba2e951d764b7047cf08b9",
+    "optimize.py": "01c01dda082ece1f5bf4b8ed4d358895220651c020953b103d148f1f5d657285"
+  },
+  "new_test_evaluated": false
+}

@@ -1,0 +1,41 @@
+{
+  "raw_rankings_reproduced": 900,
+  "audited_rankings_and_metrics_reproduced": 900,
+  "cpu_only_bm25_rankings_equal": 90,
+  "no_test_retuning": true,
+  "latency_sample_rows": 450,
+  "post_evaluation_changes": "CLI alternate-output support, CPU-only deployment wrapper, UI and report. Ranking formulas and selected parameters unchanged.",
+  "unit_tests_passed": 10,
+  "cpu_only_http_checks_passed": 8,
+  "source_syntax_files": 14,
+  "source_sha256": {
+    "advanced_retrieval.py": "2afd70bd6183e294bb9d675d9a7c91f469496f849290555f89499adc698a9aa6",
+    "build_data.py": "87eda4f003c6535bc720771492bfdccd230131010a1c4f7ad5547413b2b65883",
+    "demo/app.py": "ba5ee04d61583c1975084dd17b503d8949a97702a65717de288e447d539a8194",
+    "download_optimization_models.py": "749236b87d4649e76992eba639c95f5f3b714736ff22ec6c7eb6a89512299b22",
+    "experiments/audit_qrels.py": "52c7e7187f5618cc1f6ddd971d918e59ebb32cc81d651cb3ea9fec546901e50f",
+    "experiments/freeze_new_test.py": "bf0cb51c7e9661bcb9a67e54cdb79ecd78089972e33ed7c54ffa0490992c6912",
+    "optimize.py": "2da7b801730b84546d8e0bfa40e3a533b3fa70186034f52b42aa7f7c8b3a98b4",
+    "prepare_model.py": "f4658172a6d97406f2052da4779e2c98c7f93d100a81cae43dae0a8baff714c2",
+    "query.py": "d9e8927e5c235337c4d1192244cc5955727ce82374d7bdb873325faef59523e9",
+    "retrieval.py": "81fecbc20dca062b4ff13fee93847c49e8e73f4ef536b01f7cbde13ae831a27e",
+    "run_experiments.py": "ed8e809f792372e925d2ca1d494e5e66539e3658520ce4e4e94e3dd13c191981",
+    "select_final_config.py": "bf18266f93d19d0d072f115cef09f479618b9e61353f00f9aa4af0c909342da4",
+    "tests/test_advanced.py": "010a88cf5f5b31d23c89a2592b9c6d347f177ebd3ba370b09c86cf64d26edcb7",
+    "tests/test_retrieval.py": "7c7474cc210a3836b3c6808a95b9d732fecd02286f7e342660a6ee8bb2ff437a"
+  },
+  "model_weights": [
+    {
+      "name": "bge-small-zh-v1.5",
+      "weight_bytes": 95827648,
+      "weight_sha256": "354763b9b1357bc9c44f62c6be2276321081ed2567773608c0d0785b61d5a026"
+    },
+    {
+      "name": "bge-reranker-base",
+      "weight_bytes": 1112206140,
+      "weight_sha256": "ced967c45fd1902eb92716c9ceeca7c95a936770ea9db611f5a841b926e33fbd"
+    }
+  ],
+  "download_record_bytes_note": "Historical model_records.bytes means directory total, not model weight bytes.",
+  "original_inputs_hash_verified": true
+}

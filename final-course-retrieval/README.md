@@ -1,66 +1,76 @@
-# 中文课程知识检索对比
+# 中文课程知识检索优化与神经重排比较
 
-输入课程问题，比较字符TF-IDF、MiniLM语义检索和RRF排名融合，返回原文及来源。项目只检索，不生成回答，也不检测资料外问题。
+这是期末项目优化版。30条固定知识卡片，原60题在结果可见后作为开发诊断数据，新增90题在配置选择前冻结、锁定方案后首次评测。旧代码与results/保留，不混算新旧测试分数。
 
-## 结果与边界
+## 当前结果
 
-30条自编知识卡片，60道问题，20开发/40测试；配置在测试前固定。测试集结果：
+新90题经CODEX全量相关性核对后记录7处更正：只修改评分标签，不改问题、资料、参数或900条模型排名。原始评分与更正评分都保留，新题尚无独立人工逐项审核。3道学生确认仅属于旧题。
 
-|方法|Recall@1|Recall@3|Recall@5|MRR@5|
-|---|---:|---:|---:|---:|
-|字符TF-IDF|0.6625|0.8000|0.8000|0.7292|
-|MiniLM语义检索|0.4375|0.6750|0.8500|0.5804|
-|RRF混合检索|0.5625|0.8000|0.8750|0.6858|
+|方法|Recall@1|Recall@3|Recall@5|MRR@5|时延ms|
+|---|---:|---:|---:|---:|---:|
+|原TF-IDF|0.7722|0.9000|0.9167|0.8704|0.038|
+|原MiniLM|0.6056|0.8833|0.9333|0.7646|14.070|
+|原RRF|0.7667|0.9278|0.9611|0.8750|15.124|
+|改进BM25|0.8611|0.9778|0.9889|0.9504|0.212|
+|中文BGE|0.6944|0.8889|0.9278|0.8207|6.362|
+|候选融合|0.7444|0.9278|0.9667|0.8643|6.352|
+|纯神经重排|0.8111|0.9444|0.9556|0.9102|43.590|
+|词法先验重排|0.8556|0.9667|0.9667|0.9444|43.188|
 
-混合检索提高前5项召回，但首位排序和MRR不及关键词方法。没有训练或微调模型，RRF是已有方法。消融是移除一个分支，与单分支的排序等价。
+时延来自事先指定15题（前5概念×3种题型），每题每方法3次，GPU同步；不含加载/索引。词法在CPU、神经方法在CUDA FP32，不能把硬件差异解释为算法加速倍数。
 
-问题和卡片由CODEX共同整理，非独立公共基准；学生已确认3道代表题对应关系，其余57题未逐项人工核验。问题类型与开发/测试分布不平衡，不能将两者差异完全归因于泛化。详情见[data](data/)和[逐题结果](results/per_question.json)。
+推荐BM25：当前小型术语语料中质量和代价更好。神经方案开发集MRR为0.9181，但新测试未超过强词法基线。没有按测试结果继续调参，也不宣称公共基准领先。
 
-![主要结果](results/main_results.png)
+![同题比较](results_v2/comparison.png)
 
-## 安装和首次准备
+## 安装与模型
 
-Python 3.12，在本目录运行。新电脑建议创建独立环境；本项目CPU推理，无需CUDA。依赖来自真实运行环境，完整包快照另见requirements-installed.txt。
+Python 3.12。已有环境可直接用；新电脑可创建环境后安装requirements.txt。CUDA不是纯词法查询必需条件。
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe prepare_model.py
-$env:COURSE_MODEL_PATH = (Resolve-Path '.\models\minilm').Path
+python -B query.py '什么是过拟合？' --method bm25
+python -B demo/app.py --lexical-only
 ```
 
-prepare_model.py仅用于明确需要下载的新电脑。已有同版本模型时直接设置COURSE_MODEL_PATH，检索与评测使用local_files_only离线加载。模型为Apache-2.0许可，权重不随仓库发布，来源与固定revision见[config.json](config.json)。
+纯词法模式只加载NumPy/CPU索引，不加载任何神经权重。浏览器访问 http://127.0.0.1:8765/ ，Ctrl+C结束；直接双击HTML不能运行接口。
 
-## 查询与复现
+如需完整神经对比，明确下载官方固定版本模型：
 
 ```powershell
-python -B query.py '为什么新题表现不好？' --method hybrid --k 5
-python -B -m unittest discover -s tests -v
-python -B run_experiments.py --out results/reproduce
+python prepare_model.py
+$env:COURSE_MODEL_PATH = (Resolve-Path '.\models\minilm').Path
+python download_optimization_models.py
 python -B demo/app.py
 ```
 
-浏览器访问`http://127.0.0.1:8765/`。不要直接双击HTML，否则无法调用Python模型。Ctrl+C停止服务。可用`--model-path`传模型目录，演示可用`--port`改端口。
+原MiniLM约0.47GB；新增BGE-small-zh约96MB、reranker-base约1.11GB，模型不随仓库发布。下载脚本固定revision，来源为官方Hugging Face，全部缓存和模型留在项目下。两个BGE模型MIT许可，MiniLM为Apache-2.0。没有GPU时完整演示可加 --device cpu，时延会不同。
 
-实验拒绝覆盖已有逐题结果，请换新的--out目录。演示默认展示results/中的正式汇总，新复跑目录不自动替换正式结果。build_data.py只记录数据的构建过程，已有freeze.json时拒绝重写，不应在每次评测前重新造题。数据hash基于原始字节，.gitattributes关闭自动换行转换，避免不同系统检出时改变冻结文件。
+## 一条命令复跑评分
 
-指标与排序在同一环境重跑应一致；查询计时随系统负载波动。每题每方法预热后运行3次，保存全部540条计时，查询含编码、匹配、排名及结果封装，不含模型加载和建索引。均值池化考虑attention mask，归一化后使用内积；不是CLS向量。
+```powershell
+python -B -m unittest discover -s tests -v
+python -B optimize.py test --out results_v2/reproduce
+python -B experiments/audit_qrels.py --results results_v2/reproduce
+```
 
-## 文件
+使用已发布的锁定配置，不重新调参；已有结果目录拒绝覆盖。无GPU可在optimize.py中显式加 --device cpu，报告会标记设备改变。原始指标在new_test_summary.json，更正指标在audited_summary.json。界面读取正式results_v2/audited_summary.json，不会悄悄用任意复跑目录替换正式统计。
 
-- retrieval.py：原文输入、词法与语义表示、排名融合；不读取问题标注。
-- run_experiments.py：验证数据hash、运行基线与消融、导出表图与环境证据。
-- data/：知识卡片、问题、来源、冻结清单、3题抽查记录及来源链接勘误。
-- demo/：仅监听本机的HTTP服务与网页。
-- results/：逐题结果、汇总、原始计时、图表及真实页面截图。
+开发阶段的optimize.py dev和select_final_config.py仅用于重现历史工作顺序；已有锁定文件时拒绝覆盖。不要为了优化已公开的新测试集而删除锁定文件重新选择参数。
 
-当前实现为小规模全量比较，词法矩阵使用NumPy稠密存储；扩大到大规模资料需要倒排索引与向量索引。未实现检索分数校准，相似度与RRF分数不能解释为正确概率。
+## 方法与证据
+
+- advanced_retrieval.py：中文单字/双字/完整英文词BM25，中文BGE CLS编码，有限正证据RRF，候选交叉编码与词法先验分数融合；不读取题目标签。
+- data/v2：原始90题冻结清单、7处更正和全部更正理由。问题与资料正文均保持原样。
+- results_v2：120组纯重排、180组分数融合开发比较、固定配置、900条首次与更正排名评分、450条原始计时和题型表。
+- 移除词法先验、移除神经分数在同一候选集内比较；仅BGE候选是另一个候选来源对照。
+- .gitattributes关闭自动换行转换，避免改变冻结文件字节hash。
+
+900条新测试排名与更正指标已在干净输出目录复跑一致，CPU独立BM25入口亦与90题正式排序一致；10项单元测试与8项CPU-only接口检查通过。`results_v2/release_verification.json`记录发布源文件hash及复现检查。锁定文件中的code_hashes对应评测时的历史代码；之后只增加独立输出、CPU部署、网页和下载完整性检查，不改排序公式、锁定参数或问题。model_records中的bytes是下载目录总量，实际权重字节与校验另列在发布检查中。小样本、AI共同构造数据和后验标注核对仍限制结论，完整原始结果保留以便检查。
 
 ## 技术来源
 
-- [模型与mean pooling示例](https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2)
-- [Sentence-BERT](https://arxiv.org/abs/1908.10084)
-- [RRF原始论文](https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf)
-- [TF-IDF定义](https://scikit-learn.org/stable/modules/feature_extraction.html#tfidf-term-weighting)
+[BM25](https://doi.org/10.1561/1500000019)、[Sentence-BERT](https://arxiv.org/abs/1908.10084)、[BGE / C-Pack](https://arxiv.org/abs/2309.07597)、[BGE-small-zh](https://huggingface.co/BAAI/bge-small-zh-v1.5)、[重排器](https://huggingface.co/BAAI/bge-reranker-base)、[RRF](https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf)。
 
-代码为本项目实现，不依赖旧作业目录或Sentence Transformers安装。课程报告、教师课件、原模板、模型权重、私人环境路径不属于公开附件。
+只做原文检索，不生成回答或检测资料外问题。归一化分数不是正确概率。中文报告和LaTeX源文件在本地审阅，不属于公开代码附件。
